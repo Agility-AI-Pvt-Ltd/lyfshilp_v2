@@ -1,5 +1,6 @@
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
+import { HowWeWork } from "@/src/components/ui/how-we-work";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
           </h1>
         </div>
       </main>
+
+      <HowWeWork />
 
       <LyfshilpFooter />
     </div>

@@ -160,9 +160,36 @@ export function LyfshilpFooter() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/15 pt-7 text-[14px] font-semibold text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>Copyright 2026 Lyfshilp. All rights reserved.</p>
-          <p>Built for curious minds and real-world skills.</p>
+        <div className="mt-14 flex items-center justify-between border-t border-white/15 pb-10 pt-7 text-[11px] font-bold uppercase tracking-widest text-white/50">
+          <div>
+            <p>@2026 LYFSHILP. ALL RIGHTS RESERVED</p>
+            <p className="mt-1">
+              <Link href="/privacy" className="hover:text-white">Privacy Policy</Link> •{" "}
+              <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <p>MADE BY</p>
+            <p className="text-[13px] text-white">AGILITY</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Giant Orange Banner Element */}
+      <section className="relative overflow-hidden bg-[#ff492c] py-16 lg:py-24">
+        <div className="flex w-full items-end justify-between px-6 sm:px-8 lg:px-14">
+          <h2 className="relative flex items-start text-[15vw] font-black leading-[0.75] tracking-tighter text-[#1a1a1a] sm:text-[13vw] lg:text-[11.5vw]">
+            LYFSHILP
+            <span className="ml-2 mt-2 text-[3vw] font-black leading-none sm:text-[2vw] lg:text-[1.5vw]">®</span>
+          </h2>
+          <div className="hidden shrink-0 pb-1 text-right md:block">
+            <h3 className="text-[3vw] font-black leading-[0.9] tracking-tight text-[#1a1a1a] lg:text-[2.5vw]">
+              Beyond<br />
+              Learning<br />
+              Built with<br />
+              Vision.
+            </h3>
+          </div>
         </div>
       </section>
     </footer>
