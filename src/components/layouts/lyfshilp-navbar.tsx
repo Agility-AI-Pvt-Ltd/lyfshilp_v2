@@ -53,14 +53,96 @@ const programGroups = [
 
 const communityItems = [
   {
-    label: "Community",
+    label: "Lyfshilp Community",
     href: "/community",
-    description: "Meet builders, mentors, and collaborators",
+    description: "Student founders building the future together",
   },
   {
     label: "Podcast",
     href: "/podcast",
     description: "Conversations on AI, work, and learning",
+  },
+];
+
+const communityFeaturedCards = [
+  {
+    label: "Lyfshilp Community",
+    href: "/community",
+    kicker: "Community",
+    title: "Where student founders build the future together",
+    cta: "Explore community",
+    accent: "bg-[#5e22ff]",
+  },
+  {
+    label: "Podcast",
+    href: "/podcast",
+    kicker: "Podcast",
+    title: "Conversations on AI, work, learning, and real builders",
+    cta: "Listen now",
+    accent: "bg-[#10b981]",
+  },
+  {
+    label: "Live Sessions",
+    href: "/community",
+    kicker: "Sessions",
+    title: "AMAs, demo days, and workshops with builders and mentors",
+    cta: "See what is inside",
+    accent: "bg-[#ff492c]",
+  },
+];
+
+const communityGroups = [
+  {
+    title: "Network",
+    items: [
+      {
+        label: "Share & Discuss",
+        href: "/community",
+        description:
+          "Post your startup idea and get feedback from founders and mentors.",
+        accent: "bg-[#5e22ff]",
+      },
+      {
+        label: "Build Together",
+        href: "/community",
+        description:
+          "Find co-founders, designers, and developers across schools and colleges.",
+        accent: "bg-[#10b981]",
+      },
+      {
+        label: "Celebrate Wins",
+        href: "/community",
+        description:
+          "Share milestones, progress, and achievements with the community.",
+        accent: "bg-[#ff492c]",
+      },
+    ],
+  },
+  {
+    title: "Access",
+    items: [
+      {
+        label: "Lyfshilp Mentors",
+        href: "/community",
+        description:
+          "Get guidance from founders and industry leaders who help ideas scale.",
+        accent: "bg-[#ffd166]",
+      },
+      {
+        label: "Live Sessions",
+        href: "/community",
+        description:
+          "Join community AMAs, demo days, and workshops with builders.",
+        accent: "bg-[#5e22ff]",
+      },
+      {
+        label: "Nationwide Network",
+        href: "/community",
+        description:
+          "Connect with student founders across cities and campuses in India.",
+        accent: "bg-[#10b981]",
+      },
+    ],
   },
 ];
 
@@ -212,12 +294,70 @@ function EnterpriseCard({
   );
 }
 
+function CommunityFeatureCard({
+  label,
+  href,
+  kicker,
+  title,
+  cta,
+  accent,
+}: {
+  label: string;
+  href: string;
+  kicker: string;
+  title: string;
+  cta: string;
+  accent: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group/card relative flex min-h-[270px] flex-col overflow-hidden rounded-sm bg-[#f8f9fb] p-8 transition-transform hover:-translate-y-0.5"
+    >
+      <span
+        className={`absolute right-12 top-0 size-9 ${accent} bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.18)_0,rgba(255,255,255,0.18)_2px,transparent_2px,transparent_5px)]`}
+        aria-hidden="true"
+      />
+      <span
+        className={`absolute right-0 top-9 size-9 ${accent} bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.18)_0,rgba(255,255,255,0.18)_2px,transparent_2px,transparent_5px)] opacity-80`}
+        aria-hidden="true"
+      />
+      <span
+        className="absolute inset-x-0 top-[72px] border-t border-dashed border-[#e1e4ec]"
+        aria-hidden="true"
+      />
+
+      <span className="flex h-12 items-center">
+        <span className="text-[21px] font-semibold leading-none tracking-normal text-[#272835]">
+          {label}
+        </span>
+      </span>
+
+      <span className="mt-auto block">
+        <span className="mb-4 inline-flex h-7 items-center rounded-sm bg-white px-2.5 text-[12px] font-semibold tracking-normal text-[#8a90a3] shadow-sm">
+          {kicker}
+        </span>
+        <span className="block max-w-[340px] text-[20px] font-semibold leading-6 tracking-normal text-[#272835]">
+          {title}
+        </span>
+        <span className="mt-5 flex items-center gap-2 text-[15px] font-medium leading-5 tracking-normal text-[#747b8f] transition-colors group-hover/card:text-[#5e22ff]">
+          {cta}
+          <span
+            aria-hidden="true"
+            className="size-0 border-y-[5px] border-l-[6px] border-y-transparent border-l-current opacity-45"
+          />
+        </span>
+      </span>
+    </Link>
+  );
+}
+
 function ProgramsMenu() {
   const [enterpriseItem] = programGroups[2].items;
   const [featuredItem] = programGroups[0].items;
 
   return (
-    <div className="group/programs relative">
+    <div className="group/programs relative flex h-20 items-center">
       <MenuTrigger label="Programs" />
 
       <div className="invisible fixed left-0 top-20 z-50 w-screen opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
@@ -278,25 +418,50 @@ function ProgramsMenu() {
 
 function CommunityMenu() {
   return (
-    <div className="group/community relative">
+    <div className="group/community relative flex h-20 items-center">
       <MenuTrigger label="Community" />
 
-      <div className="invisible absolute left-0 top-full z-50 w-80 pt-3 opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
-        <div className="rounded-md border border-[#e6e8ef] bg-white p-2 shadow-[0_18px_45px_rgba(21,24,38,0.14)]">
-          {communityItems.map((item) => (
+      <div className="invisible fixed left-0 top-20 z-50 w-screen opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
+        <div className="border-y border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.12)]">
+          <div className="relative mx-auto min-h-[430px] max-w-[1500px] overflow-hidden px-4 py-7 sm:px-6 lg:px-8">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-4 border-l border-dashed border-[#e1e4ec] sm:left-6 lg:left-8"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 right-4 border-l border-dashed border-[#e1e4ec] sm:right-6 lg:right-8"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-[92px] border-t border-dashed border-[#e1e4ec]"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-[104px] border-t border-dashed border-[#e1e4ec]"
+            />
+
+            <p className="mb-8 pl-5 text-[15px] font-semibold tracking-normal text-[#8a90a3]">
+              Featured Community
+            </p>
+
+            <div className="grid grid-cols-3 gap-8 px-5">
+              {communityFeaturedCards.map((item) => (
+                <CommunityFeatureCard key={item.label} {...item} />
+              ))}
+            </div>
+
             <Link
-              key={item.label}
-              href={item.href}
-              className="block rounded-md px-3 py-3 transition-colors hover:bg-[#f8fafb]"
+              href="/community"
+              className="mt-8 inline-flex items-center gap-2 pl-5 text-[15px] font-semibold tracking-normal text-[#272835] transition-colors hover:text-[#5e22ff]"
             >
-              <span className="block text-[15px] font-semibold leading-5 text-[#11131f]">
-                {item.label}
-              </span>
-              <span className="mt-1 block text-[13px] leading-5 text-[#8a90a3]">
-                {item.description}
-              </span>
+              View all community updates
+              <span
+                aria-hidden="true"
+                className="size-0 border-y-[5px] border-l-[6px] border-y-transparent border-l-current opacity-45"
+              />
             </Link>
-          ))}
+          </div>
         </div>
       </div>
     </div>
@@ -359,6 +524,21 @@ export function LyfshilpNavbar() {
             <p className="mt-3 px-3 py-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#8a90a3]">
               Community
             </p>
+            {communityGroups.map((group) => (
+              <div key={group.title} className="grid gap-1">
+                <p className="px-3 py-1 text-[13px] font-semibold text-[#36394a]">
+                  {group.title}
+                </p>
+                {group.items.map((item) => (
+                  <NavLink
+                    key={item.label}
+                    label={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                  />
+                ))}
+              </div>
+            ))}
             {communityItems.map((item) => (
               <NavLink
                 key={item.label}
