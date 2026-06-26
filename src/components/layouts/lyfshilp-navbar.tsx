@@ -485,7 +485,7 @@ export function LyfshilpNavbar() {
 
         {/* Explore products pill button — desktop only */}
         <Link
-          href="/lyfshilp-fellowship"
+          href="/products"
           className="group relative hidden overflow-hidden items-center gap-0 rounded-full bg-[#f8fafb] border border-[#e5e7eb] p-1 transition-colors duration-300 lg:flex"
         >
           {/* #CFFD53 sweep layer — covers whole pill left to right on hover */}
