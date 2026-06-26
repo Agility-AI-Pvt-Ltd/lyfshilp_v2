@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { ScrollRevealText } from "../ui/scroll-reveal-text";
+import { StaggeredCountdown } from "../ui/staggered-countdown";
 
 const footerStats = [
-  { value: "500+", label: "Student founders" },
-  { value: "50+", label: "Partner schools" },
-  { value: "20+", label: "Mentors and builders" },
-  { value: "10+", label: "Cities represented" },
+  { digits: "500", suffix: "+", label: "Student founders" },
+  { digits: "50", suffix: "+", label: "Partner schools" },
+  { digits: "20", suffix: "+", label: "Mentors and builders" },
+  { digits: "10", suffix: "+", label: "Cities represented" },
 ];
 
 const footerLinks = [
@@ -88,9 +89,13 @@ export function LyfshilpFooter() {
         <div className="absolute inset-x-0 bottom-0 z-20 grid gap-8 px-6 pb-9 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-14">
           {footerStats.map((stat) => (
             <div key={stat.label}>
-              <p className="text-[54px] font-black leading-none tracking-normal sm:text-[64px]">
-                {stat.value}
-              </p>
+              <StaggeredCountdown
+                value={stat.digits}
+                suffix={stat.suffix}
+                color="#fffaf4"
+                duration={2}
+                className="text-[54px] font-black leading-none tracking-normal sm:text-[64px]"
+              />
               <p className="mt-4 text-[18px] font-semibold tracking-normal text-white/90">
                 {stat.label}
               </p>

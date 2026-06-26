@@ -483,6 +483,49 @@ export function LyfshilpNavbar() {
           <NavLink label="About Us" href="/about-us" />
         </nav>
 
+        {/* Explore products pill button — desktop only */}
+        <Link
+          href="/lyfshilp-fellowship"
+          className="group relative hidden overflow-hidden items-center gap-0 rounded-full bg-[#f8fafb] border border-[#e5e7eb] p-1 transition-colors duration-300 lg:flex"
+        >
+          {/* #CFFD53 sweep layer — covers whole pill left to right on hover */}
+          <span
+            className="absolute inset-0 origin-left scale-x-0 bg-[#CFFD53] transition-transform duration-300 ease-in-out group-hover:scale-x-100"
+            aria-hidden="true"
+          />
+
+          {/* Text with slide animation */}
+          <span className="relative flex h-[1.4em] items-center overflow-hidden px-5">
+            {/* Original text — slides up out */}
+            <span className="block whitespace-nowrap text-[15px] font-semibold text-[#272835] transition-transform duration-300 ease-in-out group-hover:-translate-y-[200%]">
+              Explore products
+            </span>
+            {/* Incoming text — slides in from below in dark */}
+            <span
+              className="absolute left-5 right-0 flex items-center whitespace-nowrap text-[15px] font-semibold text-[#272835] translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+              aria-hidden="true"
+            >
+              Explore products
+            </span>
+          </span>
+
+          {/* Arrow circle — #CFFD53 filled */}
+          <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full bg-[#CFFD53] text-[#272835] transition-all duration-300">
+            {/* Arrow exits to the right */}
+            <span className="absolute transition-all duration-300 ease-in-out group-hover:translate-x-[150%]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+            {/* Arrow enters from the left */}
+            <span className="absolute -translate-x-[150%] text-[#272835] transition-all duration-300 ease-in-out group-hover:translate-x-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </span>
+        </Link>
+
         <button
           type="button"
           className="grid size-10 shrink-0 place-items-center rounded-md border border-[#dfe1e7] bg-[#f8fafb] lg:hidden"
