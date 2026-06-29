@@ -124,15 +124,17 @@ function ArrowGlyph() {
 export default function Home() {
   return (
     <div className="bg-[#fffaf4] text-[#272835]">
-      <LyfshilpNavbar />
+      <LyfshilpNavbar showMarquee={true} />
 
       <main>
         {/* Hero */}
         <HeroSection
           columnOneImages={heroCol1}
           columnTwoImages={heroCol2}
-          title={"Explore, build, and\nbecome future-ready."}
-          subtitle="LYFSHILP GIVES EVERY LEARNER — FROM SCHOOL TO COLLEGE — THE SPACE TO EXPLORE IDEAS, BUILD REAL PRODUCTS, AND GROW WITH A COMMUNITY OF AMBITIOUS BUILDERS ACROSS INDIA."
+          title={
+            "'Your Child Doesn't Just Learn AI. \nThey Build With It. Lead With It.'"
+          }
+          subtitle=""
           rating="4.9 rating"
           students="500+ student founders"
         />
@@ -186,9 +188,18 @@ export default function Home() {
                 href="/about-us"
                 className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-sm bg-[#272835] p-7 text-white transition-transform hover:-translate-y-1"
               >
-                <span className="absolute right-0 top-0 size-10 bg-[#CFFD53]" aria-hidden="true" />
-                <span className="absolute bottom-0 right-10 size-8 bg-[#5e22ff]" aria-hidden="true" />
-                <span className="absolute bottom-0 right-0 size-10 bg-[#10b981]" aria-hidden="true" />
+                <span
+                  className="absolute right-0 top-0 size-10 bg-[#CFFD53]"
+                  aria-hidden="true"
+                />
+                <span
+                  className="absolute bottom-0 right-10 size-8 bg-[#5e22ff]"
+                  aria-hidden="true"
+                />
+                <span
+                  className="absolute bottom-0 right-0 size-10 bg-[#10b981]"
+                  aria-hidden="true"
+                />
                 <h3 className="relative z-10 max-w-[200px] text-[24px] font-black leading-tight tracking-tight">
                   Not sure where to start?
                 </h3>
