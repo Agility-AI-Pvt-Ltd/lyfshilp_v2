@@ -9,6 +9,7 @@ interface HeroSectionProps {
   subtitle?: string;
   rating?: string;
   students?: string;
+  trustedText?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -17,20 +18,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title = "Master Pro\n3D Design",
   subtitle =
     "GET READY TO TRULY ROCK YOUR 3D DESIGN SKILLS WITH FUN PROJECTS, REAL-LIFE WORKFLOWS, AND TRAINING FROM THE PROS. LEARN BY DOING WITH HANDS-ON PROJECTS THAT MIRROR REAL INDUSTRY WORKFLOWS.",
+  trustedText = "Trusted by 5,000+ students across 14 Indian cities",
 }) => {
   // Duplicate images for seamless infinite loop
   const col1 = [...columnOneImages, ...columnOneImages, ...columnOneImages];
   const col2 = [...columnTwoImages, ...columnTwoImages, ...columnTwoImages];
-
-  const dataTags = [
-    "MIT Sloan",
-    "Stanford GSB",
-    "Incubated at IIIT Allahabad",
-    "DPIIT Recognised",
-    "38 Institutions",
-    "6,000+ Students",
-    "NEP 2020 Aligned",
-  ];
 
   return (
     <>
@@ -119,7 +111,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         }
       `}</style>
 
-      <section className="hero-bg relative w-full min-h-screen overflow-hidden flex items-center">
+      <section className="hero-bg relative w-full min-h-screen overflow-hidden flex items-end">
 
         {/* ── Background image rows ── */}
         <div className="absolute inset-0 z-0 flex items-center">
@@ -154,19 +146,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* ── Foreground content ── */}
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-20 md:py-24 flex flex-col items-start">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-16 pt-32 pb-8 sm:pb-12 flex flex-col items-start">
           <div className="w-full bg-white/70 backdrop-blur-xl border border-[#272835]/15 rounded-2xl md:rounded-[32px] p-6 sm:p-8 md:p-12 shadow-2xl flex flex-col items-start">
-            {/* Data tags badges */}
-            <div className="flex flex-wrap gap-2 mb-6 max-w-4xl">
-              {dataTags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center rounded-full bg-black/5 px-3.5 py-1.5 text-[10px] md:text-xs font-bold tracking-normal text-[#272835] border border-black/[0.04] shadow-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            {/* Trusted Text */}
+            {trustedText && (
+              <span className="inline-flex items-center rounded-full bg-[#CFFD53] px-3.5 py-1.5 text-[10px] md:text-xs font-black uppercase tracking-[0.08em] text-[#272835] shadow-sm mb-6 border border-black/[0.04]">
+                {trustedText}
+              </span>
+            )}
 
             {/* Headline */}
             <h1
@@ -190,24 +177,61 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 w-full sm:w-auto">
-              <button className="btn-primary w-full sm:w-auto px-7 py-3 rounded-none text-sm uppercase">
-                Get Started
+              <button className="group relative w-full sm:w-auto overflow-hidden flex items-center justify-between rounded-full bg-[#f8fafb] p-1 transition-colors duration-300 border-0 focus:outline-none">
+                {/* #CFFD53 sweep layer — covers whole pill left to right on hover */}
+                <span
+                  className="absolute inset-0 origin-left scale-x-0 bg-[#CFFD53] transition-transform duration-300 ease-in-out group-hover:scale-x-100"
+                  aria-hidden="true"
+                />
+
+                {/* Text with slide animation */}
+                <span className="relative flex h-[1.4em] items-center overflow-hidden px-5">
+                  {/* Original text — slides up out */}
+                  <span className="block whitespace-nowrap text-[15px] font-bold text-[#272835] transition-transform duration-300 ease-in-out group-hover:-translate-y-[200%]">
+                    Book a Free Counselling Call
+                  </span>
+                  {/* Incoming text — slides in from below */}
+                  <span
+                    className="absolute left-5 right-0 flex items-center whitespace-nowrap text-[15px] font-bold text-[#272835] translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
+                    aria-hidden="true"
+                  >
+                    Book a Free Counselling Call
+                  </span>
+                </span>
+
+                {/* Arrow circle — #CFFD53 filled */}
+                <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full bg-[#CFFD53] text-[#272835] transition-all duration-300">
+                  {/* Arrow exits to the right */}
+                  <span className="absolute transition-all duration-300 ease-in-out group-hover:translate-x-[150%]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                  {/* Arrow enters from the left */}
+                  <span className="absolute -translate-x-[150%] text-[#272835] transition-all duration-300 ease-in-out group-hover:translate-x-0" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </span>
               </button>
-              <button className="btn-secondary w-full sm:w-auto px-7 py-3 rounded-full text-sm uppercase flex items-center justify-center gap-2">
+              <button className="btn-secondary w-full sm:w-auto h-11 px-7 rounded-full text-sm uppercase flex items-center justify-center gap-2.5 !bg-white !border-0 focus:outline-none">
                 <svg
                   width="18"
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  className="shrink-0"
                 >
-                  <circle cx="12" cy="12" r="10" />
-                  <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" />
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                View Curriculum
+                <span>Download Program Guide</span>
               </button>
             </div>
           </div>

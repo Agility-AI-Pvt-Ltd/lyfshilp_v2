@@ -3,6 +3,7 @@
 import NextImage from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { MarqueeBanner } from "../ui/marquee-banner";
 
 const programGroups = [
   {
@@ -467,7 +468,11 @@ function CommunityMenu() {
   );
 }
 
-export function LyfshilpNavbar() {
+interface LyfshilpNavbarProps {
+  showMarquee?: boolean;
+}
+
+export function LyfshilpNavbar({ showMarquee = false }: LyfshilpNavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -497,12 +502,14 @@ export function LyfshilpNavbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 px-4 pt-4 transition-transform duration-300 ease-in-out ${
+      className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-in-out ${
         hidden && !isOpen ? "translate-y-[-150%]" : "translate-y-0"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between rounded-full border border-[#e6e8ef] bg-white/85 pl-6 pr-3 shadow-[0_10px_40px_rgba(21,24,38,0.12)] backdrop-blur-xl">
-        <Logo />
+      {showMarquee && <MarqueeBanner />}
+      <div className={`px-4 ${showMarquee ? "pt-3" : "pt-4"}`}>
+        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between rounded-full border border-[#e6e8ef] bg-white/85 pl-6 pr-3 shadow-[0_10px_40px_rgba(21,24,38,0.12)] backdrop-blur-xl">
+          <Logo />
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           <NavLink label="Home" href="/" />
@@ -566,6 +573,7 @@ export function LyfshilpNavbar() {
             <span className="h-0.5 rounded-full bg-[#1d293d]" />
           </span>
         </button>
+      </div>
       </div>
 
       {isOpen ? (
