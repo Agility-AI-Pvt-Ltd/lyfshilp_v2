@@ -1,18 +1,14 @@
 "use client";
 
+import NextImage from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const programGroups = [
   {
     title: "Learning",
     items: [
-      {
-        label: "Lyfshilp Fellowship",
-        href: "/lyfshilp-fellowship",
-        description: "Mentored AI product-building for ambitious learners",
-        accent: "bg-[#5e22ff]",
-      },
+
       {
         label: "Summer Programme",
         href: "/summer-programme",
@@ -153,12 +149,15 @@ function Logo() {
       className="flex shrink-0 items-center gap-2.5"
       aria-label="Lyfshilp home"
     >
-      <span className="relative grid size-7 place-items-center">
-        <span className="absolute size-5 rotate-45 rounded-[3px] bg-[#5e4cff]" />
-        <span className="absolute left-0 top-1 size-2.5 rounded-[2px] bg-[#ff492c]" />
-        <span className="absolute bottom-0 right-0 size-2.5 rounded-[2px] bg-[#10b981]" />
-        <span className="absolute right-0 top-0 size-2 rounded-full bg-[#ffd166]" />
-      </span>
+      <NextImage
+        src="/images/logo.png"
+        alt="Lyfshilp Academy Logo"
+        width={42}
+        height={42}
+        className="h-[42px] w-[42px] object-contain"
+        unoptimized
+        priority
+      />
       <span className="text-[22px] font-semibold leading-none tracking-normal text-[#272835]">
         lyfshilp
       </span>
@@ -273,7 +272,7 @@ function EnterpriseCard({
   return (
     <Link
       href={href}
-      className="group/card relative flex min-h-36 overflow-hidden rounded-sm bg-[#262735] p-5 text-white transition-transform hover:-translate-y-0.5"
+      className="group/card relative flex h-full min-h-36 overflow-hidden rounded-sm bg-[#262735] p-5 text-white transition-transform hover:-translate-y-0.5"
     >
       <span className="relative z-10">
         <span className="flex items-center gap-2 text-[16px] font-semibold leading-6">
@@ -357,12 +356,12 @@ function ProgramsMenu() {
   const [featuredItem] = programGroups[0].items;
 
   return (
-    <div className="group/programs relative flex h-20 items-center">
+    <div className="group/programs relative flex h-16 items-center">
       <MenuTrigger label="Programs" />
 
-      <div className="invisible fixed left-0 top-20 z-50 w-screen opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
-        <div className="border-y border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.12)]">
-          <div className="relative mx-auto grid min-h-[370px] max-w-[1500px] grid-cols-[1fr_1fr_1fr_1fr] overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
+        <div className="w-full max-w-[1120px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
+          <div className="relative grid min-h-[370px] grid-cols-[1fr_1fr_1fr_1fr] px-4">
             <span
               aria-hidden="true"
               className="pointer-events-none absolute inset-x-0 top-[72px] border-t border-dashed border-[#e1e4ec]"
@@ -398,7 +397,7 @@ function ProgramsMenu() {
               <p className="mb-5 px-2 text-[14px] font-semibold tracking-normal text-[#8a90a3]">
                 {programGroups[2].title}
               </p>
-              <div className="grid gap-2">
+              <div className="grid auto-rows-fr gap-2">
                 <EnterpriseCard {...enterpriseItem} />
                 <EnterpriseCard {...featuredItem} />
               </div>
@@ -418,12 +417,12 @@ function ProgramsMenu() {
 
 function CommunityMenu() {
   return (
-    <div className="group/community relative flex h-20 items-center">
+    <div className="group/community relative flex h-16 items-center">
       <MenuTrigger label="Community" />
 
-      <div className="invisible fixed left-0 top-20 z-50 w-screen opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
-        <div className="border-y border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.12)]">
-          <div className="relative mx-auto min-h-[430px] max-w-[1500px] overflow-hidden px-4 py-7 sm:px-6 lg:px-8">
+      <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
+        <div className="w-full max-w-[1120px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
+          <div className="relative min-h-[430px] px-6 py-7">
             <span
               aria-hidden="true"
               className="pointer-events-none absolute inset-y-0 left-4 border-l border-dashed border-[#e1e4ec] sm:left-6 lg:left-8"
@@ -470,10 +469,39 @@ function CommunityMenu() {
 
 export function LyfshilpNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (currentY < 10) {
+        // Always visible at the very top of the page
+        setHidden(false);
+      } else if (currentY > lastY) {
+        // Scrolling down -> hide
+        setHidden(true);
+      } else if (currentY < lastY) {
+        // Scrolling up -> reveal
+        setHidden(false);
+      }
+
+      lastY = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#e5e7eb] bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 px-4 pt-4 transition-transform duration-300 ease-in-out ${
+        hidden && !isOpen ? "translate-y-[-150%]" : "translate-y-0"
+      }`}
+    >
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between rounded-full border border-[#e6e8ef] bg-white/85 pl-6 pr-3 shadow-[0_10px_40px_rgba(21,24,38,0.12)] backdrop-blur-xl">
         <Logo />
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
@@ -485,7 +513,7 @@ export function LyfshilpNavbar() {
 
         {/* Explore products pill button — desktop only */}
         <Link
-          href="/products"
+          href="/futurex"
           className="group relative hidden overflow-hidden items-center gap-0 rounded-full bg-[#f8fafb] border border-[#e5e7eb] p-1 transition-colors duration-300 lg:flex"
         >
           {/* #CFFD53 sweep layer — covers whole pill left to right on hover */}
@@ -498,14 +526,14 @@ export function LyfshilpNavbar() {
           <span className="relative flex h-[1.4em] items-center overflow-hidden px-5">
             {/* Original text — slides up out */}
             <span className="block whitespace-nowrap text-[15px] font-semibold text-[#272835] transition-transform duration-300 ease-in-out group-hover:-translate-y-[200%]">
-              Explore products
+              FutureX Fellowship
             </span>
             {/* Incoming text — slides in from below in dark */}
             <span
               className="absolute left-5 right-0 flex items-center whitespace-nowrap text-[15px] font-semibold text-[#272835] translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"
               aria-hidden="true"
             >
-              Explore products
+              FutureX Fellowship
             </span>
           </span>
 
@@ -541,7 +569,7 @@ export function LyfshilpNavbar() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-[#e5e7eb] bg-white px-4 py-4 lg:hidden">
+        <div className="mx-auto mt-3 max-h-[calc(100vh-6rem)] w-full max-w-7xl overflow-y-auto rounded-2xl border border-[#e6e8ef] bg-white px-4 py-4 shadow-[0_10px_40px_rgba(21,24,38,0.12)] lg:hidden">
           <nav aria-label="Mobile primary" className="grid gap-1">
             <NavLink label="Home" href="/" onClick={() => setIsOpen(false)} />
 
