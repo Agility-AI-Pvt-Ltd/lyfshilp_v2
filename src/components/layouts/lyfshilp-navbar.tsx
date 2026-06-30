@@ -9,7 +9,12 @@ const programGroups = [
   {
     title: "Learning",
     items: [
-
+      {
+        label: "FutureX Fellowship",
+        href: "/futurex-fellowship",
+        description: "A mentored pathway for ambitious AI product builders",
+        accent: "bg-[#5e22ff]",
+      },
       {
         label: "Summer Programme",
         href: "/summer-programme",
@@ -50,7 +55,7 @@ const programGroups = [
 
 const communityItems = [
   {
-    label: "Lyfshilp Community",
+    label: "FutureX Community",
     href: "/community",
     description: "Student founders building the future together",
   },
@@ -63,7 +68,7 @@ const communityItems = [
 
 const communityFeaturedCards = [
   {
-    label: "Lyfshilp Community",
+    label: "FutureX Community",
     href: "/community",
     kicker: "Community",
     title: "Where student founders build the future together",
@@ -160,7 +165,7 @@ function Logo() {
         priority
       />
       <span className="text-[22px] font-semibold leading-none tracking-normal text-[#272835]">
-        lyfshilp
+        Lyfshilp
       </span>
     </Link>
   );

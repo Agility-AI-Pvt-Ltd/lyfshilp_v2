@@ -1,24 +1,28 @@
 import Link from "next/link";
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
-import { HowWeWork } from "@/src/components/ui/how-we-work";
 import { StaggeredCountdown } from "@/src/components/ui/staggered-countdown";
 import HeroSection from "@/src/components/ui/HeroSection";
+import { FooterStats } from "@/src/components/ui/footer-stats";
+import { JoinCommunity } from "@/src/components/ui/join-community";
 
 const heroCol1 = [
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600&auto=format&fit=crop",
+  "/images/hero/1.JPG",
+  "/images/hero/3.JPG",
+  "/images/hero/5.JPG",
+  "/images/hero/7.JPG",
+  "/images/hero/9.jpg",
+  "/images/hero/11.jpeg",
+  "/images/hero/13.jpeg",
 ];
 
 const heroCol2 = [
-  "https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1618005198143-e528346d9a9f?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop",
+  "/images/hero/2.JPG",
+  "/images/hero/4.JPG",
+  "/images/hero/6.JPG",
+  "/images/hero/8.JPG",
+  "/images/hero/10.jpg",
+  "/images/hero/12.jpeg",
 ];
 
 export const metadata = {
@@ -29,8 +33,8 @@ export const metadata = {
 
 const programmes = [
   {
-    label: "Lyfshilp Fellowship",
-    href: "/lyfshilp-fellowship",
+    label: "FutureX Fellowship",
+    href: "/futurex-fellowship",
     description:
       "A mentored pathway for ambitious learners building AI products and founder-level confidence.",
     accent: "bg-[#5e22ff]",
@@ -134,7 +138,7 @@ export default function Home() {
           title={
             "'Your Child Doesn't Just Learn AI. \nThey Build With It. Lead With It.'"
           }
-          subtitle=""
+          subtitle="Transforming education to inspire, engage, and prepare every student."
           rating="4.9 rating"
           students="500+ student founders"
         />
@@ -212,8 +216,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* How We Work — scroll-driven horizontal section */}
-        <HowWeWork />
 
         {/* Why Lyfshilp */}
         <section className="bg-[#fffaf4] px-6 py-24 sm:px-8 lg:px-14">
@@ -273,6 +275,8 @@ export default function Home() {
         </section>
       </main>
 
+      <FooterStats />
+      <JoinCommunity />
       <LyfshilpFooter />
     </div>
   );

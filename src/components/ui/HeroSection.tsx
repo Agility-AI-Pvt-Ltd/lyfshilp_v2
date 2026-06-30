@@ -37,10 +37,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         }
 
         .row-scroll-left {
-          animation: scrollLeft 24s linear infinite;
+          animation: scrollLeft 60s linear infinite;
         }
         .row-scroll-right {
-          animation: scrollRight 24s linear infinite;
+          animation: scrollRight 60s linear infinite;
         }
 
         .image-card {
