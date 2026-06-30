@@ -2,6 +2,8 @@ import NextImage from "next/image";
 import Link from "next/link";
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
+import { MentorsSection } from "@/src/components/about/mentors-section";
+import { HowWeWork } from "@/src/components/ui/how-we-work";
 
 export const metadata = {
   title: "About Us | Lyfshilp",
@@ -12,11 +14,38 @@ export const metadata = {
 const heroImage =
   "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=85";
 
-const labImage =
-  "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=85";
+const labImage = "/images/about-team/ai-project-lab.png";
 
-const showcaseImage =
-  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=85";
+const showcaseCollage = [
+  {
+    src: "/images/about-collage/reroute-demo.png",
+    alt: "A learner presenting the ReRoute sustainability project during an online demo",
+    wrapperClassName:
+      "h-[240px] sm:col-span-2 sm:h-[320px] lg:col-span-6 lg:col-start-1 lg:row-start-1 lg:h-[400px]",
+    imageClassName: "object-cover",
+  },
+  {
+    src: "/images/about-collage/student-demo-day.png",
+    alt: "A student presenting during a Lyfshilp online demo day",
+    wrapperClassName:
+      "h-[180px] lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:h-[170px]",
+    imageClassName: "object-cover",
+  },
+  {
+    src: "/images/about-collage/creativity-compass-demo.png",
+    alt: "A student showcasing the Creativity Compass project to mentors",
+    wrapperClassName:
+      "h-[180px] lg:col-span-2 lg:col-start-3 lg:row-start-2 lg:h-[170px]",
+    imageClassName: "object-cover",
+  },
+  {
+    src: "/images/about-collage/near-me-demo.jpg",
+    alt: "A student demonstrating the NearMe location discovery project",
+    wrapperClassName:
+      "h-[200px] sm:col-span-2 lg:col-span-4 lg:col-start-1 lg:row-start-3 lg:h-[220px]",
+    imageClassName: "object-contain",
+  },
+];
 
 const proofPoints = [
   { value: "6,000+", label: "students introduced to AI and product thinking" },
@@ -26,37 +55,6 @@ const proofPoints = [
 ];
 
 const droppingAudiences = ["Students", "Schools", "Colleges", "EVERYONE!"];
-
-const learningSystem = [
-  {
-    step: "01",
-    title: "AI Literacy",
-    description:
-      "Students understand prompts, models, data, bias, automation, and responsible AI through age-aware examples.",
-    accent: "bg-[#5e22ff]",
-  },
-  {
-    step: "02",
-    title: "Builder Sprints",
-    description:
-      "Learners move from idea to prototype with AI copilots, no-code tools, design thinking, and mentor reviews.",
-    accent: "bg-[#10b981]",
-  },
-  {
-    step: "03",
-    title: "Founder Mindset",
-    description:
-      "Every project is shaped around a real user, clear problem, feedback loops, storytelling, and demo confidence.",
-    accent: "bg-[#ff492c]",
-  },
-  {
-    step: "04",
-    title: "Showcase Ready",
-    description:
-      "Students leave with portfolios, presentations, products, and the vocabulary to explain what they built.",
-    accent: "bg-[#ffd166]",
-  },
-];
 
 const audiences = [
   {
@@ -96,22 +94,61 @@ const principles = [
 
 const team = [
   {
-    name: "AI Mentors",
-    role: "Prompt workflows, tool stacks, and responsible AI reviews",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=700&q=85",
+    name: "Shraddh Ranj Utsav",
+    role: "Founder & CEO - Lyfshilp Academy & Agility AI",
+    image: "/images/about-team/mentor-1-fill.png",
+    imageClassName: "scale-125 object-[58%_48%]",
   },
   {
-    name: "Learning Designers",
-    role: "Age-aware curriculum, project briefs, and assessment rubrics",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=85",
+    name: "Shreya Sinha",
+    role: "Co-Founder & COO - Lyfshilp Academy & Agility AI",
+    image: "/images/about-team/mentor-2-fill.png",
+    imageClassName: "scale-125 object-[50%_42%]",
   },
   {
-    name: "Builder Community",
-    role: "Demo days, peer circles, founder feedback, and momentum",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=85",
+    name: "Aryan Shukla",
+    role: "Co-Founder & CTO - Lyfshilp Academy & Agility AI",
+    image: "/images/about-team/mentor-3.png",
+    imageClassName: "object-center",
+  },
+];
+
+const mentorProfiles = [
+  {
+    name: "Shraddh Ranj Utsav",
+    role: "Founder & CEO - Lyfshilp Academy & Agility AI",
+    credentials:
+      "B.Tech, NSUT Delhi; MBA in Rural Management, IRMA Anand; advanced studies in Data Science & AI, BITS Pilani.",
+    detail:
+      "Architect of Lyfshilp Academy's fellowship and learning frameworks. His work spans Amul, Resil agritech, the Gandhi Fellowship with Piramal Foundation, International Trade Centre research in Geneva, and the Prime Minister's Rural Fellowship programme.",
+    focus: "Programme vision, strategy, and partnerships for FutureX AI.",
+  },
+  {
+    name: "Shreya Sinha",
+    role: "Co-Founder & COO - Lyfshilp Academy & Agility AI",
+    credentials:
+      "B.Tech, NSUT Delhi; PGP in Digital Marketing & Strategic Marketing, MICA Ahmedabad; Economics at National School of Drama.",
+    detail:
+      "Nearly six years at Piramal Pharma Solutions leading digital marketing and analytics, plus two years with Piramal Foundation across 63 rural government schools in Rajasthan.",
+    focus: "Curriculum design, mentor engagement, and student experience.",
+  },
+  {
+    name: "Aryan Shukla",
+    role: "Co-Founder & CTO - Lyfshilp Academy & Agility AI",
+    credentials:
+      "Integrated B.Tech + M.Tech in Mathematics and Computing from IIT (BHU) Varanasi.",
+    detail:
+      "Owns the full technology stack across AI systems, agentic architectures, retrieval-augmented knowledge systems, and automation pipelines. Previously a Machine Learning Engineer at Samsung Research Institute, Delhi, with an Expert rating on Codeforces.",
+    focus: "AI systems, platform architecture, and technical mentorship.",
+  },
+  {
+    name: "C.A. Saurabh Jain",
+    role: "Co-Founder - Lyfshilp Academy & Agility AI",
+    credentials:
+      "CA (ICAI) , CS-II , MBA (ICAI) , IMSIP (ICAI)",
+    detail:
+      "A finance, compliance, and strategic operations leader with more than a decade of experience bringing financial rigour and governance depth to the FutureX fellowship team.",
+    focus: "Financial strategy, regulatory compliance, and operational efficiency.",
   },
 ];
 
@@ -121,28 +158,6 @@ function ArrowGlyph() {
       aria-hidden="true"
       className="size-0 border-y-[5px] border-l-[7px] border-y-transparent border-l-current"
     />
-  );
-}
-
-function PixelMark({ accent }: { accent: string }) {
-  const pixels = [1, 2, 4, 7, 8, 10, 13, 14];
-
-  return (
-    <span
-      className={`grid size-12 shrink-0 grid-cols-4 grid-rows-4 overflow-hidden rounded-sm ${accent} p-1`}
-      aria-hidden="true"
-    >
-      {Array.from({ length: 16 }).map((_, index) => (
-        <span
-          key={index}
-          className={
-            pixels.includes(index)
-              ? "m-0.5 rounded-[1px] bg-white"
-              : "m-0.5 rounded-[1px] bg-black/20"
-          }
-        />
-      ))}
-    </span>
   );
 }
 
@@ -335,7 +350,7 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            <div className="relative min-h-[460px] overflow-hidden rounded-sm bg-[#101116]">
+            <div className="relative min-h-[460px] overflow-hidden rounded-2xl bg-[#101116] shadow-[0_24px_64px_rgba(0,0,0,0.38)] ring-1 ring-black/10">
               <NextImage
                 src={labImage}
                 alt="Learners and mentors working together in an AI project lab"
@@ -356,81 +371,49 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="bg-[#fffaf4] px-6 py-20 sm:px-8 lg:px-14 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div>
-                <p className="mb-4 text-[13px] font-black uppercase tracking-[0.18em] text-[#8a90a3]">
-                  How It Works
-                </p>
-                <h2 className="max-w-3xl text-[38px] font-black leading-tight tracking-normal text-[#272835] sm:text-[52px]">
-                  A practical AI learning system, not a lecture series.
-                </h2>
+        <HowWeWork />
+
+        <section
+          className="overflow-hidden bg-[#fffaf4] px-6 py-16 sm:px-8 lg:px-14 lg:py-20"
+          aria-label="Lyfshilp learner project showcase"
+        >
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
+            {showcaseCollage.map((image) => (
+              <div
+                key={image.src}
+                className={`group relative overflow-hidden rounded-2xl bg-[#101116] shadow-[0_16px_40px_rgba(0,0,0,0.22)] ring-1 ring-black/10 ${image.wrapperClassName}`}
+              >
+                <NextImage
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 1280px, (min-width: 640px) 50vw, 100vw"
+                  className={`${image.imageClassName} transition-transform duration-500 group-hover:scale-[1.015]`}
+                />
               </div>
-              <p className="max-w-md text-[16px] leading-7 text-[#747b8f]">
-                Every pathway moves students from awareness to application,
-                then into feedback, refinement, and public presentation.
-              </p>
-            </div>
+            ))}
 
-            <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-              {learningSystem.map((item) => (
-                <article
-                  key={item.title}
-                  className="group min-h-[330px] rounded-sm border border-[#e6e8ef] bg-white p-7 transition-all hover:-translate-y-1 hover:border-[#272835]"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <PixelMark accent={item.accent} />
-                    <span className="text-[13px] font-black tracking-[0.2em] text-[#c7cad6]">
-                      {item.step}
-                    </span>
-                  </div>
-                  <h3 className="mt-8 text-[28px] font-black leading-tight tracking-normal text-[#272835]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-5 text-[16px] leading-7 text-[#747b8f]">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="overflow-hidden bg-[#101116] px-6 py-20 text-white sm:px-8 lg:px-14 lg:py-24">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <div className="relative min-h-[430px] overflow-hidden rounded-sm">
-              <NextImage
-                src={showcaseImage}
-                alt="Students presenting a project during a Lyfshilp showcase"
-                fill
-                sizes="(min-width: 1024px) 640px, 100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-[#101116]/18" aria-hidden="true" />
-            </div>
-
-            <div>
-              <p className="mb-4 text-[13px] font-black uppercase tracking-[0.18em] text-[#CFFD53]">
+            <div className="flex min-h-[360px] flex-col rounded-2xl bg-[#101116] p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.26)] sm:col-span-2 sm:p-7 lg:col-span-2 lg:col-start-5 lg:row-start-2 lg:row-span-2">
+              <p className="text-[12px] font-black uppercase tracking-[0.18em] text-[#CFFD53]">
                 Who We Serve
               </p>
-              <h2 className="text-[38px] font-black leading-tight tracking-normal sm:text-[52px]">
+              <h2 className="mt-3 text-[28px] font-black leading-tight tracking-normal sm:text-[32px]">
                 AI pathways for schools, colleges, and teams.
               </h2>
-              <div className="mt-10 grid gap-7">
+              <div className="mt-auto grid gap-3 pt-6">
                 {audiences.map((audience, index) => (
                   <div
                     key={audience.title}
-                    className="grid gap-4 border-t border-white/14 pt-7 sm:grid-cols-[76px_1fr]"
+                    className="grid grid-cols-[30px_1fr] gap-2 border-t border-white/14 pt-3"
                   >
-                    <span className="text-[15px] font-black tracking-[0.22em] text-white/28">
+                    <span className="pt-0.5 text-[11px] font-black tracking-[0.16em] text-white/30">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div>
-                      <h3 className="text-[24px] font-black tracking-normal">
+                      <h3 className="text-[16px] font-black tracking-normal">
                         {audience.title}
                       </h3>
-                      <p className="mt-3 max-w-xl text-[16px] leading-7 text-white/62">
+                      <p className="mt-1 text-[12px] leading-5 text-white/58">
                         {audience.description}
                       </p>
                     </div>
@@ -453,11 +436,6 @@ export default function AboutUsPage() {
                   confidence.
                 </h2>
               </div>
-              <p className="max-w-md text-[16px] leading-7 text-[#747b8f]">
-                The Lyfshilp team keeps learning grounded in practical outcomes:
-                useful tools, stronger portfolios, sharper thinking, and a
-                community that keeps building.
-              </p>
             </div>
 
             <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -466,13 +444,13 @@ export default function AboutUsPage() {
                   key={member.name}
                   className="overflow-hidden rounded-sm border border-[#e6e8ef] bg-[#fffaf4]"
                 >
-                  <div className="relative h-[310px]">
+                  <div className="relative h-[310px] overflow-hidden">
                     <NextImage
                       src={member.image}
                       alt={member.name}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
+                      className={`object-cover ${member.imageClassName}`}
                     />
                   </div>
                   <div className="p-6">
@@ -486,6 +464,8 @@ export default function AboutUsPage() {
                 </article>
               ))}
             </div>
+
+            <MentorsSection mentors={mentorProfiles} />
           </div>
         </section>
 
