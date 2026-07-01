@@ -7,7 +7,7 @@ const footerLinks = [
     title: "Programs",
     links: [
       { label: "FutureX Fellowship", href: "/futurex-fellowship" },
-      { label: "Summer Programme", href: "/summer-programme" },
+      { label: "AI Scholar Program", href: "/summer-programme" },
       { label: "For Schools", href: "/for-schools" },
       { label: "For Colleges", href: "/for-colleges" },
       { label: "Corporate AI", href: "/corporate-ai" },

@@ -94,7 +94,7 @@ const principles = [
 
 const team = [
   {
-    name: "Shraddh Ranj Utsav",
+    name: "Sharadd Raaj Utsav",
     role: "Founder & CEO - Lyfshilp Academy & Agility AI",
     image: "/images/about-team/mentor-1-fill.png",
     imageClassName: "scale-125 object-[58%_48%]",
@@ -115,7 +115,7 @@ const team = [
 
 const mentorProfiles = [
   {
-    name: "Shraddh Ranj Utsav",
+    name: "Sharadd Raaj Utsav",
     role: "Founder & CEO - Lyfshilp Academy & Agility AI",
     credentials:
       "B.Tech, NSUT Delhi; MBA in Rural Management, IRMA Anand; advanced studies in Data Science & AI, BITS Pilani.",
