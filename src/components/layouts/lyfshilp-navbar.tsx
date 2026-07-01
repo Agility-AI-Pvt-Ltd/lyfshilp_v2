@@ -16,7 +16,7 @@ const programGroups = [
         accent: "bg-[#5e22ff]",
       },
       {
-        label: "Summer Programme",
+        label: "AI Scholar Program",
         href: "/summer-programme",
         description: "Focused project sprints with practical outcomes",
         accent: "bg-[#10b981]",

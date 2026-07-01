@@ -36,14 +36,14 @@ const routeContent: Record<string, RouteContent> = {
     accent: "bg-[#5e22ff]",
   },
   "summer-programme": {
-    title: "Focused summer sprints with practical outcomes.",
-    eyebrow: "Summer Programme",
+    title: "AI learning that turns curiosity into real projects.",
+    eyebrow: "AI Scholar Program",
     description:
-      "A compact programme for students to explore AI, build real projects, and finish the break with work they can show.",
+      "A guided program for students to build practical AI literacy, use modern tools responsibly, and finish with work they can demonstrate.",
     points: [
-      "Short, structured project cycles",
-      "Applied AI and product thinking",
-      "Demo-ready final projects",
+      "Practical AI and prompt engineering",
+      "Responsible, project-led learning",
+      "Demo-ready student projects",
     ],
     accent: "bg-[#10b981]",
   },
