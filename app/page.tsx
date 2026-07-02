@@ -3,7 +3,6 @@ import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
 import { StaggeredCountdown } from "@/src/components/ui/staggered-countdown";
 import HeroSection from "@/src/components/ui/HeroSection";
-import { FooterStats } from "@/src/components/ui/footer-stats";
 import { JoinCommunity } from "@/src/components/ui/join-community";
 import { ProgramsSection } from "@/src/components/ui/programs-section";
 
@@ -33,27 +32,6 @@ export const metadata = {
 };
 
 const programmes = [
-  {
-    label: "FutureX Fellowship",
-    href: "/lyfshilp-fellowship",
-    description:
-      "A mentored pathway for ambitious learners building AI products and founder-level confidence.",
-    accent: "bg-[#5e22ff]",
-  },
-  {
-    label: "AI Scholar Program",
-    href: "/summer-programme",
-    description:
-      "Project-led AI learning with practical, demo-ready outcomes students can actually show.",
-    accent: "bg-[#10b981]",
-  },
-  {
-    label: "For Schools",
-    href: "/for-schools",
-    description:
-      "Age-aware AI literacy and creative technology projects that help students learn by making.",
-    accent: "bg-[#ff492c]",
-  },
   {
     label: "For Colleges",
     href: "/for-colleges",
@@ -145,6 +123,35 @@ export default function Home() {
         />
 
         <ProgramsSection />
+
+        {/* Stats band */}
+        <section className="bg-[#0d0d0d] px-6 py-24 sm:px-8 lg:px-14">
+          <div className="mx-auto max-w-7xl">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-white/40">
+              By the numbers
+            </p>
+            <h2 className="max-w-3xl text-[36px] font-black leading-tight tracking-tight text-white sm:text-[48px]">
+              A growing movement of young builders.
+            </h2>
+
+            <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <StaggeredCountdown
+                    value={stat.digits}
+                    suffix={stat.suffix}
+                    color="#ffffff"
+                    duration={2}
+                    className="text-[54px] font-black leading-none tracking-tight sm:text-[64px]"
+                  />
+                  <p className="mt-4 text-[17px] font-semibold tracking-normal text-white/70">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Original programmes grid */}
         <section className="border-b border-[#efe7da] bg-white px-6 py-24 sm:px-8 lg:px-14">
@@ -246,37 +253,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats band */}
-        <section className="bg-[#0d0d0d] px-6 py-24 sm:px-8 lg:px-14">
-          <div className="mx-auto max-w-7xl">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-white/40">
-              By the numbers
-            </p>
-            <h2 className="max-w-3xl text-[36px] font-black leading-tight tracking-tight text-white sm:text-[48px]">
-              A growing movement of young builders.
-            </h2>
-
-            <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <StaggeredCountdown
-                    value={stat.digits}
-                    suffix={stat.suffix}
-                    color="#ffffff"
-                    duration={2}
-                    className="text-[54px] font-black leading-none tracking-tight sm:text-[64px]"
-                  />
-                  <p className="mt-4 text-[17px] font-semibold tracking-normal text-white/70">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
 
-      <FooterStats />
       <JoinCommunity />
       <LyfshilpFooter />
     </div>

@@ -23,7 +23,7 @@ const routeContent: Record<string, RouteContent> = {
     ],
     accent: "bg-[#CFFD53]",
   },
-  "lyfshilp-fellowship": {
+  "futurex-fellowship": {
     title: "A fellowship for ambitious student builders.",
     eyebrow: "Lyfshilp Fellowship",
     description:
