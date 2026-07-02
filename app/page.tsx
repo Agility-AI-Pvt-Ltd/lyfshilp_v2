@@ -38,6 +38,7 @@ const programmes = [
     description:
       "Campus programmes aligned with real industry work, startup labs, and mentor showcases.",
     accent: "bg-[#ffd166]",
+    status: "Launching Soon",
   },
   {
     label: "Corporate AI",
@@ -45,6 +46,7 @@ const programmes = [
     description:
       "Practical AI enablement and adoption support for modern teams and everyday work.",
     accent: "bg-[#242532]",
+    status: "Launching Soon",
   },
 ];
 
@@ -191,7 +193,7 @@ export default function Home() {
                     </p>
                   </div>
                   <span className="mt-auto flex items-center gap-2 text-[14px] font-semibold text-[#747b8f] transition-colors group-hover:text-[#272835]">
-                    Learn more
+                    {programme.status ?? "Learn more"}
                     <ArrowGlyph />
                   </span>
                 </Link>

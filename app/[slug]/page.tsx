@@ -60,10 +60,10 @@ const routeContent: Record<string, RouteContent> = {
     accent: "bg-[#ff492c]",
   },
   "for-colleges": {
-    title: "Campus programmes aligned with real industry work.",
+    title: "Launching soon.",
     eyebrow: "For Colleges",
     description:
-      "Lyfshilp helps colleges run builder-focused AI programmes that turn student potential into visible projects and career momentum.",
+      "Our builder-focused college programme is being prepared for launch. It will turn student potential into visible projects and career momentum.",
     points: [
       "Startup and product labs",
       "Industry-style project briefs",
@@ -72,10 +72,10 @@ const routeContent: Record<string, RouteContent> = {
     accent: "bg-[#ffd166]",
   },
   "corporate-ai": {
-    title: "AI enablement for modern teams.",
+    title: "Launching soon.",
     eyebrow: "Corporate AI",
     description:
-      "Practical training and adoption support for teams that want to use AI responsibly in everyday work, decision-making, and delivery.",
+      "Our practical AI enablement programme for modern teams is being prepared for launch.",
     points: [
       "Role-specific AI workflows",
       "Team training and playbooks",
