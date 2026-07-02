@@ -54,30 +54,38 @@ const programmes = [
   },
 ];
 
-const reasons = [
-  {
-    title: "Mentored, not lectured",
-    description:
-      "Learn directly from founders, builders, and industry mentors who guide every sprint instead of just handing out theory.",
-  },
-  {
-    title: "Build real, shippable work",
-    description:
-      "Every learner finishes with projects worth showing — AI tools, startups, and initiatives that move from idea to launch.",
-  },
-  {
-    title: "A nationwide builder community",
-    description:
-      "Find collaborators, co-founders, and feedback across schools and colleges in cities all over India.",
-  },
-];
 
 const stats = [
-  { digits: "5,000", suffix: "+", label: "Student Trained" },
-  { digits: "40", suffix: "+", label: "Partner schools" },
-  { digits: "14", suffix: "", label: "Cities across India" },
-  { digits: "100% Free Tools", suffix: "", label: "Zero extra cost beyond program fee" },
-  { digits: "Intl. Certified", suffix: "", label: "International FutureX Fellowship seal" },
+  {
+    digits: "5,000",
+    suffix: "+",
+    label: "Student Trained",
+    description: "Empowering young minds across high schools and colleges with hands-on startup and tech curricula."
+  },
+  {
+    digits: "40",
+    suffix: "+",
+    label: "Partner schools",
+    description: "Collaborating with elite institutions to drive active tech and AI training directly."
+  },
+  {
+    digits: "14",
+    suffix: "",
+    label: "Cities across India",
+    description: "Forging a nationwide builder community of ambitious learners, co-founders, and mentors."
+  },
+  {
+    digits: "100% Free Tools",
+    suffix: "",
+    label: "Zero extra cost beyond program fee",
+    description: "Ensuring no barriers to entry with completely free, no-code, and open-source ecosystems."
+  },
+  {
+    digits: "Intl. Certified",
+    suffix: "",
+    label: "International FutureX Fellowship seal",
+    description: "Validating student outcomes with international seals and credentials recognized worldwide."
+  },
 ];
 
 function PixelMark({ accent }: { accent: string }) {
@@ -129,34 +137,58 @@ export default function Home() {
           students="500+ student founders"
         />
 
-        {/* Stats band */}
-        <section className="bg-[#0d0d0d] px-4 pb-0 pt-24 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[1440px]">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-white/40">
-              By the numbers
-            </p>
-            <h2 className="max-w-3xl text-[36px] font-black leading-tight tracking-tight text-white sm:text-[48px]">
-              A growing movement of young builders.
-            </h2>
+        <FutureXReviewsSection />
 
-            <div className="mt-16 grid gap-4 grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-4">
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col">
-                  <StaggeredCountdown
-                    value={stat.digits}
-                    suffix={stat.suffix}
-                    color="#ffffff"
-                    duration={2}
-                    className="text-[26px] font-black leading-none tracking-tight sm:text-[32px] lg:text-[36px]"
-                  />
-                  <p className="mt-3 text-[14px] font-semibold tracking-normal text-white/70 leading-snug sm:text-[15px]">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+        {/* Stats band */}
+        <section className="bg-[#0d0d0d] px-4 pb-24 pt-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1440px] mb-24">
+            
+            {/* White card container */}
+            <div className="bg-white rounded-[32px] md:rounded-[40px] px-8 py-16 md:px-12 md:py-20 shadow-2xl border border-[#efe7da]/30 text-[#272835]">
+              
+              {/* Header with headings */}
+              <div className="mb-16">
+                <h2 className="text-[32px] sm:text-[42px] font-black text-[#272835] tracking-tight leading-none">
+                  We only deliver results.
+                </h2>
+                <p className="mt-4 text-[16px] sm:text-[18px] text-[#747b8f] font-medium leading-relaxed max-w-2xl">
+                  We don&apos;t use excuses or something. Okay maybe sometimes.
+                </p>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-8 xl:gap-x-12 gap-y-12 border-t border-[#272835]/10 pt-16">
+                {stats.map((stat) => {
+                  const isLong = stat.digits.length > 8;
+                  return (
+                    <div key={stat.label} className="flex flex-col text-left">
+                      <div className="flex items-baseline">
+                        <StaggeredCountdown
+                          value={stat.digits}
+                          suffix={stat.suffix}
+                          color="#272835"
+                          duration={2}
+                          className={`font-black leading-none tracking-tight text-[#272835] ${
+                            isLong
+                              ? "text-[20px] sm:text-[24px] lg:text-[28px]"
+                              : "text-[32px] sm:text-[36px] lg:text-[40px]"
+                          }`}
+                        />
+                      </div>
+                      <p className="mt-4 text-[15px] font-extrabold tracking-tight text-[#272835] leading-snug">
+                        {stat.label}
+                      </p>
+                      <p className="mt-3 text-[14px] leading-relaxed text-[#747b8f]">
+                        {stat.description}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
-            <div className="mt-20 border-t border-white/10 pt-16 text-center">
+            {/* Customer Stories Header */}
+            <div className="mt-24 text-center">
               <p className="text-[13px] font-black uppercase tracking-[0.2em] text-[#9bd340]">
                 Customer stories
               </p>
@@ -245,35 +277,6 @@ export default function Home() {
           </div>
         </section> */}
 
-        {/* Why Lyfshilp */}
-        <section className="bg-[#fffaf4] px-6 py-24 sm:px-8 lg:px-14">
-          <div className="mx-auto max-w-7xl">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-[#8a90a3]">
-              Why Lyfshilp
-            </p>
-            <h2 className="max-w-3xl text-[40px] font-black leading-tight tracking-tight text-[#272835] sm:text-[52px]">
-              Learning that ends in real work, not just a certificate.
-            </h2>
-
-            <div className="mt-16 grid gap-12 border-t border-[#e6e8ef] pt-12 lg:grid-cols-3 lg:gap-16">
-              {reasons.map((reason, index) => (
-                <div key={reason.title}>
-                  <span className="text-[15px] font-black tracking-widest text-[#c7cad6]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-5 text-[24px] font-bold leading-tight tracking-tight text-[#272835]">
-                    {reason.title}
-                  </h3>
-                  <p className="mt-4 text-[16px] leading-7 text-[#747b8f]">
-                    {reason.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <FutureXReviewsSection />
       </main>
 
       <JoinCommunity />
