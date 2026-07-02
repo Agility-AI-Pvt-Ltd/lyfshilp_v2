@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title = "Master Pro\n3D Design",
   subtitle =
     "GET READY TO TRULY ROCK YOUR 3D DESIGN SKILLS WITH FUN PROJECTS, REAL-LIFE WORKFLOWS, AND TRAINING FROM THE PROS. LEARN BY DOING WITH HANDS-ON PROJECTS THAT MIRROR REAL INDUSTRY WORKFLOWS.",
-  trustedText = "Trusted by 5,000+ students across 14 Indian cities",
+  trustedText = "India's Most Serious AI Program for School Students.",
 }) => {
   // Duplicate images for seamless infinite loop
   const col1 = [...columnOneImages, ...columnOneImages, ...columnOneImages];

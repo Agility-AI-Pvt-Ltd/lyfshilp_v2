@@ -5,6 +5,8 @@ import { StaggeredCountdown } from "@/src/components/ui/staggered-countdown";
 import HeroSection from "@/src/components/ui/HeroSection";
 import { JoinCommunity } from "@/src/components/ui/join-community";
 import { ProgramsSection } from "@/src/components/ui/programs-section";
+import { BuiltTogether } from "@/src/components/ui/built-together";
+import { RealVoices } from "@/src/components/ui/real-voices";
 import { CustomerReviews } from "@/src/components/ui/customer-reviews";
 import { FutureXReviewsSection } from "@/src/components/ui/futurex-reviews-section";
 
@@ -71,10 +73,11 @@ const reasons = [
 ];
 
 const stats = [
-  { digits: "500", suffix: "+", label: "Student founders" },
-  { digits: "50", suffix: "+", label: "Partner schools" },
-  { digits: "20", suffix: "+", label: "Mentors and builders" },
-  { digits: "10", suffix: "+", label: "Cities represented" },
+  { digits: "5,000", suffix: "+", label: "Student Trained" },
+  { digits: "40", suffix: "+", label: "Partner schools" },
+  { digits: "14", suffix: "", label: "Cities across India" },
+  { digits: "100% Free Tools", suffix: "", label: "Zero extra cost beyond program fee" },
+  { digits: "Intl. Certified", suffix: "", label: "International FutureX Fellowship seal" },
 ];
 
 function PixelMark({ accent }: { accent: string }) {
@@ -121,16 +124,14 @@ export default function Home() {
           title={
             "'Your Child Doesn't Just Learn AI. \nThey Build With It. Lead With It.'"
           }
-          subtitle="Transforming education to inspire, engage, and prepare every student."
+          subtitle="The FutureX Fellowship is a 36-session, project-led program where students in Grades 6-12 build real AI tools, pitch real business ideas, and earn internationally recognised certification — all using free tools."
           rating="4.9 rating"
           students="500+ student founders"
         />
 
-        <ProgramsSection />
-
         {/* Stats band */}
-        <section className="bg-[#0d0d0d] px-6 pb-0 pt-24 sm:px-8 lg:px-14">
-          <div className="mx-auto max-w-7xl">
+        <section className="bg-[#0d0d0d] px-4 pb-0 pt-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1440px]">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-white/40">
               By the numbers
             </p>
@@ -138,17 +139,17 @@ export default function Home() {
               A growing movement of young builders.
             </h2>
 
-            <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-16 grid gap-4 grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-4">
               {stats.map((stat) => (
-                <div key={stat.label}>
+                <div key={stat.label} className="flex flex-col">
                   <StaggeredCountdown
                     value={stat.digits}
                     suffix={stat.suffix}
                     color="#ffffff"
                     duration={2}
-                    className="text-[54px] font-black leading-none tracking-tight sm:text-[64px]"
+                    className="text-[26px] font-black leading-none tracking-tight sm:text-[32px] lg:text-[36px]"
                   />
-                  <p className="mt-4 text-[17px] font-semibold tracking-normal text-white/70">
+                  <p className="mt-3 text-[14px] font-semibold tracking-normal text-white/70 leading-snug sm:text-[15px]">
                     {stat.label}
                   </p>
                 </div>
@@ -168,8 +169,12 @@ export default function Home() {
           <CustomerReviews />
         </section>
 
+        <ProgramsSection />
+        <BuiltTogether />
+        <RealVoices />
+
         {/* Original programmes grid */}
-        <section className="border-b border-[#efe7da] bg-white px-6 py-24 sm:px-8 lg:px-14">
+        {/* <section className="border-b border-[#efe7da] bg-white px-6 py-24 sm:px-8 lg:px-14">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -238,7 +243,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Why Lyfshilp */}
         <section className="bg-[#fffaf4] px-6 py-24 sm:px-8 lg:px-14">
