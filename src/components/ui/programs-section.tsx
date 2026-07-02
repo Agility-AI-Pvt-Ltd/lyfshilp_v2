@@ -9,7 +9,7 @@ type Program = {
   title: string;
   audience: string;
   duration: string;
-  description: string;
+  benefits: string[];
   cta: string;
   href: string;
   accent: string;
@@ -23,10 +23,15 @@ const programs: Program[] = [
     title: "International FutureX Fellowship",
     audience: "School & college students, Grades 6–12",
     duration: "36 sessions over 9 months (Online)",
-    description:
-      "Build a real startup, pitch to investors, earn international certification. Demo Day, Harvard Case Method, XP system.",
+    benefits: [
+      "Build and validate a real startup",
+      "Pitch to investors at Demo Day",
+      "Earn an international certification",
+      "Learn through the Harvard Case Method",
+      "Grow with an XP-based progress system",
+    ],
     cta: "Explore the Fellowship",
-    href: "/lyfshilp-fellowship",
+    href: "/futurex-fellowship",
     accent: "#9f7b19",
     softAccent: "#fff4d8",
     icon: "star",
@@ -36,8 +41,13 @@ const programs: Program[] = [
     title: "AI Scholar Track",
     audience: "Schools and their students (in-school delivery)",
     duration: "Semester-long — 20 sessions",
-    description:
-      "Schools integrate AI literacy into curriculum. Students learn prompt engineering, AI ethics, and build their first AI tool within school hours.",
+    benefits: [
+      "Build practical AI literacy during school hours",
+      "Learn prompt engineering through projects",
+      "Understand AI ethics and responsible use",
+      "Create a first working AI tool",
+      "Present finished work in a student showcase",
+    ],
     cta: "Partner with Your School",
     href: "/for-schools",
     accent: "#6629d6",
@@ -49,8 +59,13 @@ const programs: Program[] = [
     title: "Build With AI",
     audience: "Older students, undergrads, working professionals",
     duration: "8 weekends (16 sessions, online)",
-    description:
-      "Build 3 real AI-powered tools using free platforms — no coding required. Demo Day at the end.",
+    benefits: [
+      "Build 3 useful AI-powered tools",
+      "Work with free, no-code platforms",
+      "Follow a guided 8-weekend build plan",
+      "Improve through mentor and peer feedback",
+      "Present finished tools at Demo Day",
+    ],
     cta: "Join the Next Cohort",
     href: "/products",
     accent: "#16804b",
@@ -318,75 +333,97 @@ export function ProgramsSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid items-stretch gap-5 lg:mt-20 lg:grid-cols-3 lg:gap-6">
-          {programs.map((program, index) => (
+        <div className="mt-16 grid items-stretch gap-6 lg:mt-20 lg:grid-cols-3 lg:gap-7">
+          {programs.map((program) => (
             <article
               key={program.title}
-              className="group relative flex min-h-[560px] flex-col overflow-hidden rounded-[28px] border border-[#dce4de] bg-white/95 p-7 shadow-[0_18px_55px_rgba(31,56,44,0.08)] backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(31,56,44,0.15)] sm:p-9"
+              className="group relative flex flex-col overflow-hidden rounded-[28px] border border-[#dce4de] bg-white/95 shadow-[0_18px_55px_rgba(31,56,44,0.09)] backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(31,56,44,0.16)] lg:min-h-[820px]"
             >
-              <div
-                className="absolute inset-x-0 top-0 h-2"
-                style={{
-                  background: `linear-gradient(90deg, ${program.accent}, ${index === 1 ? "#a976ff" : "#55ba79"})`,
-                }}
-                aria-hidden="true"
-              />
-              <div
-                className="absolute -right-20 -top-20 size-52 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-50"
-                style={{ backgroundColor: program.softAccent }}
-                aria-hidden="true"
-              />
+              <div className="relative flex flex-col p-7 sm:p-9 lg:min-h-[350px]">
+                <div
+                  className="absolute -right-20 -top-20 size-52 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"
+                  style={{ backgroundColor: program.softAccent }}
+                  aria-hidden="true"
+                />
 
-              <div
-                className="relative grid size-16 place-items-center rounded-[20px] transition-transform duration-500 group-hover:rotate-6 group-hover:scale-105"
-                style={{
-                  color: program.accent,
-                  backgroundColor: program.softAccent,
-                }}
-              >
-                <ProgramIcon icon={program.icon} />
-              </div>
+                <div className="relative flex items-center justify-between gap-4">
+                  <div
+                    className="grid size-16 shrink-0 place-items-center rounded-[20px] transition-transform duration-500 group-hover:rotate-6 group-hover:scale-105"
+                    style={{
+                      color: program.accent,
+                      backgroundColor: program.softAccent,
+                    }}
+                  >
+                    <ProgramIcon icon={program.icon} />
+                  </div>
+                  <span
+                    className="inline-flex rounded-full px-4 py-2 text-right text-[11px] font-black uppercase tracking-[0.08em] sm:text-[12px]"
+                    style={{
+                      color: program.accent,
+                      backgroundColor: program.softAccent,
+                    }}
+                  >
+                    {program.badge}
+                  </span>
+                </div>
 
-              <div className="relative mt-8">
-                <span
-                  className="inline-flex rounded-full px-4 py-2 text-[12px] font-black uppercase tracking-[0.08em]"
-                  style={{
-                    color: program.accent,
-                    backgroundColor: program.softAccent,
-                  }}
-                >
-                  {program.badge}
-                </span>
-                <h3 className="mt-6 text-[31px] font-black leading-[1.08] tracking-[-0.035em] text-[#10271e] sm:text-[34px]">
+                <h3 className="relative mt-8 text-[31px] font-black leading-[1.08] tracking-[-0.035em] text-[#10271e] sm:text-[35px]">
                   {program.title}
                 </h3>
+
+                <div className="relative mt-7 space-y-4 text-[16px] leading-7 text-[#5a6a63]">
+                  <p>
+                    <strong className="font-black text-[#173027]">For: </strong>
+                    {program.audience}
+                  </p>
+                  <p>
+                    <strong className="font-black text-[#173027]">
+                      Duration:{" "}
+                    </strong>
+                    {program.duration}
+                  </p>
+                </div>
+
               </div>
 
-              <div className="relative mt-8 space-y-4 border-y border-[#dfe5e1] py-7 text-[16px] leading-7 text-[#5a6a63]">
-                <p>
-                  <strong className="font-black text-[#173027]">For: </strong>
-                  {program.audience}
-                </p>
-                <p>
-                  <strong className="font-black text-[#173027]">
-                    Duration:{" "}
-                  </strong>
-                  {program.duration}
-                </p>
+              <div className="relative flex flex-1 flex-col border-t border-[#dfe5e1] bg-[#fbfcfb] p-7 sm:p-9">
+                <h4 className="text-[17px] font-black text-[#173027]">
+                  Program benefits:
+                </h4>
+                <ul className="mt-5 space-y-4">
+                  {program.benefits.map((benefit) => (
+                    <li
+                      key={benefit}
+                      className="grid grid-cols-[auto_1fr] gap-3 text-[15px] leading-6 text-[#4e5e57] sm:text-[16px]"
+                    >
+                      <span
+                        className="mt-0.5 grid size-5 place-items-center rounded-full text-[12px] font-black"
+                        style={{
+                          color: program.accent,
+                          backgroundColor: program.softAccent,
+                        }}
+                        aria-hidden="true"
+                      >
+                        ✓
+                      </span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href={program.href}
+                  className="relative mt-8 flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-[#10271e] px-5 py-4 text-center text-[16px] font-black text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:shadow-[0_12px_28px_rgba(16,39,30,0.22)] lg:mt-auto lg:pt-4"
+                >
+                  {program.cta}
+                  <span
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </Link>
               </div>
-
-              <p className="relative mt-7 text-[17px] leading-7 text-[#263a32]">
-                {program.description}
-              </p>
-
-              <Link
-                href={program.href}
-                className="relative mt-auto inline-flex w-fit items-center gap-3 pt-8 text-[16px] font-black transition-all hover:gap-5"
-                style={{ color: program.accent }}
-              >
-                {program.cta}
-                <span aria-hidden="true">→</span>
-              </Link>
             </article>
           ))}
         </div>
