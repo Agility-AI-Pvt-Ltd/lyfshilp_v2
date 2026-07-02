@@ -18,7 +18,7 @@ const programs: Program[] = [
     badge: "Flagship · Grades 6–12",
     title: "International FutureX Fellowship",
     audience: "School & college students, Grades 6–12",
-    duration: "36 sessions over 9 months (Online)",
+    duration: "36 sessions over 6 months (Online)",
     benefits: [
       "Build and validate a real startup",
       "Pitch to investors at Demo Day",

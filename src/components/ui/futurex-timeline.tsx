@@ -56,7 +56,7 @@ export function FutureXTimelineSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="mb-6 text-[42px] font-black leading-[1.08] tracking-[-0.03em] text-[#111827] sm:text-[56px]">
-              The 9-Month Journey
+              The 6-Month Journey
             </h2>
             <p className="mx-auto max-w-2xl text-[19px] leading-relaxed text-[#4b5563] sm:text-[21px]">
               From idea to Demo Day. A structured path that mirrors how real

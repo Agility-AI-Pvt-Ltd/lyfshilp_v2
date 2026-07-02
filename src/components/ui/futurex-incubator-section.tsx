@@ -1,4 +1,5 @@
 import React from "react";
+import NextImage from "next/image";
 
 const features = [
   {
@@ -100,24 +101,16 @@ const features = [
     title: "AI-Powered Tools",
     description:
       "Access a built-in AI Playground and Research Workspace to prototype ideas, analyse feasibility, and experiment with prompt engineering.",
-    bgColor: "bg-[#2dd4bf]",
+    bgColor: "bg-[#153d70]",
     illustration: (
-      <div className="relative h-full w-full p-6 flex items-center justify-center">
-        {/* AI Chat / Interface UI */}
-        <div className="w-[85%] h-[80%] bg-white rounded-xl shadow-lg p-3 flex flex-col">
-          <div className="flex-1 flex flex-col gap-3">
-            <div className="self-end w-[70%] h-8 bg-teal-100 rounded-2xl rounded-tr-sm p-2 flex items-center">
-              <div className="w-1/2 h-1.5 bg-teal-300 rounded-full ml-2"></div>
-            </div>
-            <div className="self-start w-[70%] h-12 bg-gray-50 rounded-2xl rounded-tl-sm border border-gray-100 p-2 flex flex-col gap-1.5 justify-center">
-              <div className="w-3/4 h-1.5 bg-gray-200 rounded-full ml-2"></div>
-              <div className="w-1/2 h-1.5 bg-gray-200 rounded-full ml-2"></div>
-            </div>
-          </div>
-          <div className="mt-3 w-full h-8 bg-gray-50 rounded-full border border-gray-100 flex items-center px-3">
-             <div className="w-1/3 h-1.5 bg-gray-200 rounded-full"></div>
-          </div>
-        </div>
+      <div className="relative h-full w-full">
+        <NextImage
+          src="/images/futurex-fellowship/image.png"
+          alt="AI interface floating above a person's hands"
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover object-center"
+        />
       </div>
     ),
   },
@@ -169,7 +162,7 @@ export function FutureXIncubatorSection() {
           </h2>
           <p className="text-[19px] leading-relaxed text-[#4b5563] sm:text-[21px]">
             Fellows don&apos;t just learn entrepreneurship — they live it. Every
-            concept is applied to a venture you build across 9 months.
+            concept is applied to a venture you build across 6 months.
           </p>
         </div>
 

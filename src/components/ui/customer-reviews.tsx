@@ -75,8 +75,8 @@ const reviewRows: Review[][] = [
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <blockquote className="flex min-h-[130px] w-[290px] shrink-0 flex-col justify-between rounded-[18px] border border-white/10 bg-[#191919] px-5 py-4 shadow-[0_12px_30px_rgba(0,0,0,0.28)] sm:w-[360px] sm:px-6 sm:py-5">
-      <p className="text-[15px] font-semibold leading-6 text-white/90 sm:text-[16px]">
+    <blockquote className="flex min-h-[110px] w-[260px] shrink-0 flex-col justify-between rounded-[16px] border border-white/10 bg-[#191919] px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.28)] sm:w-[300px] sm:px-5 sm:py-4">
+      <p className="text-[14px] font-semibold leading-relaxed text-white/90 sm:text-[15px]">
         “{review.quote}”
       </p>
       <footer className="mt-4 text-[11px] font-black uppercase tracking-[0.15em] text-white/45">

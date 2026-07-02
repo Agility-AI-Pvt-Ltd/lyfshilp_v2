@@ -72,7 +72,7 @@ export function FutureXPlatformSection() {
 
   return (
     <section ref={containerRef} className="relative h-[400vh] bg-[#0a0f1c]">
-      <div className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+      <div className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden py-4 sm:py-8">
         
         {/* Background Ambience */}
         <div className="absolute inset-0 z-0">
@@ -89,7 +89,7 @@ export function FutureXPlatformSection() {
         </div>
 
         {/* Header Text */}
-        <div className="relative z-50 w-full px-6 text-center mb-8 sm:mb-12">
+        <div className="relative z-50 w-full px-6 text-center mb-6 sm:mb-8 shrink-0">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.2em] text-[#60a5fa]">
             Inside the Platform
           </p>
@@ -103,7 +103,7 @@ export function FutureXPlatformSection() {
 
         {/* Carousel / Coverflow */}
         <div
-          className="relative z-10 flex h-[450px] w-full items-center justify-center sm:h-[500px]"
+          className="relative z-10 flex h-[400px] w-full shrink-0 items-center justify-center sm:h-[450px]"
           style={{ perspective: "1200px" }}
         >
           {platformFeatures.map((feature, index) => (
@@ -117,7 +117,7 @@ export function FutureXPlatformSection() {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="relative z-50 mt-8 sm:mt-12 flex flex-col items-center gap-2 opacity-50">
+        <div className="relative z-50 mt-6 sm:mt-8 flex shrink-0 flex-col items-center gap-2 opacity-50">
           <span className="text-xs uppercase tracking-widest text-white font-semibold">Scroll to explore</span>
           <div className="h-10 w-[2px] overflow-hidden rounded-full bg-white/20">
              <motion.div 
@@ -207,7 +207,7 @@ function CarouselCard({
         zIndex,
         filter,
       }}
-      className={`absolute flex h-[380px] w-[300px] sm:h-[450px] sm:w-[350px] flex-col justify-between overflow-hidden rounded-[32px] border bg-[#111827]/80 p-6 sm:p-8 shadow-[0_20px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl ${feature.border}`}
+      className={`absolute flex h-[320px] w-[280px] sm:h-[400px] sm:w-[320px] flex-col justify-between overflow-hidden rounded-[32px] border bg-[#111827]/80 p-6 sm:p-8 shadow-[0_20px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl ${feature.border}`}
     >
       <div
         className={`absolute inset-0 bg-gradient-to-br opacity-50 ${feature.accent}`}

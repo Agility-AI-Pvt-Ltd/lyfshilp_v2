@@ -71,9 +71,8 @@ const reasons = [
 ];
 
 const stats = [
-  { digits: "500", suffix: "+", label: "Student founders" },
+  { digits: "5000", suffix: "+", label: "Students trained" },
   { digits: "50", suffix: "+", label: "Partner schools" },
-  { digits: "20", suffix: "+", label: "Mentors and builders" },
   { digits: "10", suffix: "+", label: "Cities represented" },
 ];
 
@@ -123,7 +122,7 @@ export default function Home() {
           }
           subtitle="Transforming education to inspire, engage, and prepare every student."
           rating="4.9 rating"
-          students="500+ student founders"
+          students="5000+ students trained"
         />
 
         <ProgramsSection />
@@ -138,7 +137,7 @@ export default function Home() {
               A growing movement of young builders.
             </h2>
 
-            <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <StaggeredCountdown

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
 import { ScrollingMetrics } from "@/src/components/ui/scrolling-metrics";
@@ -35,10 +36,10 @@ const routeContent: Record<string, RouteContent> = {
     title: "International FutureX Fellowship",
     eyebrow: "Flagship Program · Grades 6–12",
     description:
-      "Build a real startup from scratch. Pitch to investors. Earn an international certification. A 9-month online incubator designed for the next generation of founders.",
+      "Build a real startup from scratch. Pitch to investors. Earn an international certification. A 6-month online incubator designed for the next generation of founders.",
     metrics: [
       { value: "36", label: "Sessions" },
-      { value: "9", label: "Months" },
+      { value: "6", label: "Months" },
       { value: "100%", label: "Online" },
     ],
     accent: "bg-[#5e22ff]",
@@ -141,9 +142,92 @@ const routeContent: Record<string, RouteContent> = {
   },
 };
 
+const productCards = [
+  {
+    badge: "Flagship · Grades 6–12",
+    title: "International FutureX Fellowship",
+    audience: "School & college students, Grades 6–12",
+    duration: "36 sessions over 6 months (Online)",
+    benefits: [
+      "Build and validate a real startup",
+      "Pitch to investors at Demo Day",
+      "Earn an international certification",
+      "Learn through the Harvard Case Method",
+      "Grow with an XP-based progress system",
+    ],
+    cta: "Explore the Fellowship",
+    href: "/futurex-fellowship",
+    accent: "#9f7b19",
+    softAccent: "#fff4d8",
+  },
+  {
+    badge: "In-school · All grades",
+    title: "AI Scholar Track",
+    audience: "Schools and their students (in-school delivery)",
+    duration: "Semester-long — 20 sessions",
+    benefits: [
+      "Build practical AI literacy during school hours",
+      "Learn prompt engineering through projects",
+      "Understand AI ethics and responsible use",
+      "Create a first working AI tool",
+      "Present finished work in a student showcase",
+    ],
+    cta: "Partner with Your School",
+    href: "/for-schools",
+    accent: "#6629d6",
+    softAccent: "#f1e9ff",
+  },
+  {
+    badge: "Cohort · Age 14+",
+    title: "Build With AI",
+    audience: "Older students, undergrads, working professionals",
+    duration: "8 weekends (16 sessions, online)",
+    benefits: [
+      "Build 3 useful AI-powered tools",
+      "Work with free, no-code platforms",
+      "Follow a guided 8-weekend build plan",
+      "Improve through mentor and peer feedback",
+      "Present finished tools at Demo Day",
+    ],
+    cta: "Join the Next Cohort",
+    href: "/products",
+    accent: "#16804b",
+    softAccent: "#e4f4eb",
+  },
+];
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+function ProductCardMark({
+  accent,
+  softAccent,
+}: {
+  accent: string;
+  softAccent: string;
+}) {
+  const pixels = [1, 2, 4, 7, 8, 10, 13, 14];
+
+  return (
+    <span
+      className="grid size-11 shrink-0 grid-cols-4 grid-rows-4 overflow-hidden rounded-sm p-1 shadow-sm"
+      style={{ backgroundColor: accent }}
+      aria-hidden="true"
+    >
+      {Array.from({ length: 16 }).map((_, index) => (
+        <span
+          key={index}
+          className="m-0.5 rounded-[1px]"
+          style={{
+            backgroundColor: pixels.includes(index) ? "#ffffff" : softAccent,
+            opacity: pixels.includes(index) ? 1 : 0.55,
+          }}
+        />
+      ))}
+    </span>
+  );
+}
 
 export function generateStaticParams() {
   return Object.keys(routeContent).map((slug) => ({ slug }));
@@ -255,6 +339,89 @@ export default async function InfoPage({ params }: PageProps) {
             <FutureXEventsSection />
             <FutureXSpotlightSection />
           </>
+        )}
+        {slug === "products" && (
+          <section className="border-y border-[#efe7da] bg-white px-6 py-24 sm:px-8 lg:px-14">
+            <div className="mx-auto max-w-7xl">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-[#8a90a3]">
+                Programs
+              </p>
+              <h2 className="max-w-3xl text-[40px] font-black leading-tight tracking-normal text-[#272835] sm:text-[52px]">
+                Choose your build path.
+              </h2>
+
+              <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {productCards.map((card) => (
+                  <Link
+                    key={card.title}
+                    href={card.href}
+                    className="group relative flex aspect-square min-h-[410px] flex-col overflow-hidden rounded-sm border border-[#e6e8ef] bg-[#fffaf4] p-5 transition-all hover:-translate-y-1 hover:border-[#272835] sm:min-h-[460px] lg:min-h-0"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <ProductCardMark
+                        accent={card.accent}
+                        softAccent={card.softAccent}
+                      />
+                      <span
+                        className="rounded-full px-3 py-1.5 text-right text-[10px] font-black uppercase tracking-[0.06em]"
+                        style={{
+                          color: card.accent,
+                          backgroundColor: card.softAccent,
+                        }}
+                      >
+                        {card.badge}
+                      </span>
+                    </div>
+
+                    <div className="mt-5">
+                      <h3 className="text-[23px] font-black leading-7 tracking-normal text-[#272835] transition-colors group-hover:text-[#5e22ff]">
+                        {card.title}
+                      </h3>
+                      <div className="mt-4 space-y-1.5 text-[13px] leading-5 text-[#747b8f]">
+                        <p>
+                          <strong className="font-black text-[#272835]">
+                            For:{" "}
+                          </strong>
+                          {card.audience}
+                        </p>
+                        <p>
+                          <strong className="font-black text-[#272835]">
+                            Duration:{" "}
+                          </strong>
+                          {card.duration}
+                        </p>
+                      </div>
+                    </div>
+
+                    <ul className="mt-4 grid gap-1.5">
+                      {card.benefits.map((benefit) => (
+                        <li
+                          key={benefit}
+                          className="grid grid-cols-[auto_1fr] gap-2 text-[12px] font-medium leading-4 text-[#747b8f]"
+                        >
+                          <span
+                            className="mt-0.5 grid size-4 place-items-center rounded-full text-[10px] font-black"
+                            style={{
+                              color: card.accent,
+                              backgroundColor: card.softAccent,
+                            }}
+                            aria-hidden="true"
+                          >
+                            ✓
+                          </span>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <span className="mt-auto pt-4 text-[14px] font-semibold text-[#747b8f] transition-colors group-hover:text-[#272835]">
+                      {card.cta}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
         )}
       </main>
       <LyfshilpFooter />

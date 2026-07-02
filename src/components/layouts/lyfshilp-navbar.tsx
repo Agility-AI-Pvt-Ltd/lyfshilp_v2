@@ -365,7 +365,7 @@ function ProgramsMenu() {
     <div className="group/programs relative flex h-16 items-center">
       <MenuTrigger label="Programs" />
 
-      <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
+      <div className="invisible fixed inset-x-0 top-16 z-40 flex justify-center px-4 pt-4 opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
         <div className="w-full max-w-[1120px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
           <div className="relative grid min-h-[370px] grid-cols-[1fr_1fr_1fr_1fr] px-4">
             <span
@@ -426,7 +426,7 @@ function CommunityMenu() {
     <div className="group/community relative flex h-16 items-center">
       <MenuTrigger label="Community" />
 
-      <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
+      <div className="invisible fixed inset-x-0 top-16 z-40 flex justify-center px-4 pt-4 opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
         <div className="w-full max-w-[1120px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
           <div className="relative min-h-[430px] px-6 py-7">
             <span
