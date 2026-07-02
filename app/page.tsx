@@ -6,6 +6,7 @@ import HeroSection from "@/src/components/ui/HeroSection";
 import { JoinCommunity } from "@/src/components/ui/join-community";
 import { ProgramsSection } from "@/src/components/ui/programs-section";
 import { CustomerReviews } from "@/src/components/ui/customer-reviews";
+import { FutureXReviewsSection } from "@/src/components/ui/futurex-reviews-section";
 
 const heroCol1 = [
   "/images/hero/1.JPG",
@@ -267,6 +268,7 @@ export default function Home() {
           </div>
         </section>
 
+        <FutureXReviewsSection />
       </main>
 
       <JoinCommunity />

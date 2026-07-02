@@ -1,12 +1,20 @@
 import { notFound } from "next/navigation";
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
+import { ScrollingMetrics } from "@/src/components/ui/scrolling-metrics";
+import { FutureXIncubatorSection } from "@/src/components/ui/futurex-incubator-section";
+import { FutureXTimelineSection } from "@/src/components/ui/futurex-timeline";
+import { FutureXPlatformSection } from "@/src/components/ui/futurex-platform-section";
+import { FutureXLeaderboardSection } from "@/src/components/ui/futurex-leaderboard-section";
+import { FutureXSpotlightSection } from "@/src/components/ui/futurex-spotlight-section";
+import { FutureXEventsSection } from "@/src/components/ui/futurex-events-section";
 
 type RouteContent = {
   title: string;
   eyebrow: string;
   description: string;
-  points: string[];
+  points?: string[];
+  metrics?: { value: string; label: string }[];
   accent: string;
 };
 
@@ -24,14 +32,14 @@ const routeContent: Record<string, RouteContent> = {
     accent: "bg-[#CFFD53]",
   },
   "futurex-fellowship": {
-    title: "A fellowship for ambitious student builders.",
-    eyebrow: "Lyfshilp Fellowship",
+    title: "International FutureX Fellowship",
+    eyebrow: "Flagship Program · Grades 6–12",
     description:
-      "A mentored pathway for learners who want to build AI products, understand business problems, and develop founder-level confidence.",
-    points: [
-      "Weekly mentor sessions",
-      "Hands-on product sprints",
-      "Portfolio-worthy outcomes",
+      "Build a real startup from scratch. Pitch to investors. Earn an international certification. A 9-month online incubator designed for the next generation of founders.",
+    metrics: [
+      { value: "36", label: "Sessions" },
+      { value: "9", label: "Months" },
+      { value: "100%", label: "Online" },
     ],
     accent: "bg-[#5e22ff]",
   },
@@ -168,46 +176,86 @@ export default async function InfoPage({ params }: PageProps) {
       <LyfshilpNavbar />
       <main className="pt-20">
         <section className="relative overflow-hidden px-6 py-24 sm:px-8 lg:px-14">
-          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-            <div>
-              <p className="mb-5 text-[13px] font-semibold uppercase tracking-widest text-[#8a90a3]">
-                {content.eyebrow}
-              </p>
+          <div
+            className={`mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.05fr_0.95fr] ${
+              content.metrics ? "lg:items-start" : "lg:items-end"
+            }`}
+          >
+            <div
+              className={content.metrics ? "lg:sticky lg:top-32" : undefined}
+            >
+              <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#e1e4ec] bg-white px-4 py-1.5 shadow-[0_4px_12px_rgba(0,0,0,0.05)] ring-1 ring-black/5">
+                <span className="relative flex size-2.5 items-center justify-center">
+                  <span className={`absolute inline-flex h-full w-full animate-ping rounded-full ${content.accent} opacity-40`} />
+                  <span className={`relative inline-flex size-2 rounded-full ${content.accent}`} />
+                </span>
+                <p className="text-[12px] font-bold uppercase tracking-[0.15em] text-[#4a4f60]">
+                  {content.eyebrow}
+                </p>
+              </div>
               <h1 className="max-w-4xl text-[48px] font-black leading-[1.04] tracking-normal text-[#272835] sm:text-[70px] lg:text-[86px]">
-                {content.title}
+                {content.title.includes("FutureX")
+                  ? content.title.split("FutureX").map((part, i, arr) => (
+                      <span key={i}>
+                        {part}
+                        {i < arr.length - 1 && (
+                          <span className="whitespace-nowrap">
+                            Future<span className={`inline-block cursor-default transition-all duration-500 hover:-rotate-180 hover:scale-110 ${content.accent.replace("bg-", "text-")}`}>X</span>
+                          </span>
+                        )}
+                      </span>
+                    ))
+                  : content.title}
               </h1>
               <p className="mt-8 max-w-2xl text-[18px] leading-relaxed text-[#747b8f]">
                 {content.description}
               </p>
             </div>
 
-            <div className="relative min-h-[360px] overflow-hidden rounded-sm bg-white p-8 shadow-[0_22px_70px_rgba(21,24,38,0.10)]">
-              <span
-                className={`absolute right-0 top-0 size-16 ${content.accent}`}
-                aria-hidden="true"
+            {content.metrics ? (
+              <ScrollingMetrics
+                metrics={content.metrics}
+                accentClassName={content.accent}
               />
-              <span
-                className={`absolute bottom-0 left-0 size-24 ${content.accent} opacity-20`}
-                aria-hidden="true"
-              />
-              <div className="relative z-10 grid gap-5">
-                {content.points.map((point, index) => (
-                  <div
-                    key={point}
-                    className="grid grid-cols-[auto_1fr] gap-4 border-b border-dashed border-[#e1e4ec] pb-5 last:border-b-0 last:pb-0"
-                  >
-                    <span className="grid size-10 place-items-center rounded-sm bg-[#f8fafb] text-[13px] font-black text-[#272835]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p className="pt-1 text-[18px] font-semibold leading-7 text-[#272835]">
-                      {point}
-                    </p>
-                  </div>
-                ))}
+            ) : (
+              <div className="relative min-h-[360px] overflow-hidden rounded-sm bg-white p-8 shadow-[0_22px_70px_rgba(21,24,38,0.10)]">
+                <span
+                  className={`absolute right-0 top-0 size-16 ${content.accent}`}
+                  aria-hidden="true"
+                />
+                <span
+                  className={`absolute bottom-0 left-0 size-24 ${content.accent} opacity-20`}
+                  aria-hidden="true"
+                />
+                <div className="relative z-10 grid gap-5">
+                  {(content.points ?? []).map((point, index) => (
+                    <div
+                      key={point}
+                      className="grid grid-cols-[auto_1fr] gap-4 border-b border-dashed border-[#e1e4ec] pb-5 last:border-b-0 last:pb-0"
+                    >
+                      <span className="grid size-10 place-items-center rounded-sm bg-[#f8fafb] text-[13px] font-black text-[#272835]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <p className="pt-1 text-[18px] font-semibold leading-7 text-[#272835]">
+                        {point}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
+        {slug === "futurex-fellowship" && (
+          <>
+            <FutureXIncubatorSection />
+            <FutureXTimelineSection />
+            <FutureXPlatformSection />
+            <FutureXLeaderboardSection />
+            <FutureXEventsSection />
+            <FutureXSpotlightSection />
+          </>
+        )}
       </main>
       <LyfshilpFooter />
     </div>
