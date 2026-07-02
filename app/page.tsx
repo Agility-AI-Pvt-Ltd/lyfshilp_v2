@@ -5,6 +5,8 @@ import { StaggeredCountdown } from "@/src/components/ui/staggered-countdown";
 import HeroSection from "@/src/components/ui/HeroSection";
 import { JoinCommunity } from "@/src/components/ui/join-community";
 import { ProgramsSection } from "@/src/components/ui/programs-section";
+import { CustomerReviews } from "@/src/components/ui/customer-reviews";
+import { FutureXReviewsSection } from "@/src/components/ui/futurex-reviews-section";
 
 const heroCol1 = [
   "/images/hero/1.JPG",
@@ -38,6 +40,7 @@ const programmes = [
     description:
       "Campus programmes aligned with real industry work, startup labs, and mentor showcases.",
     accent: "bg-[#ffd166]",
+    status: "Launching Soon",
   },
   {
     label: "Corporate AI",
@@ -45,6 +48,7 @@ const programmes = [
     description:
       "Practical AI enablement and adoption support for modern teams and everyday work.",
     accent: "bg-[#242532]",
+    status: "Launching Soon",
   },
 ];
 
@@ -125,7 +129,7 @@ export default function Home() {
         <ProgramsSection />
 
         {/* Stats band */}
-        <section className="bg-[#0d0d0d] px-6 py-24 sm:px-8 lg:px-14">
+        <section className="bg-[#0d0d0d] px-6 pb-0 pt-24 sm:px-8 lg:px-14">
           <div className="mx-auto max-w-7xl">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-white/40">
               By the numbers
@@ -150,7 +154,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-20 border-t border-white/10 pt-16 text-center">
+              <p className="text-[13px] font-black uppercase tracking-[0.2em] text-[#9bd340]">
+                Customer stories
+              </p>
+              <h2 className="mx-auto mt-4 max-w-3xl text-[38px] font-black leading-tight tracking-[-0.035em] text-white sm:text-[52px]">
+                The shift families can see.
+              </h2>
+            </div>
           </div>
+
+          <CustomerReviews />
         </section>
 
         {/* Original programmes grid */}
@@ -191,7 +206,7 @@ export default function Home() {
                     </p>
                   </div>
                   <span className="mt-auto flex items-center gap-2 text-[14px] font-semibold text-[#747b8f] transition-colors group-hover:text-[#272835]">
-                    Learn more
+                    {programme.status ?? "Learn more"}
                     <ArrowGlyph />
                   </span>
                 </Link>
@@ -253,6 +268,7 @@ export default function Home() {
           </div>
         </section>
 
+        <FutureXReviewsSection />
       </main>
 
       <JoinCommunity />

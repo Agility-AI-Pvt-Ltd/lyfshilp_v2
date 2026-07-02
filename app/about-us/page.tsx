@@ -97,19 +97,19 @@ const team = [
     name: "Sharadd Raaj Utsav",
     role: "Founder & CEO - Lyfshilp Academy & Agility AI",
     image: "/images/about-team/mentor-1-fill.png",
-    imageClassName: "scale-125 object-[58%_48%]",
+    imageClassName: "scale-125 object-cover object-[58%_48%]",
   },
   {
     name: "Shreya Sinha",
     role: "Co-Founder & COO - Lyfshilp Academy & Agility AI",
     image: "/images/about-team/mentor-2-fill.png",
-    imageClassName: "scale-125 object-[50%_42%]",
+    imageClassName: "scale-125 object-cover object-[50%_42%]",
   },
   {
     name: "Aryan Shukla",
     role: "Co-Founder & CTO - Lyfshilp Academy & Agility AI",
     image: "/images/about-team/mentor-3.png",
-    imageClassName: "object-center",
+    imageClassName: "object-cover object-top",
   },
 ];
 
@@ -450,7 +450,7 @@ export default function AboutUsPage() {
                       alt={member.name}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className={`object-cover ${member.imageClassName}`}
+                      className={member.imageClassName}
                     />
                   </div>
                   <div className="p-6">
