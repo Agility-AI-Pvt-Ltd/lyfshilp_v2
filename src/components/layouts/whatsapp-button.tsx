@@ -1,11 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function WhatsAppButton() {
+  const pathname = usePathname();
   const [isAlertVisible, setIsAlertVisible] = useState(true);
+  const [fellowshipTextIndex, setFellowshipTextIndex] = useState(0);
 
-  const message = "Hi! I want to know more about FutureX programs for my child.";
+  const isFellowship = pathname === "/futurex-fellowship";
+
+  useEffect(() => {
+    if (!isFellowship) return;
+    const interval = setInterval(() => {
+      setFellowshipTextIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [isFellowship]);
+
+  const message = isFellowship
+    ? "Book a quick call"
+    : "Hi! I want to know more about FutureX programs for my child.";
+
   const url = `https://wa.me/917042671115?text=${encodeURIComponent(message)}`;
 
   return (
@@ -40,22 +56,52 @@ export function WhatsAppButton() {
         .alert-bubble-animate {
           animation: alert-slide-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
+        @keyframes text-fade-in {
+          0% {
+            opacity: 0;
+            transform: translateY(4px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .text-fade-in {
+          animation: text-fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
       `}</style>
 
       <div className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3 select-none pointer-events-none">
         {/* Alert Bubble */}
         {isAlertVisible && (
-          <div className="alert-bubble-animate pointer-events-auto flex items-center gap-3 bg-white/95 backdrop-blur-md border border-[#FF492C]/25 text-[#272835] shadow-xl py-3 px-4 rounded-2xl max-w-[280px] sm:max-w-md">
+          <div className={`alert-bubble-animate pointer-events-auto flex items-center gap-3 bg-white/95 backdrop-blur-md border text-[#272835] shadow-xl py-3 px-4 rounded-2xl max-w-[280px] sm:max-w-md ${isFellowship ? "border-[#10b981]/25" : "border-[#FF492C]/25"}`}>
             {/* Live Indicator */}
             <span className="flex h-2.5 w-2.5 relative shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF492C] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF492C]"></span>
+              <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isFellowship ? "bg-[#10b981]" : "bg-[#FF492C]"}`}></span>
+              <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${isFellowship ? "bg-[#10b981]" : "bg-[#FF492C]"}`}></span>
             </span>
 
             {/* Alert Message */}
-            <p className="text-[10px] sm:text-xs font-extrabold tracking-wide uppercase leading-normal text-[#272835]">
-              Next cohort starts <span className="text-[#FF492C]">15 July</span> — Only <span className="text-[#FF492C]">20 seats</span> per batch
-            </p>
+            {isFellowship ? (
+              <p
+                key={fellowshipTextIndex}
+                className="text-fade-in text-[10px] sm:text-xs font-extrabold tracking-wide uppercase leading-normal text-[#272835]"
+              >
+                {fellowshipTextIndex === 0 ? (
+                  <>
+                    Next batch starts <span className="text-[#10b981]">June 15</span> — <span className="text-[#10b981]">12 seats</span> remaining
+                  </>
+                ) : (
+                  <>
+                    Book a <span className="text-[#10b981]">quick call</span>
+                  </>
+                )}
+              </p>
+            ) : (
+              <p className="text-[10px] sm:text-xs font-extrabold tracking-wide uppercase leading-normal text-[#272835]">
+                Next cohort starts <span className="text-[#FF492C]">15 July</span> — Only <span className="text-[#FF492C]">20 seats</span> per batch
+              </p>
+            )}
 
             {/* Dismiss Button */}
             <button

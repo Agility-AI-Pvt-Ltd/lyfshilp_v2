@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Session 1 Builder Mission Problem Discovery</title>
+  <desc id="desc">A premium parchment style mission card for identifying ten real-world problems, talking to people from two age groups, and understanding solvable problems.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#8b5a2b"/>
+      <stop offset="48%" stop-color="#3a2115"/>
+      <stop offset="100%" stop-color="#160d0a"/>
+    </radialGradient>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7d99d"/>
+      <stop offset="52%" stop-color="#f2c77c"/>
+      <stop offset="100%" stop-color="#d99a4b"/>
+    </linearGradient>
+    <linearGradient id="feather" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffe7a5"/>
+      <stop offset="45%" stop-color="#c37a23"/>
+      <stop offset="100%" stop-color="#6b3415"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" rx="28" fill="url(#glow)"/>
+  <g opacity=".7">
+    <circle cx="110" cy="90" r="2" fill="#ffd88a"/>
+    <circle cx="180" cy="180" r="3" fill="#ffd88a"/>
+    <circle cx="1000" cy="120" r="3" fill="#ffd88a"/>
+    <circle cx="1070" cy="320" r="2" fill="#ffd88a"/>
+    <circle cx="270" cy="430" r="2" fill="#ffd88a"/>
+    <circle cx="900" cy="470" r="2" fill="#ffd88a"/>
+    <circle cx="620" cy="74" r="2" fill="#ffd88a"/>
+    <circle cx="740" cy="188" r="2" fill="#ffd88a"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="600" y="78" font-size="44" font-weight="700" letter-spacing="4" fill="#f8d69a">SESSION 1:</text>
+    <text x="600" y="142" font-size="74" font-weight="700" letter-spacing="3" fill="#f8d69a">BUILDER MISSION</text>
+    <text x="600" y="208" font-size="50" font-weight="700" letter-spacing="2" fill="#f8d69a">PROBLEM DISCOVERY</text>
+  </g>
+  <path d="M358 248 C460 232 748 236 862 248 C892 251 908 274 894 302 L842 520 C836 545 817 558 792 558 H362 C334 558 315 541 318 513 L338 282 C340 262 346 250 358 248Z" fill="url(#paper)" filter="url(#shadow)"/>
+  <path d="M360 268 C470 250 744 255 858 270" fill="none" stroke="#8c5526" stroke-width="2" opacity=".42"/>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#2d1508">
+    <g transform="translate(430 342)">
+      <path d="M-36 -16 L-18 -28 L0 -11 L-19 8 Z" fill="#315c35"/>
+      <path d="M-23 -14 L-13 -20 L-5 -12 L-17 -3 Z" fill="#d7c87a"/>
+      <text x="22" y="0" font-size="43">Identify 10 real-world problems</text>
+    </g>
+    <g transform="translate(430 420)">
+      <path d="M-36 -16 L-18 -28 L0 -11 L-19 8 Z" fill="#315c35"/>
+      <path d="M-23 -14 L-13 -20 L-5 -12 L-17 -3 Z" fill="#d7c87a"/>
+      <text x="22" y="0" font-size="43">Talk to people from two age groups</text>
+    </g>
+    <g transform="translate(430 498)">
+      <path d="M-36 -16 L-18 -28 L0 -11 L-19 8 Z" fill="#315c35"/>
+      <path d="M-23 -14 L-13 -20 L-5 -12 L-17 -3 Z" fill="#d7c87a"/>
+      <text x="22" y="0" font-size="43">Understand problems you could solve</text>
+    </g>
+  </g>
+  <path d="M945 542 C920 462 926 371 967 286 C1000 220 1066 164 1160 112 C1125 202 1086 282 1037 351 C1005 396 972 438 945 542Z" fill="url(#feather)" filter="url(#shadow)"/>
+  <path d="M956 520 C1005 402 1068 285 1142 134" stroke="#f6d281" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+  <path d="M312 540 H880" stroke="#7a421f" stroke-width="3" opacity=".65"/>
+</svg>

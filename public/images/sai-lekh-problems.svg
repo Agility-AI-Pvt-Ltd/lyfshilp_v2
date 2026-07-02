@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ten problems noticed in daily life</title>
+  <desc id="desc">A grid of ten daily life problem cards including air pollution, traffic congestion, noise pollution, garbage issues, water problems, overcrowding, potholes, stray animals, extreme weather, and crowded transport.</desc>
+  <rect width="1200" height="600" rx="28" fill="#f6f1e8"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(24 24)">
+      <rect width="216" height="260" rx="18" fill="#fff8f5" stroke="#d8c7c0"/>
+      <rect width="216" height="124" rx="18" fill="#d9c5a7"/>
+      <circle cx="74" cy="56" r="30" fill="#b9a282" opacity=".55"/>
+      <path d="M0 105 C45 84 95 88 132 66 C164 47 191 47 216 36 L216 124 L0 124Z" fill="#8f8a79" opacity=".75"/>
+      <text x="108" y="166" text-anchor="middle" font-size="22" font-weight="800" fill="#7c3aed">Air Pollution</text>
+      <text x="108" y="200" text-anchor="middle" font-size="17" font-weight="700" fill="#333">Heavy smog makes</text>
+      <text x="108" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#333">breathing difficult and</text>
+      <text x="108" y="248" text-anchor="middle" font-size="17" font-weight="700" fill="#333">reduces visibility.</text>
+    </g>
+    <g transform="translate(250 24)">
+      <rect width="216" height="260" rx="18" fill="#fffaf4" stroke="#e3c6aa"/>
+      <rect width="216" height="124" rx="18" fill="#6b7280"/>
+      <g transform="translate(16 20)">
+        <rect x="0" y="36" width="180" height="18" rx="9" fill="#e5e7eb"/>
+        <rect x="20" y="66" width="172" height="18" rx="9" fill="#9ca3af"/>
+        <rect x="8" y="96" width="184" height="18" rx="9" fill="#d1d5db"/>
+        <circle cx="38" cy="28" r="13" fill="#f59e0b"/>
+        <circle cx="88" cy="28" r="13" fill="#ef4444"/>
+        <circle cx="140" cy="28" r="13" fill="#10b981"/>
+      </g>
+      <text x="108" y="166" text-anchor="middle" font-size="22" font-weight="800" fill="#ea580c">Traffic Congestion</text>
+      <text x="108" y="200" text-anchor="middle" font-size="17" font-weight="700" fill="#333">Frequent jams cause</text>
+      <text x="108" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#333">delays and stressful</text>
+      <text x="108" y="248" text-anchor="middle" font-size="17" font-weight="700" fill="#333">travel.</text>
+    </g>
+    <g transform="translate(476 24)">
+      <rect width="216" height="260" rx="18" fill="#f8fff8" stroke="#b8d8bf"/>
+      <rect width="216" height="124" rx="18" fill="#70665a"/>
+      <g fill="#27211c">
+        <rect x="92" y="20" width="16" height="104" rx="8"/>
+        <path d="M100 42 L52 24 L52 76 Z"/>
+        <path d="M112 46 L164 26 L164 78 Z"/>
+        <path d="M100 84 L58 72 L58 110 Z"/>
+      </g>
+      <text x="108" y="166" text-anchor="middle" font-size="22" font-weight="800" fill="#16a34a">Noise Pollution</text>
+      <text x="108" y="200" text-anchor="middle" font-size="17" font-weight="700" fill="#333">Constant honking and</text>
+      <text x="108" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#333">city noise disturb</text>
+      <text x="108" y="248" text-anchor="middle" font-size="17" font-weight="700" fill="#333">daily life.</text>
+    </g>
+    <g transform="translate(702 24)">
+      <rect width="216" height="260" rx="18" fill="#fff8f8" stroke="#e5b8c7"/>
+      <rect width="216" height="124" rx="18" fill="#918272"/>
+      <g transform="translate(22 32)">
+        <ellipse cx="40" cy="58" rx="34" ry="18" fill="#51311f"/>
+        <ellipse cx="88" cy="42" rx="42" ry="22" fill="#7f5539"/>
+        <ellipse cx="142" cy="66" rx="40" ry="20" fill="#6b4226"/>
+        <rect x="8" y="76" width="174" height="18" rx="9" fill="#f3e8d6"/>
+      </g>
+      <text x="108" y="166" text-anchor="middle" font-size="22" font-weight="800" fill="#db2777">Garbage Issues</text>
+      <text x="108" y="200" text-anchor="middle" font-size="17" font-weight="700" fill="#333">Litter and waste are</text>
+      <text x="108" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#333">often seen on streets</text>
+      <text x="108" y="248" text-anchor="middle" font-size="17" font-weight="700" fill="#333">and corners.</text>
+    </g>
+    <g transform="translate(928 24)">
+      <rect width="248" height="260" rx="18" fill="#f8fbff" stroke="#b8d1e5"/>
+      <rect width="248" height="124" rx="18" fill="#6b7280"/>
+      <g transform="translate(54 22)">
+        <rect x="0" y="48" width="44" height="58" rx="10" fill="#f59e0b"/>
+        <rect x="54" y="36" width="44" height="70" rx="10" fill="#e5e7eb"/>
+        <rect x="108" y="28" width="44" height="78" rx="10" fill="#bfdbfe"/>
+        <path d="M0 24 H150" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+      </g>
+      <text x="124" y="166" text-anchor="middle" font-size="22" font-weight="800" fill="#2563eb">Water Problems</text>
+      <text x="124" y="200" text-anchor="middle" font-size="17" font-weight="700" fill="#333">Irregular supply or</text>
+      <text x="124" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#333">poor-quality drinking</text>
+      <text x="124" y="248" text-anchor="middle" font-size="17" font-weight="700" fill="#333">water in some areas.</text>
+    </g>
+    <g transform="translate(24 308)">
+      <rect width="216" height="268" rx="18" fill="#374151"/>
+      <rect x="12" y="12" width="42" height="42" rx="12" fill="#0f9488"/>
+      <text x="33" y="43" text-anchor="middle" font-size="34" font-weight="900" fill="#fff">6</text>
+      <text x="108" y="140" text-anchor="middle" font-size="21" font-weight="800" fill="#fff">Overcrowding</text>
+      <text x="108" y="174" text-anchor="middle" font-size="16" font-weight="700" fill="#d1d5db">Busy markets and roads</text>
+      <text x="108" y="198" text-anchor="middle" font-size="16" font-weight="700" fill="#d1d5db">make movement slow.</text>
+    </g>
+    <g transform="translate(250 308)">
+      <rect width="216" height="268" rx="18" fill="#4b5563"/>
+      <rect x="12" y="12" width="42" height="42" rx="12" fill="#2563eb"/>
+      <text x="33" y="43" text-anchor="middle" font-size="34" font-weight="900" fill="#fff">7</text>
+      <text x="108" y="140" text-anchor="middle" font-size="21" font-weight="800" fill="#fff">Potholes</text>
+      <text x="108" y="174" text-anchor="middle" font-size="16" font-weight="700" fill="#e5e7eb">Broken roads create</text>
+      <text x="108" y="198" text-anchor="middle" font-size="16" font-weight="700" fill="#e5e7eb">unsafe commutes.</text>
+    </g>
+    <g transform="translate(476 308)">
+      <rect width="216" height="268" rx="18" fill="#5b6b45"/>
+      <rect x="12" y="12" width="42" height="42" rx="12" fill="#737513"/>
+      <text x="33" y="43" text-anchor="middle" font-size="34" font-weight="900" fill="#fff">8</text>
+      <text x="108" y="140" text-anchor="middle" font-size="21" font-weight="800" fill="#fff">Stray Animals</text>
+      <text x="108" y="174" text-anchor="middle" font-size="16" font-weight="700" fill="#e5e7eb">Animals on roads slow</text>
+      <text x="108" y="198" text-anchor="middle" font-size="16" font-weight="700" fill="#e5e7eb">traffic and risk safety.</text>
+    </g>
+    <g transform="translate(702 308)">
+      <rect width="216" height="268" rx="18" fill="#d97706"/>
+      <rect x="12" y="12" width="42" height="42" rx="12" fill="#dc2626"/>
+      <text x="33" y="43" text-anchor="middle" font-size="34" font-weight="900" fill="#fff">9</text>
+      <circle cx="138" cy="72" r="34" fill="#fff7ed"/>
+      <text x="108" y="160" text-anchor="middle" font-size="21" font-weight="800" fill="#fff">Extreme Weather</text>
+      <text x="108" y="194" text-anchor="middle" font-size="16" font-weight="700" fill="#fff7ed">Heat and smog affect</text>
+      <text x="108" y="218" text-anchor="middle" font-size="16" font-weight="700" fill="#fff7ed">health and routine.</text>
+    </g>
+    <g transform="translate(928 308)">
+      <rect width="248" height="268" rx="18" fill="#374151"/>
+      <rect x="12" y="12" width="42" height="42" rx="12" fill="#4f46e5"/>
+      <text x="33" y="43" text-anchor="middle" font-size="34" font-weight="900" fill="#fff">10</text>
+      <text x="124" y="140" text-anchor="middle" font-size="21" font-weight="800" fill="#fff">Crowded Transport</text>
+      <text x="124" y="174" text-anchor="middle" font-size="16" font-weight="700" fill="#d1d5db">Packed buses and trains</text>
+      <text x="124" y="198" text-anchor="middle" font-size="16" font-weight="700" fill="#d1d5db">make travel tiring.</text>
+    </g>
+  </g>
+</svg>

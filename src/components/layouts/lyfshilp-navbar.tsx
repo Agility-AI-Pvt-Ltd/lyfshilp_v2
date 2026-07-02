@@ -23,23 +23,23 @@ const programGroups = [
       },
     ],
   },
-  {
-    title: "Education",
-    items: [
-      {
-        label: "For Schools",
-        href: "/for-schools",
-        description: "Future-ready AI learning paths for school students",
-        accent: "bg-[#ff492c]",
-      },
-      {
-        label: "For Colleges",
-        href: "/for-colleges",
-        description: "Campus programs aligned with real industry work",
-        accent: "bg-[#ffd166]",
-      },
-    ],
-  },
+  // {
+  //   title: "Education",
+  //   items: [
+  //     {
+  //       label: "For Schools",
+  //       href: "/for-schools",
+  //       description: "Future-ready AI learning paths for school students",
+  //       accent: "bg-[#ff492c]",
+  //     },
+  //     {
+  //       label: "For Colleges",
+  //       href: "/for-colleges",
+  //       description: "Campus programs aligned with real industry work",
+  //       accent: "bg-[#ffd166]",
+  //     },
+  //   ],
+  // },
   {
     title: "Enterprise",
     items: [
@@ -358,16 +358,15 @@ function CommunityFeatureCard({
 }
 
 function ProgramsMenu() {
-  const [enterpriseItem] = programGroups[2].items;
-  const [featuredItem] = programGroups[0].items;
+  const [enterpriseItem] = programGroups[1].items;
 
   return (
     <div className="group/programs relative flex h-16 items-center">
       <MenuTrigger label="Programs" />
 
-      <div className="invisible fixed inset-x-0 top-16 z-40 flex justify-center px-4 pt-4 opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
-        <div className="w-full max-w-[1120px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
-          <div className="relative grid min-h-[370px] grid-cols-[1fr_1fr_1fr_1fr] px-4">
+      <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
+        <div className="w-full max-w-[840px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
+          <div className="relative grid min-h-[370px] grid-cols-[1.2fr_1fr_0.8fr] px-4">
             <span
               aria-hidden="true"
               className="pointer-events-none absolute inset-x-0 top-[72px] border-t border-dashed border-[#e1e4ec]"
@@ -388,24 +387,12 @@ function ProgramsMenu() {
               </div>
             </section>
 
-            <section className="border-r border-dashed border-[#e1e4ec] px-8 py-7">
+            <section className="border-r border-dashed border-[#e1e4ec] px-4 py-7">
               <p className="mb-5 px-2 text-[14px] font-semibold tracking-normal text-[#8a90a3]">
                 {programGroups[1].title}
               </p>
               <div className="grid gap-3">
-                {programGroups[1].items.map((item) => (
-                  <ProgramLink key={item.label} {...item} />
-                ))}
-              </div>
-            </section>
-
-            <section className="border-r border-dashed border-[#e1e4ec] px-3 py-7">
-              <p className="mb-5 px-2 text-[14px] font-semibold tracking-normal text-[#8a90a3]">
-                {programGroups[2].title}
-              </p>
-              <div className="grid auto-rows-fr gap-2">
                 <EnterpriseCard {...enterpriseItem} />
-                <EnterpriseCard {...featuredItem} />
               </div>
             </section>
 
@@ -525,7 +512,7 @@ export function LyfshilpNavbar({ showMarquee = false }: LyfshilpNavbarProps) {
 
         {/* Explore products pill button — desktop only */}
         <Link
-          href="/futurex-fellowship "
+          href="/futurex-fellowship"
           className="group relative hidden overflow-hidden items-center gap-0 rounded-full bg-[#f8fafb] border border-[#e5e7eb] p-1 transition-colors duration-300 lg:flex"
         >
           {/* #CFFD53 sweep layer — covers whole pill left to right on hover */}

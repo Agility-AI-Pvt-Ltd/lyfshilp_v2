@@ -5,6 +5,8 @@ import { StaggeredCountdown } from "@/src/components/ui/staggered-countdown";
 import HeroSection from "@/src/components/ui/HeroSection";
 import { JoinCommunity } from "@/src/components/ui/join-community";
 import { ProgramsSection } from "@/src/components/ui/programs-section";
+import { BuiltTogether } from "@/src/components/ui/built-together";
+import { RealVoices } from "@/src/components/ui/real-voices";
 import { CustomerReviews } from "@/src/components/ui/customer-reviews";
 import { FutureXReviewsSection } from "@/src/components/ui/futurex-reviews-section";
 
@@ -52,23 +54,6 @@ const programmes = [
   },
 ];
 
-const reasons = [
-  {
-    title: "Mentored, not lectured",
-    description:
-      "Learn directly from founders, builders, and industry mentors who guide every sprint instead of just handing out theory.",
-  },
-  {
-    title: "Build real, shippable work",
-    description:
-      "Every learner finishes with projects worth showing — AI tools, startups, and initiatives that move from idea to launch.",
-  },
-  {
-    title: "A nationwide builder community",
-    description:
-      "Find collaborators, co-founders, and feedback across schools and colleges in cities all over India.",
-  },
-];
 
 const stats = [
   { digits: "5000", suffix: "+", label: "Students trained" },
@@ -120,12 +105,12 @@ export default function Home() {
           title={
             "'Your Child Doesn't Just Learn AI. \nThey Build With It. Lead With It.'"
           }
-          subtitle="Transforming education to inspire, engage, and prepare every student."
+          subtitle="The FutureX Fellowship is a 36-session, project-led program where students in Grades 6-12 build real AI tools, pitch real business ideas, and earn internationally recognised certification — all using free tools."
           rating="4.9 rating"
           students="5000+ students trained"
         />
 
-        <ProgramsSection />
+        <FutureXReviewsSection />
 
         {/* Stats band */}
         <section className="bg-[#0d0d0d] px-6 pb-0 pt-24 sm:px-8 lg:px-14">
@@ -154,7 +139,8 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-20 border-t border-white/10 pt-16 text-center">
+            {/* Customer Stories Header */}
+            <div className="mt-24 text-center">
               <p className="text-[13px] font-black uppercase tracking-[0.2em] text-[#9bd340]">
                 Customer stories
               </p>
@@ -167,8 +153,12 @@ export default function Home() {
           <CustomerReviews />
         </section>
 
+        <ProgramsSection />
+        <BuiltTogether />
+        <RealVoices />
+
         {/* Original programmes grid */}
-        <section className="border-b border-[#efe7da] bg-white px-6 py-24 sm:px-8 lg:px-14">
+        {/* <section className="border-b border-[#efe7da] bg-white px-6 py-24 sm:px-8 lg:px-14">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -237,37 +227,8 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Why Lyfshilp */}
-        <section className="bg-[#fffaf4] px-6 py-24 sm:px-8 lg:px-14">
-          <div className="mx-auto max-w-7xl">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-[#8a90a3]">
-              Why Lyfshilp
-            </p>
-            <h2 className="max-w-3xl text-[40px] font-black leading-tight tracking-tight text-[#272835] sm:text-[52px]">
-              Learning that ends in real work, not just a certificate.
-            </h2>
-
-            <div className="mt-16 grid gap-12 border-t border-[#e6e8ef] pt-12 lg:grid-cols-3 lg:gap-16">
-              {reasons.map((reason, index) => (
-                <div key={reason.title}>
-                  <span className="text-[15px] font-black tracking-widest text-[#c7cad6]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-5 text-[24px] font-bold leading-tight tracking-tight text-[#272835]">
-                    {reason.title}
-                  </h3>
-                  <p className="mt-4 text-[16px] leading-7 text-[#747b8f]">
-                    {reason.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <FutureXReviewsSection />
       </main>
 
       <JoinCommunity />
