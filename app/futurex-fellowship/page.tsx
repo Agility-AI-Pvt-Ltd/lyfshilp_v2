@@ -10,6 +10,7 @@ import { FutureXTimelineSection } from "@/src/components/ui/futurex-timeline";
 import { FutureXPlatformSection } from "@/src/components/ui/futurex-platform";
 import { FutureXLeaderboardSection } from "@/src/components/ui/futurex-leaderboard";
 import { FutureXSpotlightSection } from "@/src/components/ui/futurex-spotlight";
+import { FellowshipApplyModal } from "@/src/components/ui/fellowship-apply-modal";
 
 // SVG Icons
 function ArrowGlyph() {
@@ -353,6 +354,7 @@ export default function FutureXFellowshipPage() {
   const router = useRouter();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [showHeaderElements, setShowHeaderElements] = useState(true);
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = (e: Event) => {
@@ -495,13 +497,14 @@ export default function FutureXFellowshipPage() {
               </p>
 
               <div className="mt-6 flex flex-wrap justify-center gap-4">
-                <Link
-                  href="mailto:futurex@lyfshilpacademy.com?subject=FutureX Fellowship Application Inquiry"
+                <button
+                  type="button"
+                  onClick={() => setIsApplyModalOpen(true)}
                   className="group inline-flex h-14 items-center gap-3 rounded-full bg-[#10b981] px-8 text-[15px] font-black text-white transition-all hover:bg-[#0e9f6e] hover:-translate-y-0.5"
                 >
                   Apply for Fellowship
                   <ArrowGlyph />
-                </Link>
+                </button>
                 <Link
                   // href="https://wa.me/917042671115?text=Hello! I want to know more about the FutureX Fellowship cohort."
                   href="https://www.futurexfellows.com/"
@@ -612,18 +615,24 @@ export default function FutureXFellowshipPage() {
               The next cohort is forming now. Grades 6–12, fully online, 9
               months to Demo Day.
             </p>
-            <Link
-              href="mailto:futurex@lyfshilpacademy.com?subject=FutureX Fellowship Application Inquiry"
+            <button
+              type="button"
+              onClick={() => setIsApplyModalOpen(true)}
               className="group inline-flex h-15 items-center justify-center gap-3 rounded-full bg-[#10b981] px-10 text-[16px] font-black text-white transition-all hover:bg-[#0e9f6e] hover:-translate-y-0.5 shadow-md shadow-[#10b981]/10 hover:shadow-[#10b981]/20 cursor-pointer"
             >
               Apply to the Fellowship
               <span className="text-xl transition-transform group-hover:translate-x-1">
                 →
               </span>
-            </Link>
+            </button>
           </div>
         </section>
       </main>
+
+      <FellowshipApplyModal
+        open={isApplyModalOpen}
+        onClose={() => setIsApplyModalOpen(false)}
+      />
     </div>
   );
 }
