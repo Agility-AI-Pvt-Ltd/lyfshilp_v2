@@ -7,7 +7,6 @@ import { JoinCommunity } from "@/src/components/ui/join-community";
 import { ProgramsSection } from "@/src/components/ui/programs-section";
 import { BuiltTogether } from "@/src/components/ui/built-together";
 import { RealVoices } from "@/src/components/ui/real-voices";
-import { CustomerReviews } from "@/src/components/ui/customer-reviews";
 import { FutureXReviewsSection } from "@/src/components/ui/futurex-reviews-section";
 
 const heroCol1 = [
@@ -139,18 +138,7 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Customer Stories Header */}
-            <div className="mt-24 text-center">
-              <p className="text-[13px] font-black uppercase tracking-[0.2em] text-[#9bd340]">
-                Customer stories
-              </p>
-              <h2 className="mx-auto mt-4 max-w-3xl text-[38px] font-black leading-tight tracking-[-0.035em] text-white sm:text-[52px]">
-                The shift families can see.
-              </h2>
-            </div>
           </div>
-
-          <CustomerReviews />
         </section>
 
         <ProgramsSection />

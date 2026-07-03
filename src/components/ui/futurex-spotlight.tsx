@@ -121,9 +121,47 @@ const spotlightItems: SpotlightItem[] = [
     comments: 10,
     cardClassName: "bg-[#181818]",
   },
+  {
+    id: "soujanya-teenager-problems",
+    time: "2 months",
+    author: "soujanya_arorak",
+    initials: "SA",
+    xp: "56 XP",
+    bonusXp: null,
+    title: "10 Problems I Face in My Daily Life as a Teenager - SOUJANYA ARORA (futurex fellow)",
+    description:
+      "Safety restrictions for girls, lack of lockers in school, heavy bags, academic pressure, and limited independence became a personal problem-discovery post about daily teenage life.",
+    tags: ["#LESSONS & MISSIONS", "#Problems", "#Daily", "#Teenager"],
+    image: {
+      src: "/images/soujanya-teenager-problems.svg",
+      alt: "Teenager daily life problems visual",
+    },
+    upvotes: 11,
+    comments: 11,
+    cardClassName: "bg-[#181818]",
+  },
+  {
+    id: "adrija-safeher-pitch-post",
+    time: "2 days",
+    author: "adrija_gupta",
+    initials: "AD",
+    xp: "1,511 XP",
+    bonusXp: "+16 XP",
+    title: "Pitch!!",
+    description:
+      "SAFEHER is a pitch for a women's safety app that combines instant live location sharing, safe routes, AI health assistance, and community reporting for unsafe areas.",
+    tags: ["#LESSONS & MISSIONS", "#Pitch"],
+    image: {
+      src: "/images/safeher-pitch.png",
+      alt: "SafeHer pitch presentation",
+    },
+    upvotes: 1,
+    comments: 0,
+    cardClassName: "bg-[#181818]",
+  },
 ];
 
-const scrollDistancePerCard = 72;
+const scrollDistancePerCard = 60;
 
 function UpvoteIcon() {
   return (
@@ -327,7 +365,7 @@ function AnimatedSpotlightCard({
   const enterStart = Math.max(0, start - step * 0.4);
   const holdEnd = start + step * 0.56;
 
-  const y = useTransform(
+  const x = useTransform(
     progress,
     index === 0
       ? [0, holdEnd, end]
@@ -384,12 +422,12 @@ function AnimatedSpotlightCard({
     <motion.div
       className="absolute inset-0"
       style={{
-        y: shouldReduceMotion ? 0 : y,
+        x: shouldReduceMotion ? 0 : x,
         opacity,
         scale: shouldReduceMotion ? 1 : scale,
         filter: shouldReduceMotion ? "none" : blur,
         zIndex: index + 1,
-        transformOrigin: "center bottom",
+        transformOrigin: "center center",
         willChange: "transform, opacity, filter",
       }}
     >

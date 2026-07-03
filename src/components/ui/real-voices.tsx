@@ -6,8 +6,58 @@ interface Testimonial {
   quote: string;
   author: string;
   subtitle: string;
-  imgSrc: string;
+  imgSrc?: string;
 }
+
+const studentTestimonials: Testimonial[] = [
+  {
+    quote:
+      "i am very interested in AI and as i am doing this program i am able to go deeper in it and learning new things",
+    author: "Mishita Khosla",
+    subtitle: "Springdales school, pusa road",
+  },
+  {
+    quote:
+      "Atleast got to know the current learning trends and learnt few basics of the different AI modules. Familiarity with few AI lingo. Hope to learn more.",
+    author: "Ranvit Rao",
+    subtitle: "Class 6th · DPS sec-45, gurgaon",
+  },
+  {
+    quote:
+      "I learned a lot about AI and learned more and more about AI's: names of AI's and types of AI's which help in everyday activities",
+    author: "Arnav Sangwan",
+    subtitle: "DPS sec-45, gurgaon",
+  },
+  {
+    quote:
+      "i have learned to create a lot of things , i have learned how to make websites , songs , a study plan . im rlly happy abt it",
+    author: "Myra Bhan",
+    subtitle: "Mount Carmel School, Dwarka",
+  },
+  {
+    quote:
+      "I have learned Prompt Engineering means how to create a Prompt and making several projects in Claude and I also made a project of Bolt based on application and I also created many songs in Suno",
+    author: "Hrehaan Chanda",
+    subtitle: "Springdales school",
+  },
+  {
+    quote:
+      "learned how every tool is meant for a different purpose. in order for the output to be proper, the input (prompt) has to be accurate as well.",
+    author: "Dravya Maheshwari",
+    subtitle: "St. Francis School, Indirapuram",
+  },
+  {
+    quote: "how to have conversations with ai",
+    author: "Agastya Gera",
+    subtitle: "DPS RK Puram",
+  },
+  {
+    quote:
+      "I learned more about prompt engineering which might help in various AI tools as I used to struggle with prompts and had to uffer the pain of not getting the result that I wanted.",
+    author: "Sanjana Agarwal",
+    subtitle: "DPS Sec-45, Gurgaon",
+  },
+];
 
 const parentTestimonials: Testimonial[] = [
   {
@@ -76,6 +126,13 @@ function QuoteIcon() {
 }
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  const initials = testimonial.author
+    .split(" ")
+    .map((name) => name[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+
   return (
     <div className="flex flex-col justify-between rounded-2xl border border-[#e6e8ef] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#272835] hover:shadow-md">
       <div>
@@ -85,12 +142,18 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         </p>
       </div>
       <div className="flex items-center mt-auto border-t border-[#f4f5f8] pt-5">
-        <img
-          src={testimonial.imgSrc}
-          alt={testimonial.author}
-          className="size-12 rounded-full object-cover bg-gray-100 border border-gray-200 shrink-0"
-          loading="lazy"
-        />
+        {testimonial.imgSrc ? (
+          <img
+            src={testimonial.imgSrc}
+            alt={testimonial.author}
+            className="size-12 shrink-0 rounded-full border border-gray-200 bg-gray-100 object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div className="grid size-12 shrink-0 place-items-center rounded-full border border-[#e6e8ef] bg-[#272835] text-[13px] font-black text-white">
+            {initials}
+          </div>
+        )}
         <div className="ml-4 overflow-hidden">
           <h4 className="text-[15px] font-bold text-[#272835] truncate">
             {testimonial.author}
@@ -132,6 +195,18 @@ export function RealVoices() {
           <h2 className="text-[40px] font-black leading-tight tracking-tight text-[#272835] sm:text-[52px]">
             Real voices. Real change.
           </h2>
+        </div>
+
+        {/* Students Section */}
+        <div className="mb-20">
+          <h3 className="mb-8 border-l-4 border-[#10b981] pl-4 text-[20px] font-black uppercase tracking-wider text-[#272835]/70">
+            Students Says
+          </h3>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {studentTestimonials.map((t, idx) => (
+              <TestimonialCard key={`student-${idx}`} testimonial={t} />
+            ))}
+          </div>
         </div>
 
         {/* Parents Section */}

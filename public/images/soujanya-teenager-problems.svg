@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Teenager daily life problems</title>
+  <desc id="desc">A muted illustration of a student sitting inside a wireframe room, representing daily teenage restrictions and pressures.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b8a699"/>
+      <stop offset="55%" stop-color="#8d8077"/>
+      <stop offset="100%" stop-color="#5d5550"/>
+    </linearGradient>
+    <radialGradient id="paper" cx="50%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#cfc0b7"/>
+      <stop offset="100%" stop-color="#84766e"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#17110d" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1144" height="544" rx="24" fill="url(#paper)" opacity=".78"/>
+  <g fill="none" stroke="#211b18" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".9" filter="url(#softShadow)">
+    <path d="M332 520 V232 L545 70 H940 V438 L730 520 Z"/>
+    <path d="M332 232 H730 V520"/>
+    <path d="M730 232 L940 70"/>
+    <path d="M730 232 V520"/>
+    <path d="M545 70 V356"/>
+    <path d="M940 70 V438"/>
+    <path d="M398 182 L398 520"/>
+    <path d="M466 132 L466 520"/>
+    <path d="M614 70 L614 520"/>
+    <path d="M690 70 L690 520"/>
+    <path d="M776 178 V490"/>
+    <path d="M844 126 V456"/>
+    <path d="M910 82 V426"/>
+    <path d="M332 286 H730"/>
+    <path d="M332 344 H730"/>
+    <path d="M332 405 H730"/>
+    <path d="M332 466 H730"/>
+    <path d="M402 180 H845"/>
+    <path d="M470 128 H904"/>
+    <path d="M545 70 H940"/>
+    <path d="M730 286 L940 136"/>
+    <path d="M730 344 L940 198"/>
+    <path d="M730 405 L940 278"/>
+    <path d="M730 466 L940 356"/>
+    <path d="M332 232 L730 520"/>
+    <path d="M398 182 L776 490"/>
+    <path d="M466 132 L844 456"/>
+    <path d="M545 70 L940 438"/>
+  </g>
+  <g fill="none" stroke="#201916" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+    <path d="M478 520 V386 L666 362 L666 520"/>
+    <path d="M478 386 H632 L666 362"/>
+    <path d="M526 520 V424 L706 408"/>
+    <path d="M526 424 H704 V520"/>
+    <path d="M478 454 H704"/>
+    <path d="M558 378 V520"/>
+    <path d="M612 368 V520"/>
+  </g>
+  <g fill="#211b18" opacity=".94">
+    <circle cx="842" cy="368" r="42"/>
+    <path d="M822 407 C860 394 908 412 926 452 C943 490 921 523 878 525 L770 526 C742 526 720 510 717 485 C714 461 734 444 759 450 L806 462 C824 466 842 456 844 438 Z"/>
+    <path d="M802 455 C772 477 744 493 708 506 L694 474 C725 462 751 447 777 426 Z"/>
+    <path d="M867 510 C900 512 932 526 964 552 L940 579 C911 558 883 546 850 542 Z"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="62" y="62" width="310" height="58" rx="29" fill="#171717" opacity=".52"/>
+    <text x="218" y="99" text-anchor="middle" font-size="24" font-weight="800" fill="#f5df9f">Daily Life as a Teenager</text>
+    <g fill="#f4ece5" opacity=".82" font-size="22" font-weight="700">
+      <text x="76" y="168">Safety restrictions</text>
+      <text x="76" y="206">Heavy school bags</text>
+      <text x="76" y="244">Academic pressure</text>
+      <text x="76" y="282">Limited independence</text>
+    </g>
+  </g>
+</svg>

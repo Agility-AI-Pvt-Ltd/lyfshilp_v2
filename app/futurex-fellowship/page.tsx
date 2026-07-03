@@ -10,6 +10,7 @@ import { FutureXTimelineSection } from "@/src/components/ui/futurex-timeline";
 import { FutureXPlatformSection } from "@/src/components/ui/futurex-platform";
 import { FutureXLeaderboardSection } from "@/src/components/ui/futurex-leaderboard";
 import { FutureXSpotlightSection } from "@/src/components/ui/futurex-spotlight";
+import { FutureXEventsSection } from "@/src/components/ui/futurex-events-section";
 
 // SVG Icons
 function ArrowGlyph() {
@@ -236,6 +237,100 @@ const faqs: FAQItem[] = [
     a: "Yes. Lyfshilp offers partial and full merit-based scholarships to fellows with strong project ideas, outstanding portfolios, or financial need.",
   },
 ];
+
+const futureXTitansSpaces = [
+  {
+    initial: "A",
+    title: "AI Shipyard",
+    description:
+      "Be like pirates — explore boldly, learn by building, break limits, and create anything you can with AI.",
+    stats: "31 members · 13 posts",
+    avatarClassName: "bg-[#ef4444]",
+  },
+  {
+    initial: "L",
+    title: "LESSONS & MISSIONS",
+    description:
+      "In this community you can post your assignments and homework given to you",
+    stats: "37 members · 189 posts",
+    avatarClassName: "bg-[#a345f5]",
+  },
+  {
+    initial: "A",
+    title: "AI BUILDER'S SPELLBOOK ???",
+    description:
+      "This Community is to showcase your work that you build during the fellowship process. Post your tool links",
+    stats: "33 members · 0 posts",
+    avatarClassName: "bg-[#42bb83]",
+  },
+  {
+    initial: "O",
+    title: "ORDER OF FUTUREX ???",
+    description:
+      "This community is to post your session work and task. Make it as interesting, creative and intuitive as you can",
+    stats: "38 members · 18 posts",
+    avatarClassName: "bg-[#3b82f6]",
+  },
+];
+
+function FutureXTitansCommunitySection() {
+  return (
+    <section className="relative z-50 bg-[#faf8f5] px-6 py-24 text-[#111827] sm:px-8 lg:px-14">
+      <div className="mx-auto max-w-7xl">
+        <div className="max-w-3xl">
+          <p className="text-[13px] font-bold uppercase tracking-[0.2em] text-[#1e5237]">
+            Community
+          </p>
+          <h2 className="mt-4 text-[40px] font-black leading-[1.08] tracking-tight text-[#111827] sm:text-[54px]">
+            FutureX Titans — where students connect
+          </h2>
+          <p className="mt-6 text-[18px] leading-relaxed text-[#4b5563] sm:text-[20px]">
+            Every scholar joins a thriving community of young innovators who share projects, submit assignments, and learn together.
+          </p>
+        </div>
+
+        <div className="mt-14 overflow-hidden">
+          <div className="flex w-max [animation:futurex-titans-marquee_32s_linear_infinite] hover:[animation-play-state:paused]">
+            {[0, 1].map((groupIndex) => (
+              <div
+                key={groupIndex}
+                className="flex gap-5 pr-5"
+                aria-hidden={groupIndex === 1}
+              >
+                {futureXTitansSpaces.map((space) => (
+                  <article
+                    key={`${groupIndex}-${space.title}`}
+                    className="flex min-h-[270px] w-[300px] shrink-0 flex-col rounded-2xl border border-[#e7dcc3] bg-white p-6 shadow-[0_10px_26px_rgba(32,38,35,0.045)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(32,38,35,0.08)] sm:w-[340px] lg:w-[360px]"
+                  >
+                    <div className="flex min-w-0 items-start gap-4">
+                      <div
+                        className={`grid size-14 shrink-0 place-items-center rounded-full text-[18px] font-black text-white shadow-inner ${space.avatarClassName}`}
+                        aria-hidden="true"
+                      >
+                        {space.initial}
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="text-[18px] font-black leading-tight tracking-tight text-[#17201c]">
+                          {space.title}
+                        </h3>
+                        <p className="mt-1.5 max-w-2xl text-[15px] font-medium leading-6 text-[#5c625f]">
+                          {space.description}
+                        </p>
+                        <p className="mt-2.5 font-mono text-[12px] font-bold tracking-[0.04em] text-[#5f6662]">
+                          {space.stats}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function FutureXFellowshipPage() {
   const router = useRouter();
@@ -472,11 +567,17 @@ export default function FutureXFellowshipPage() {
         {/* The 9-Month Journey */}
         <FutureXTimelineSection />
 
+        {/* FutureX Events */}
+        <FutureXEventsSection />
+
         {/* Inside the Platform */}
         <FutureXPlatformSection />
 
         {/* Gamified Learning */}
         <FutureXLeaderboardSection />
+
+        {/* FutureX Titans Community */}
+        <FutureXTitansCommunitySection />
 
         {/* Fellow Spotlight */}
         <FutureXSpotlightSection />

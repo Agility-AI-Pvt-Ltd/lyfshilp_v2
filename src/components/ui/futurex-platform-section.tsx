@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 const platformFeatures = [
   {
-    icon: "🤖",
     title: "AI Playground",
     description:
       "Chat with any AI model directly — no coding needed. Powered by OpenRouter's free tier, so you can experiment with prompt engineering and build AI-powered prototypes hands-on.",
@@ -13,7 +12,6 @@ const platformFeatures = [
     border: "border-blue-500/30",
   },
   {
-    icon: "🔬",
     title: "Research Workspace",
     description:
       "Submit a startup idea and get an AI-generated feasibility brief. Define your ideal customer, the problem you solve, and iterate on your analysis. Save and revisit your research anytime.",
@@ -21,7 +19,6 @@ const platformFeatures = [
     border: "border-purple-500/30",
   },
   {
-    icon: "⚡",
     title: "XP & Leaderboard",
     description:
       "Earn experience points for completing missions, lessons, and milestones. Track your rank against your cohort on a live leaderboard — the top 30 are displayed with a podium for the top 3.",
@@ -29,7 +26,6 @@ const platformFeatures = [
     border: "border-yellow-500/30",
   },
   {
-    icon: "📣",
     title: "Community Feed",
     description:
       "Post your pitches, share progress, get upvotes and feedback from fellow students. Tagged under Lessons & Missions, your work is visible to the entire fellowship community.",
@@ -37,7 +33,6 @@ const platformFeatures = [
     border: "border-emerald-500/30",
   },
   {
-    icon: "📊",
     title: "Harvard Case Studies",
     description:
       "Real business cases used at the world's top institutions, adapted for young founders. Analyse decisions, debate strategies, and apply lessons to your own venture.",
@@ -45,7 +40,6 @@ const platformFeatures = [
     border: "border-red-500/30",
   },
   {
-    icon: "🎓",
     title: "International Certification",
     description:
       "Complete the fellowship and receive an internationally recognised certification — a credential that validates your entrepreneurial skills and AI literacy to universities and employers.",

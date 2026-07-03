@@ -8,78 +8,48 @@ const reviewRows: Review[][] = [
   [
     {
       quote:
-        "My child stopped waiting for instructions and started building ideas independently.",
-      author: "Parent · Grade 8",
+        "i am very interested in AI and as i am doing this program i am able to go deeper in it and learning new things",
+      author: "Mishita Khosla; Springdales school, pusa road",
     },
     {
       quote:
-        "The project-first format made AI feel practical, creative, and genuinely exciting.",
-      author: "Parent · Grade 10",
-    },
-    {
-      quote:
-        "We could see the confidence grow every week—not just technical skills.",
-      author: "Parent · Grade 7",
-    },
-    {
-      quote:
-        "The mentors challenged students to think clearly and explain what they built.",
-      author: "School educator",
+        "Atleast got to know the current learning trends and learnt few basics of the different AI modules. Familiarity with few AI lingo. Hope to learn more.",
+      author: "Ranvit Rao, class 6th, DPS sec-45, gurgaon",
     },
   ],
   [
     {
       quote:
-        "Demo Day gave my child a real goal and the confidence to present to an audience.",
-      author: "Parent · Grade 9",
+        "I learned a lot about AI and learned more and more about AI's: names of AI's and types of AI's which help in everyday activities",
+      author: "Arnav sangwan, dps sec-45, gurgaon",
     },
     {
       quote:
-        "It was the first program where the final outcome felt useful, not just academic.",
-      author: "Parent · Grade 11",
-    },
-    {
-      quote:
-        "Students learned to question AI outputs instead of accepting every answer blindly.",
-      author: "School leader",
-    },
-    {
-      quote:
-        "The sessions balanced imagination, teamwork, and disciplined execution beautifully.",
-      author: "Parent · Grade 6",
+        "i have learned to create a lot of things , i have learned how to make websites , songs , a study plan . im rlly happy abt it",
+      author: "myra bhan, mount carmel school, dwarka",
     },
   ],
   [
     {
       quote:
-        "My child now talks about users, problems, and solutions—not only marks.",
-      author: "Parent · Grade 8",
+        "I have learned Prompt Engineering means how to create a Prompt and making several projects in Claude and I also made a project of Bolt based on application and I also created many songs in Suno",
+      author: "Hrehaan chanda, springdales school",
     },
     {
       quote:
-        "The feedback was specific and encouraging, so every revision felt meaningful.",
-      author: "Parent · Grade 10",
-    },
-    {
-      quote:
-        "They came in with an idea and left with something real they could demonstrate.",
-      author: "Program partner",
-    },
-    {
-      quote:
-        "The program turned curiosity into a habit of making, testing, and improving.",
-      author: "Parent · Grade 9",
+        "learned how every tool is meant for a different purpose. in order for the output to be proper, the input (prompt) has to be accurate as well.",
+      author: "Dravya maheshwari, St. Francis School, indirapuram",
     },
   ],
 ];
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <blockquote className="flex min-h-[110px] w-[260px] shrink-0 flex-col justify-between rounded-[16px] border border-white/10 bg-[#191919] px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.28)] sm:w-[300px] sm:px-5 sm:py-4">
-      <p className="text-[14px] font-semibold leading-relaxed text-white/90 sm:text-[15px]">
+    <blockquote className="flex min-h-[92px] w-[230px] shrink-0 flex-col justify-between rounded-[14px] border border-white/10 bg-[#191919] px-3.5 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.24)] sm:w-[260px] sm:px-4 sm:py-3.5">
+      <p className="text-[11.5px] font-semibold leading-relaxed text-white/90 sm:text-[12.5px]">
         “{review.quote}”
       </p>
-      <footer className="mt-4 text-[11px] font-black uppercase tracking-[0.15em] text-white/45">
+      <footer className="mt-3 text-[8.5px] font-black uppercase tracking-[0.12em] text-white/45 sm:text-[9px]">
         {review.author}
       </footer>
     </blockquote>
@@ -123,7 +93,7 @@ function ReviewRow({
 export function CustomerReviews() {
   return (
     <div
-      className="relative -mx-6 mt-8 overflow-hidden bg-[#0d0d0d] py-12 sm:-mx-8 sm:py-14 lg:-mx-14"
+      className="relative -mx-6 mt-6 overflow-hidden bg-[#0d0d0d] py-9 sm:-mx-8 sm:py-10 lg:-mx-14"
       style={{
         boxShadow: "inset 0 28px 42px -30px rgba(255, 255, 255, 0.2)",
       }}
@@ -162,8 +132,8 @@ export function CustomerReviews() {
 
         .customer-review-group {
           display: flex;
-          gap: 0.875rem;
-          padding-right: 0.875rem;
+          gap: 0.75rem;
+          padding-right: 0.75rem;
         }
 
         .customer-review-row:hover .customer-review-track {
@@ -186,7 +156,7 @@ export function CustomerReviews() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 space-y-4">
+      <div className="relative z-10 space-y-3">
         <ReviewRow reviews={reviewRows[0]} direction="right" duration={46} />
         <ReviewRow reviews={reviewRows[1]} direction="left" duration={42} />
         <ReviewRow reviews={reviewRows[2]} direction="right" duration={50} />

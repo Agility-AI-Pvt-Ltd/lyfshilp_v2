@@ -37,26 +37,36 @@ const communitySpaces = [
 
 export function FutureXSpotlightSection() {
   return (
-    <section className="bg-[#faf8f5] px-6 py-28 sm:px-8 lg:px-14">
-      <div className="mx-auto max-w-[1200px]">
-        <div className="mb-12 max-w-3xl">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.2em] text-[#1e5237]">
-            Community
-          </p>
-          <h2 className="text-[40px] font-black leading-[1.08] tracking-[-0.03em] text-[#111827] sm:text-[54px]">
-            FutureX Titans — where students connect
-          </h2>
-          <p className="mt-6 text-[18px] leading-relaxed text-[#4b5563] sm:text-[20px]">
-            Every scholar joins a thriving community of young innovators who
-            share projects, submit assignments, and learn together.
-          </p>
+    <section className="bg-[#faf8f5] py-28 overflow-hidden">
+      <div className="px-6 sm:px-8 lg:px-14">
+        <div className="mx-auto max-w-[1200px] mb-12">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.2em] text-[#1e5237]">
+              Community
+            </p>
+            <h2 className="text-[40px] font-black leading-[1.08] tracking-[-0.03em] text-[#111827] sm:text-[54px]">
+              FutureX Titans — where students connect
+            </h2>
+            <p className="mt-6 text-[18px] leading-relaxed text-[#4b5563] sm:text-[20px]">
+              Every scholar joins a thriving community of young innovators who
+              share projects, submit assignments, and learn together.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {communitySpaces.map((space) => (
+      {/* Scrolling marquee */}
+      <div className="relative">
+        {/* Left fade */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#faf8f5] to-transparent" />
+        {/* Right fade */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#faf8f5] to-transparent" />
+
+        <div className="community-track gap-5 px-5">
+          {[...communitySpaces, ...communitySpaces].map((space, i) => (
             <article
-              key={space.title}
-              className="group relative flex min-h-[210px] overflow-hidden rounded-[18px] border border-[#ece8e0] bg-white p-5 shadow-[0_10px_30px_rgba(32,38,35,0.055)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(32,38,35,0.1)]"
+              key={i}
+              className="group relative flex w-[300px] shrink-0 min-h-[210px] overflow-hidden rounded-[18px] border border-[#ece8e0] bg-white p-5 shadow-[0_10px_30px_rgba(32,38,35,0.055)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(32,38,35,0.1)] mx-2.5"
             >
               <div className="flex items-start gap-3.5">
                 <div

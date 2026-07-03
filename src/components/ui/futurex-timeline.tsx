@@ -43,16 +43,18 @@ const journeySteps: JourneyStep[] = [
 ];
 
 export function FutureXTimelineSection() {
+  const sectionRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start center", "end center"],
+    target: sectionRef,
+    offset: ["start end", "end start"],
   });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // Map scroll progress to line height: start growing when section enters viewport, finish when it leaves
+  const lineHeight = useTransform(scrollYProgress, [0.05, 0.85], ["0%", "100%"]);
 
   return (
-    <section className="relative lg:sticky lg:top-0 z-20 bg-[#fffaf4] px-6 py-28 sm:px-8 lg:px-14 shadow-[0_-32px_80px_rgba(0,0,0,0.06)] border-t border-[#e6e8ef]">
+    <section ref={sectionRef} className="relative lg:sticky lg:top-0 z-20 bg-[#fffaf4] px-6 py-28 sm:px-8 lg:px-14 shadow-[0_-32px_80px_rgba(0,0,0,0.06)] border-t border-[#e6e8ef]">
       <div className="mx-auto max-w-5xl">
         {/* Header Block */}
         <div className="mb-20 text-center">
