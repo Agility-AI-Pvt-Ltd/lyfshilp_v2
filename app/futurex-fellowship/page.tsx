@@ -446,7 +446,7 @@ export default function FutureXFellowshipPage() {
 
       <main>
         {/* 1. HERO SECTION */}
-        <section className="relative z-0 flex min-h-screen flex-col items-center justify-start overflow-hidden bg-black px-6 pb-12 pt-14 text-white sm:px-8 sm:pt-16 lg:sticky lg:top-0 lg:h-screen lg:px-14 lg:pt-20">
+        <section className="relative z-0 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black px-6 pb-8 pt-14 text-white sm:px-8 sm:pt-16 lg:sticky lg:top-0 lg:h-screen lg:px-14 lg:pt-16">
           {/* Background Video */}
           <video
             autoPlay
@@ -472,35 +472,35 @@ export default function FutureXFellowshipPage() {
           />
           <CircuitField />
 
-          <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-10 py-2">
+          <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-5 py-2">
             {/* Tagline & Main Copy */}
-            <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-[#10b981]/40 bg-[#10b981]/12 px-4 py-1.5 text-[12px] font-black uppercase tracking-wider text-[#CFFD53]">
-                <span className="size-2 animate-ping rounded-full bg-[#CFFD53]" />
+            <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#10b981]/40 bg-[#10b981]/12 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#CFFD53] sm:text-[11px]">
+                <span className="size-1.5 animate-ping rounded-full bg-[#CFFD53]" />
                 Cohort 4.0 Applications Open
               </div>
 
-              <h1 className="mt-5 text-[48px] font-black leading-[0.98] tracking-tight sm:text-[72px] lg:text-[96px]">
+              <h1 className="mt-3 text-[28px] font-black leading-[1.08] tracking-tight sm:text-[38px] lg:text-[44px]">
                 Your Child Doesn't Just Learn AI.{" "}
                 <span className="text-[#CFFD53]">
                   <br />
                   They Build With It. Lead With It.
                 </span>
               </h1>
-              <p className="mt-4 text-[18px] font-bold tracking-wide uppercase text-white/50">
+              <p className="mt-2 text-[12px] font-bold tracking-wide uppercase text-white/50 sm:text-[13px]">
                 FutureX Fellowship
               </p>
-              <p className="mt-3 max-w-3xl text-[19px] font-medium leading-relaxed text-white/80 sm:text-[22px] mx-auto">
+              <p className="mt-2 max-w-2xl text-[14px] font-medium leading-relaxed text-white/80 sm:text-[15px] mx-auto">
                 A mentored sprint-driven pathway for ambitious learners. Move
                 from raw ideas to fully deployed, user-tested AI products in 6
                 weeks with direct guidance from active founders.
               </p>
 
-              <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <div className="mt-4 flex flex-wrap justify-center gap-3">
                 <button
                   type="button"
                   onClick={() => setIsApplyModalOpen(true)}
-                  className="group inline-flex h-14 items-center gap-3 rounded-full bg-[#10b981] px-8 text-[15px] font-black text-white transition-all hover:bg-[#0e9f6e] hover:-translate-y-0.5"
+                  className="group inline-flex h-12 items-center gap-2.5 rounded-full bg-[#10b981] px-6 text-[14px] font-black text-white transition-all hover:bg-[#0e9f6e] hover:-translate-y-0.5"
                 >
                   Apply for Fellowship
                   <ArrowGlyph />
@@ -510,7 +510,7 @@ export default function FutureXFellowshipPage() {
                   href="https://www.futurexfellows.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-14 items-center rounded-full border border-white/20 bg-white/5 px-8 text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/12 hover:border-white/30"
+                  className="inline-flex h-12 items-center rounded-full border border-white/20 bg-white/5 px-6 text-[14px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/12 hover:border-white/30"
                 >
                   FutureX Community
                 </Link>
@@ -518,34 +518,34 @@ export default function FutureXFellowshipPage() {
             </div>
 
             {/* Interactive Stats Grid */}
-            <div className="mt-10 grid gap-6 border-t border-white/10 pt-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="min-h-24 border-l border-[#10b981]/40 pl-5">
-                <div className="text-[40px] font-black leading-none text-[#CFFD53]">
+            <div className="mt-4 grid gap-4 border-t border-white/10 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
+                <div className="text-[28px] font-black leading-none text-[#CFFD53] sm:text-[32px]">
                   <StaggeredCountdown value="5,000" suffix="+" />
                 </div>
-                <p className="mt-2 text-[14px] font-bold uppercase tracking-wider text-white/50">
+                <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
                   students trained
                 </p>
               </div>
-              <div className="min-h-24 border-l border-[#10b981]/40 pl-5">
-                <div className="text-[40px] font-black leading-none text-white">
+              <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
+                <div className="text-[28px] font-black leading-none text-white sm:text-[32px]">
                   <StaggeredCountdown value="36" suffix={`${" "}Sessions`} />
                 </div>
-                <p className="mt-2 text-[14px] font-bold uppercase tracking-wider text-white/50">
+                <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
                   Harvard Case Method
                 </p>
               </div>
-              <div className="min-h-24 border-l border-[#10b981]/40 pl-5">
-                <div className="text-[40px] font-black leading-none text-white">
+              <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
+                <div className="text-[28px] font-black leading-none text-white sm:text-[32px]">
                   <StaggeredCountdown value="" suffix="Demo Day" />
                 </div>
-                <p className="mt-2 text-[14px] font-bold uppercase tracking-wider text-white/50"></p>
+                <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]"></p>
               </div>
-              <div className="min-h-24 border-l border-[#10b981]/40 pl-5">
-                <p className="text-[40px] font-black leading-none text-white">
+              <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
+                <p className="text-[28px] font-black leading-none text-white sm:text-[32px]">
                   XP system
                 </p>
-                <p className="mt-2 text-[14px] font-bold uppercase tracking-wider text-white/50">
+                <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
                   Founder Review Cycles
                 </p>
               </div>
