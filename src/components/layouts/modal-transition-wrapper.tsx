@@ -1,15 +1,20 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 
 export function ModalTransitionWrapper({ modal }: { modal: React.ReactNode }) {
   const pathname = usePathname();
   const isFellowship = pathname === "/futurex-fellowship";
+  
+  // A truthy 'modal' prop alone isn't enough because Next.js passes a ReactElement for default.tsx.
+  // We use useSelectedLayoutSegment("modal") to determine if a route is actively rendering in the slot.
+  const modalSegment = useSelectedLayoutSegment("modal");
+  const isModalActive = modalSegment !== null;
 
   return (
     <AnimatePresence>
-      {isFellowship && modal && (
+      {isFellowship && isModalActive && modal && (
         <motion.div
           key="fellowship-modal-overlay"
           initial={{ clipPath: "circle(0% at 50% 50%)" }}

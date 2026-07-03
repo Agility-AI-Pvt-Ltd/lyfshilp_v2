@@ -18,7 +18,7 @@ export function FutureXSpotlightSection() {
   };
 
   return (
-    <section className="relative lg:sticky lg:top-0 z-50 bg-[#07080a] text-white min-h-screen px-6 py-28 sm:px-8 lg:px-14 shadow-[0_-28px_72px_rgba(0,0,0,0.9)] border-t border-white/5">
+    <section className="relative bg-[#07080a] text-white min-h-screen px-6 py-28 sm:px-8 lg:px-14 border-t border-white/5">
       <div className="mx-auto max-w-7xl">
         {/* Header Block */}
         <div className="max-w-4xl mb-20">
@@ -30,7 +30,8 @@ export function FutureXSpotlightSection() {
             <span className="text-[#CFFD53]">real students.</span>
           </h2>
           <p className="mt-6 text-[18px] sm:text-[20px] leading-relaxed text-white/70 max-w-3xl font-medium">
-            Fellows build products that address real-world problems — then pitch them to the community.
+            Fellows build products that address real-world problems — then pitch
+            them to the community.
           </p>
         </div>
 
@@ -55,7 +56,9 @@ export function FutureXSpotlightSection() {
                   AG
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-bold text-white leading-none">adrija_gupta</h3>
+                  <h3 className="text-[16px] font-bold text-white leading-none">
+                    adrija_gupta
+                  </h3>
                   <span className="mt-1.5 inline-flex items-center gap-1 rounded-full bg-[#CFFD53]/10 px-2 py-0.5 text-[11px] font-black text-[#CFFD53]">
                     ⚡ 1,511 XP
                   </span>
@@ -80,26 +83,37 @@ export function FutureXSpotlightSection() {
 
             {/* Post Description */}
             <p className="mt-4 text-[15px] sm:text-[16px] leading-relaxed text-white/70 font-medium">
-              A women&apos;s safety app for Delhi-NCR that combines instant SOS alerts, safe route navigation, AI-powered health assistance, and community-driven unsafe area reporting — built by a student who saw a problem and decided to solve it.
+              A women&apos;s safety app for Delhi-NCR that combines instant SOS
+              alerts, safe route navigation, AI-powered health assistance, and
+              community-driven unsafe area reporting — built by a student who
+              saw a problem and decided to solve it.
             </p>
 
             {/* Feature Bullet Grid */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-white/10 pt-6">
               <div className="flex items-center gap-3">
                 <span className="text-xl">🆘</span>
-                <span className="text-[14px] font-semibold text-white/80">Instant Live Location Share</span>
+                <span className="text-[14px] font-semibold text-white/80">
+                  Instant Live Location Share
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xl">🗺️</span>
-                <span className="text-[14px] font-semibold text-white/80">Safe Routes to Police & Metro</span>
+                <span className="text-[14px] font-semibold text-white/80">
+                  Safe Routes to Police & Metro
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xl">🤖</span>
-                <span className="text-[14px] font-semibold text-white/80">AI Health Assistant</span>
+                <span className="text-[14px] font-semibold text-white/80">
+                  AI Health Assistant
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xl">📍</span>
-                <span className="text-[14px] font-semibold text-white/80">Community Unsafe Area Reports</span>
+                <span className="text-[14px] font-semibold text-white/80">
+                  Community Unsafe Area Reports
+                </span>
               </div>
             </div>
 
@@ -121,7 +135,6 @@ export function FutureXSpotlightSection() {
                 <span className="font-bold">14 comments</span>
               </span>
             </div>
-
           </motion.div>
         </div>
       </div>
