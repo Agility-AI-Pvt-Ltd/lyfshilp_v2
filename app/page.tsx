@@ -137,8 +137,6 @@ export default function Home() {
           students="500+ student founders"
         />
 
-        <FutureXReviewsSection />
-
         {/* Stats band */}
         <section className="bg-[#0d0d0d] px-4 pb-24 pt-24 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[1440px] mb-24">
@@ -202,6 +200,7 @@ export default function Home() {
         </section>
 
         <ProgramsSection />
+        <FutureXReviewsSection />
         <BuiltTogether />
         <RealVoices />
 

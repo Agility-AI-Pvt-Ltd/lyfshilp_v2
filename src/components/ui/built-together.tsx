@@ -80,7 +80,7 @@ export function BuiltTogether() {
             </p>
           </div>
           <Link
-            href="https://instagram.com/futurexfellows"
+            href="https://www.instagram.com/futurexfellowship/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 text-[15px] font-semibold text-[#272835] transition-colors hover:text-[#5e22ff] shrink-0"

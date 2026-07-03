@@ -177,7 +177,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 w-full sm:w-auto">
-              <button className="group relative w-full sm:w-auto overflow-hidden flex items-center justify-between rounded-full bg-[#f8fafb] p-1 transition-colors duration-300 border-0 focus:outline-none">
+              <a
+                href={`https://wa.me/917042671115?text=${encodeURIComponent("Hi! I'd like to book a free counselling call.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-full sm:w-auto overflow-hidden flex items-center justify-between rounded-full bg-[#f8fafb] p-1 transition-colors duration-300 border-0 focus:outline-none"
+              >
                 {/* #CFFD53 sweep layer — covers whole pill left to right on hover */}
                 <span
                   className="absolute inset-0 origin-left scale-x-0 bg-[#CFFD53] transition-transform duration-300 ease-in-out group-hover:scale-x-100"
@@ -214,7 +219,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     </svg>
                   </span>
                 </span>
-              </button>
+              </a>
               <button className="btn-secondary w-full sm:w-auto h-11 px-7 rounded-full text-sm uppercase flex items-center justify-center gap-2.5 !bg-white !border-0 focus:outline-none">
                 <svg
                   width="18"
