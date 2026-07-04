@@ -10,6 +10,7 @@ interface HeroSectionProps {
   rating?: string;
   students?: string;
   trustedText?: string;
+  programGuideHref?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -19,6 +20,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   subtitle =
     "GET READY TO TRULY ROCK YOUR 3D DESIGN SKILLS WITH FUN PROJECTS, REAL-LIFE WORKFLOWS, AND TRAINING FROM THE PROS. LEARN BY DOING WITH HANDS-ON PROJECTS THAT MIRROR REAL INDUSTRY WORKFLOWS.",
   trustedText = "India's Most Serious AI Program for School Students.",
+  programGuideHref,
 }) => {
   // Duplicate images for seamless infinite loop
   const col1 = [...columnOneImages, ...columnOneImages, ...columnOneImages];
@@ -220,7 +222,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   </span>
                 </span>
               </a>
-              <button className="btn-secondary w-full sm:w-auto h-11 px-7 rounded-full text-sm uppercase flex items-center justify-center gap-2.5 !bg-white !border-0 focus:outline-none">
+              <a
+                href={programGuideHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary w-full sm:w-auto h-11 px-7 rounded-full text-sm uppercase flex items-center justify-center gap-2.5 !bg-white !border-0 focus:outline-none"
+              >
                 <svg
                   width="18"
                   height="18"
@@ -237,7 +244,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
                 <span>Download Program Guide</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
