@@ -67,6 +67,30 @@ const routeContent: Record<string, RouteContent> = {
     ],
     accent: "bg-[#ff492c]",
   },
+  "govt-bodies": {
+    title: "Enabling public education at scale.",
+    eyebrow: "Government Bodies",
+    description:
+      "Partner with Lyfshilp to bring state-wide AI literacy, digital skill alignment, and startup incubation to public school and college ecosystems.",
+    points: [
+      "State-wide student hackathons and showcases",
+      "Vocational & AI literacy curriculum alignment",
+      "Turnkey scale-optimized teacher training models",
+    ],
+    accent: "bg-[#a3e635]",
+  },
+  educators: {
+    title: "Empowering educators to lead the AI shift.",
+    eyebrow: "Educators",
+    description:
+      "Get access to classroom-ready AI pedagogy, prompt libraries, project frameworks, and join a global community of future-ready mentors.",
+    points: [
+      "AI classroom pedagogy and prompt libraries",
+      "Hands-on project-led instruction guides",
+      "Mentorship networks and continuous coaching",
+    ],
+    accent: "bg-[#67e8f9]",
+  },
   "for-colleges": {
     title: "Launching soon.",
     eyebrow: "For Colleges",
@@ -79,18 +103,7 @@ const routeContent: Record<string, RouteContent> = {
     ],
     accent: "bg-[#ffd166]",
   },
-  "corporate-ai": {
-    title: "Launching soon.",
-    eyebrow: "Corporate AI",
-    description:
-      "Our practical AI enablement programme for modern teams is being prepared for launch.",
-    points: [
-      "Role-specific AI workflows",
-      "Team training and playbooks",
-      "Implementation-focused sessions",
-    ],
-    accent: "bg-[#242532]",
-  },
+
   community: {
     title: "A community where student founders build together.",
     eyebrow: "Community",
