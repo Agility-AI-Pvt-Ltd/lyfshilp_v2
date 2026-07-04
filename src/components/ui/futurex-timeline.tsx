@@ -56,12 +56,12 @@ const journeySteps: JourneyStep[] = [
 ];
 
 const waveNodes = [
-  { x: "8.33%", y: 222 },
-  { x: "25%", y: 178 },
-  { x: "41.66%", y: 222 },
-  { x: "58.33%", y: 178 },
-  { x: "75%", y: 222 },
-  { x: "91.66%", y: 178 },
+  { x: "5%", y: 222 },
+  { x: "19.6%", y: 178 },
+  { x: "34.2%", y: 222 },
+  { x: "48.8%", y: 178 },
+  { x: "63.4%", y: 222 },
+  { x: "78%", y: 178 },
 ];
 
 export function FutureXTimelineSection() {
@@ -97,7 +97,7 @@ export function FutureXTimelineSection() {
         className="hide-scrollbar w-full overflow-x-auto pb-4 pt-2"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        <div className="relative mx-auto h-[260px] w-full min-w-[1000px]">
+        <div className="relative mx-auto h-[260px] w-full min-w-[1200px] overflow-hidden">
           <svg
             className="pointer-events-none absolute inset-0 h-[260px] w-full"
             viewBox="0 0 1200 320"
@@ -161,7 +161,7 @@ export function FutureXTimelineSection() {
                 />
 
                 {/* Text Content */}
-                <div className="absolute left-1/2 top-[-6px] w-[260px] pl-5 pointer-events-none">
+                <div className="pointer-events-none absolute left-1/2 top-[-6px] w-[260px] pl-5">
                   <h4 className="text-[18px] font-black text-[#facc15] tracking-wide mb-1 transition-opacity duration-300">
                     {step.phase}
                   </h4>
