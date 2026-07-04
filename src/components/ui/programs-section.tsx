@@ -76,7 +76,7 @@ const programs: Program[] = [
       "Present finished tools at Demo Day",
     ],
     cta: "Join the Next Cohort",
-    href: "/products",
+    href: "/build-with-ai",
     accent: "#ffd166",
     softAccent: "rgba(253, 224, 71, 0.1)",
     iconShape: "pinwheel",

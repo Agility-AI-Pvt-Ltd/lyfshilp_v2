@@ -14,7 +14,7 @@ const footerLinks: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: "FutureX Fellowship", href: "/futurex-fellowship" },
       { label: "AI Scholar Track", href: "/summer-programme" },
-      { label: "Build With AI", href: "/products" },
+      { label: "Build With AI", href: "/build-with-ai" },
     ],
   },
   {
