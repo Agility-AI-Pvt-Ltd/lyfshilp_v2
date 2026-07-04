@@ -12,38 +12,45 @@ interface JourneyStep {
 
 const journeySteps: JourneyStep[] = [
   {
-    phase: "Months 1–2",
-    title: "Discovery",
+    phase: "Month 1",
+    title: "Who Am I & What Problem Do I See?",
     description:
-      "Identify a real problem worth solving using the Harvard Case Method. Study existing businesses and analyse markets.",
-    shortLabel: "Discovery",
+      "Self-discovery, user interviews, problem statement — no idea required on Day 1.",
+    shortLabel: "Problem",
   },
   {
-    phase: "Months 3–4",
-    title: "Validation",
+    phase: "Month 2",
+    title: "From Problem to Prototype",
     description:
-      "Conduct user interviews, test assumptions, and validate demand. Build your first prototype using AI tools.",
-    shortLabel: "Validation",
+      "First venture, business model, first customer, optional team formation.",
+    shortLabel: "Prototype",
   },
   {
-    phase: "Months 5–6",
-    title: "Build",
+    phase: "Month 3",
+    title: "Go to Market",
     description:
-      "Build a working product using free platforms — no coding required. Learn prompt engineering as a co-builder.",
-    shortLabel: "Build",
+      "SEO, email marketing, first revenue attempt, AI automation tools.",
+    shortLabel: "Go to Market",
   },
   {
-    phase: "Months 7–8",
-    title: "Growth",
+    phase: "Month 4",
+    title: "Scale & Operations",
     description:
-      "Launch to real users. Build a pitch deck, craft your narrative, and share your progress with the community.",
-    shortLabel: "Growth",
+      "Analytics, paid advertising, cash flow management, leadership.",
+    shortLabel: "Operations",
   },
   {
-    phase: "Month 9",
+    phase: "Month 5",
+    title: "Advanced AI & Investor Readiness",
+    description:
+      "VC basics, vibe-coded products, Demo Day pitch preparation.",
+    shortLabel: "Investor Ready",
+  },
+  {
+    phase: "Month 6",
     title: "Demo Day",
     description:
-      "Present your startup to investors and peers. Top fellows earn recognition and opportunities beyond the programme.",
+      "Live pitch to industry panel, prize awards, Fellows Cohort induction.",
     shortLabel: "Demo Day",
   },
 ];
@@ -54,6 +61,7 @@ const waveNodes = [
   { x: "41.66%", y: 222 },
   { x: "58.33%", y: 178 },
   { x: "75%", y: 222 },
+  { x: "91.66%", y: 178 },
 ];
 
 export function FutureXTimelineSection() {
@@ -71,14 +79,14 @@ export function FutureXTimelineSection() {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-3 text-[12px] font-black uppercase tracking-[0.24em] text-[#10b981]">
-              The 9-Month Journey
+              The 6-Month Journey
             </p>
             <h2 className="mb-3 text-[32px] font-black leading-tight tracking-tight text-[#facc15] sm:text-[44px]">
               Roadmap to Demo Day
             </h2>
             <p className="mx-auto max-w-2xl text-[15px] font-medium leading-relaxed text-white/60 sm:text-[16px]">
               From idea to Demo Day. Hover over the milestones to explore your
-              9-month journey.
+              6-month journey.
             </p>
           </motion.div>
         </div>

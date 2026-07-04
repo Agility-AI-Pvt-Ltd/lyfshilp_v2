@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 
-const footerLinks = [
+type FooterLink = {
+  label: string;
+  href: string;
+  icon?: "linkedin";
+};
+
+const footerLinks: { title: string; links: FooterLink[] }[] = [
   {
     title: "Programs",
     links: [
@@ -18,7 +24,7 @@ const footerLinks = [
     links: [
       { label: "FutureX Community", href: "/community" },
       { label: "Podcast", href: "/podcast" },
-      { label: "Live Sessions", href: "/community" },
+      { label: "Live Sessions", href: "/live-sessions" },
     ],
   },
   {
@@ -27,9 +33,29 @@ const footerLinks = [
       { label: "About Us", href: "/about-us" },
       { label: "Contact", href: "mailto:futurex@lyfshilpacademy.com" },
       { label: "WhatsApp", href: "https://wa.me/917042671115" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/international-futurex-fellowship",
+        icon: "linkedin",
+      },
+      { label: "lyfshilp.com", href: "https://lyfshilp.com" },
+      { label: "futurexfellows.com", href: "https://futurexfellows.com" },
     ],
   },
 ];
+
+function LinkedInIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-4 shrink-0"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.23 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46A1.75 1.75 0 0 0 24 22.27V1.73C24 .77 23.21 0 22.23 0Z" />
+    </svg>
+  );
+}
 
 export function LyfshilpFooter() {
   return (
@@ -65,8 +91,9 @@ export function LyfshilpFooter() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-[16px] font-semibold text-white/78 transition-colors hover:text-white"
+                    className="inline-flex items-center gap-2 text-[16px] font-semibold text-white/78 transition-colors hover:text-white"
                   >
+                    {link.icon === "linkedin" && <LinkedInIcon />}
                     {link.label}
                   </Link>
                 ))}

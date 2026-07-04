@@ -593,7 +593,7 @@ export default function FutureXFellowshipPage() {
           </div>
         </section>
 
-        {/* The 9-Month Journey */}
+        {/* The 6-Month Journey */}
         <FutureXTimelineSection />
 
         {/* Inside the Platform */}

@@ -104,16 +104,28 @@ const routeContent: Record<string, RouteContent> = {
     accent: "bg-[#5e22ff]",
   },
   podcast: {
-    title: "Conversations on AI, work, learning, and builders.",
+    title: "Launching Soon.",
     eyebrow: "Podcast",
     description:
-      "Listen to practical conversations with people building at the edge of education, AI, entrepreneurship, and meaningful work.",
+      "Practical conversations with people building at the edge of education, AI, entrepreneurship, and meaningful work are coming soon.",
     points: [
       "Founder and mentor interviews",
       "Student builder stories",
       "Ideas for future-ready learning",
     ],
     accent: "bg-[#10b981]",
+  },
+  "live-sessions": {
+    title: "Launching Soon.",
+    eyebrow: "Live Sessions",
+    description:
+      "Live AMAs, demo days, and workshops with builders and mentors are coming soon.",
+    points: [
+      "Interactive mentor AMAs",
+      "Student demo days",
+      "Practical builder workshops",
+    ],
+    accent: "bg-[#ff492c]",
   },
   privacy: {
     title: "Privacy Policy",
