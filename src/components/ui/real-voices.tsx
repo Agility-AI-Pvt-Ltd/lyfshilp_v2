@@ -9,27 +9,6 @@ interface Testimonial {
   imgSrc: string;
 }
 
-const parentTestimonials: Testimonial[] = [
-  {
-    quote: "My son was always good at studies but never knew what to do with it. After FutureX, he built an AI chatbot for his school library project. I couldn't believe what a 14-year-old could create in 8 weeks.",
-    author: "Priya Sharma",
-    subtitle: "Parent of Arjun, Grade 9 · DAV Public School, Noida",
-    imgSrc: "/images/testimonials/mother_40s.png",
-  },
-  {
-    quote: "What I loved most is that they never talked down to the kids. They treated my daughter like a founder from Day 1. She presented her idea to a panel of mentors. That confidence is priceless.",
-    author: "Rakesh Mehta",
-    subtitle: "Parent of Ananya, Grade 11 · Ryan International, Delhi",
-    imgSrc: "/images/testimonials/father_45s.png",
-  },
-  {
-    quote: "We were sceptical — another online course? But this was different. Weekly check-ins, real mentors, and my son actually finished something. He built a working tool. In India, that's rare.",
-    author: "Sunita Agarwal",
-    subtitle: "Parent of Rohan, Grade 10 · St. Xavier's, Jaipur",
-    imgSrc: "/images/testimonials/mother_candid.png",
-  },
-];
-
 const teacherTestimonials: Testimonial[] = [
   {
     quote: "The workshop on AI and Bloom's Taxonomy was eye-opening for our faculty. We left with practical tools we could use in class the next day — not just theory.",
@@ -132,18 +111,6 @@ export function RealVoices() {
           <h2 className="text-[40px] font-black leading-tight tracking-tight text-[#272835] sm:text-[52px]">
             Real voices. Real change.
           </h2>
-        </div>
-
-        {/* Parents Section */}
-        <div className="mb-20">
-          <h3 className="mb-8 text-[20px] font-black uppercase tracking-wider text-[#272835]/70 border-l-4 border-[#ffd166] pl-4">
-            Parents say
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {parentTestimonials.map((t, idx) => (
-              <TestimonialCard key={`parent-${idx}`} testimonial={t} />
-            ))}
-          </div>
         </div>
 
         {/* Teachers Section */}
