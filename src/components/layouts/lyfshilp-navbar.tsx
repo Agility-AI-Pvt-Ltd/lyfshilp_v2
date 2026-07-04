@@ -363,6 +363,10 @@ function ProgramsMenu() {
   return (
     <div className="group/programs relative flex h-16 items-center">
       <MenuTrigger label="Programs" />
+      <span
+        aria-hidden="true"
+        className="invisible absolute inset-x-0 top-full h-8 group-hover/programs:visible group-focus-within/programs:visible"
+      />
 
       <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/programs:visible group-hover/programs:opacity-100 group-focus-within/programs:visible group-focus-within/programs:opacity-100">
         <div className="w-full max-w-[840px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
@@ -412,6 +416,10 @@ function CommunityMenu() {
   return (
     <div className="group/community relative flex h-16 items-center">
       <MenuTrigger label="Community" />
+      <span
+        aria-hidden="true"
+        className="invisible absolute inset-x-0 top-full h-8 group-hover/community:visible group-focus-within/community:visible"
+      />
 
       <div className="invisible fixed inset-x-0 top-[80px] z-40 flex justify-center px-4 opacity-0 transition duration-150 group-hover/community:visible group-hover/community:opacity-100 group-focus-within/community:visible group-focus-within/community:opacity-100">
         <div className="w-full max-w-[1120px] overflow-hidden rounded-3xl border border-[#e6e8ef] bg-white shadow-[0_24px_60px_rgba(21,24,38,0.16)]">
