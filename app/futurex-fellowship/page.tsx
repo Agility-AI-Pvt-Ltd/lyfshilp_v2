@@ -10,6 +10,7 @@ import { FutureXTimelineSection } from "@/src/components/ui/futurex-timeline";
 import { FutureXPlatformSection } from "@/src/components/ui/futurex-platform";
 import { FutureXLeaderboardSection } from "@/src/components/ui/futurex-leaderboard";
 import { FutureXSpotlightSection } from "@/src/components/ui/futurex-spotlight";
+import { FutureXCommunitySpaces } from "@/src/components/ui/futurex-community-spaces";
 import { FellowshipApplyModal } from "@/src/components/ui/fellowship-apply-modal";
 
 // SVG Icons
@@ -593,7 +594,7 @@ export default function FutureXFellowshipPage() {
           </div>
         </section>
 
-        {/* The 9-Month Journey */}
+        {/* The 6-Month Journey */}
         <FutureXTimelineSection />
 
         {/* Inside the Platform */}
@@ -604,6 +605,9 @@ export default function FutureXFellowshipPage() {
 
         {/* Fellow Spotlight */}
         <FutureXSpotlightSection />
+
+        {/* FutureX Community Spaces */}
+        <FutureXCommunitySpaces />
 
         {/* CTA section */}
         <section className="relative z-[60] bg-[#fffaf4] text-[#272835] min-h-[75vh] flex flex-col items-center justify-center text-center px-6 py-24 sm:px-8 lg:px-14 shadow-[0_-32px_80px_rgba(0,0,0,0.06)] border-t border-[#e6e8ef]">

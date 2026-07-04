@@ -2,6 +2,7 @@ import NextImage from "next/image";
 import Link from "next/link";
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
+import { AdvisoryMentorsSection } from "@/src/components/about/advisory-mentors-section";
 import { MentorsSection } from "@/src/components/about/mentors-section";
 import { HowWeWork } from "@/src/components/ui/how-we-work";
 
@@ -302,12 +303,6 @@ export default function AboutUsPage() {
                   Join the builder community
                   <ArrowGlyph />
                 </Link>
-                <Link
-                  href="/for-schools"
-                  className="inline-flex h-14 w-fit items-center rounded-full border border-white/28 px-7 text-[15px] font-bold text-white transition-colors hover:bg-white hover:text-[#101116]"
-                >
-                  Explore school programmes
-                </Link>
               </div>
             </div>
 
@@ -468,6 +463,8 @@ export default function AboutUsPage() {
             <MentorsSection mentors={mentorProfiles} />
           </div>
         </section>
+
+        <AdvisoryMentorsSection />
 
         <section className="bg-[#fffaf4] px-6 py-20 sm:px-8 lg:px-14 lg:py-24">
           <div className="mx-auto max-w-7xl">

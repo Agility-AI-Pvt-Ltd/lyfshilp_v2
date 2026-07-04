@@ -10,7 +10,8 @@ export function FutureXSpotlightSection() {
             FELLOW SPOTLIGHT
           </p>
           <h2 className="mb-6 text-[42px] font-black leading-[1.08] tracking-[-0.03em] text-[#111827] sm:text-[52px]">
-            Real pitches from real students
+            <span className="block">Real posts from</span>
+            <span className="block">FutureX students</span>
           </h2>
           <p className="text-[19px] leading-relaxed text-[#4b5563] sm:text-[21px]">
             Fellows build products that address real-world problems — then pitch

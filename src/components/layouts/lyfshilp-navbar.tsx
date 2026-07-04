@@ -85,7 +85,7 @@ const communityFeaturedCards = [
   },
   {
     label: "Live Sessions",
-    href: "/community",
+    href: "/live-sessions",
     kicker: "Sessions",
     title: "AMAs, demo days, and workshops with builders and mentors",
     cta: "See what is inside",
@@ -132,7 +132,7 @@ const communityGroups = [
       },
       {
         label: "Live Sessions",
-        href: "/community",
+        href: "/live-sessions",
         description:
           "Join community AMAs, demo days, and workshops with builders.",
         accent: "bg-[#5e22ff]",

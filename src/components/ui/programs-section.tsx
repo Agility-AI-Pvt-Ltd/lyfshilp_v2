@@ -34,7 +34,7 @@ const programs: Program[] = [
       "Create a first working AI tool",
       "Present finished work in a student showcase",
     ],
-    cta: "Partner with Your School",
+    cta: "Explore the AI Scholar Track",
     href: "/for-schools",
     accent: "#ffffff",
     softAccent: "rgba(255, 255, 255, 0.1)",
