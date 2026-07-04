@@ -13,10 +13,8 @@ const footerLinks: { title: string; links: FooterLink[] }[] = [
     title: "Programs",
     links: [
       { label: "FutureX Fellowship", href: "/futurex-fellowship" },
-      { label: "AI Scholar Program", href: "/summer-programme" },
-      { label: "For Schools", href: "/for-schools" },
-      { label: "For Colleges", href: "/for-colleges" },
-      { label: "Corporate AI", href: "/corporate-ai" },
+      { label: "AI Scholar Track", href: "/summer-programme" },
+      { label: "Build With AI", href: "/products" },
     ],
   },
   {
@@ -31,7 +29,10 @@ const footerLinks: { title: string; links: FooterLink[] }[] = [
     title: "Company",
     links: [
       { label: "About Us", href: "/about-us" },
-      { label: "Contact", href: "mailto:futurex@lyfshilpacademy.com" },
+      {
+        label: "Contact",
+        href: "mailto:service.excellence@lyfshilpacademy.com",
+      },
       { label: "WhatsApp", href: "https://wa.me/917042671115" },
       {
         label: "LinkedIn",
@@ -75,10 +76,35 @@ export function LyfshilpFooter() {
               </span>
               lyfshilp
             </Link>
-            <p className="mt-5 max-w-sm text-[16px] font-medium leading-7 text-white/68">
-              AI-powered learning, practical projects, and communities for
-              learners, schools, colleges, and teams.
+            <p className="mt-6 text-[13px] font-black uppercase tracking-[0.15em] text-white">
+              Lyfshilp Academy
             </p>
+            <p className="mt-2 max-w-sm text-[16px] font-medium leading-7 text-white/68">
+              Making AI-powered learning accessible to every student in India.
+            </p>
+            <div className="mt-5 grid gap-2 text-[14px] font-semibold text-white/62">
+              <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <Link
+                  href="tel:+917042671115"
+                  className="transition-colors hover:text-white"
+                >
+                  7042671115
+                </Link>
+                <span aria-hidden="true">·</span>
+                <Link
+                  href="tel:+917042672300"
+                  className="transition-colors hover:text-white"
+                >
+                  7042672300
+                </Link>
+              </p>
+              <Link
+                href="mailto:service.excellence@lyfshilpacademy.com"
+                className="break-all transition-colors hover:text-white"
+              >
+                service.excellence@lyfshilpacademy.com
+              </Link>
+            </div>
           </div>
 
           {footerLinks.map((group) => (
@@ -102,12 +128,17 @@ export function LyfshilpFooter() {
           ))}
         </div>
 
-        <div className="mt-14 flex items-center justify-between border-t border-white/15 pb-5 pt-7 text-[11px] font-bold uppercase tracking-widest text-white/50">
+        <div className="mt-14 flex items-center justify-between border-t border-white/15 pb-5 pt-7 text-[11px] font-bold tracking-widest text-white/50">
           <div>
-            <p>@2026 LYFSHILP. ALL RIGHTS RESERVED</p>
-            <p className="mt-1">
-              <Link href="/privacy" className="hover:text-white">Privacy Policy</Link> •{" "}
-              <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+            <p>
+              © 2026 Lyfshilp Academy Pvt. Ltd. &amp; Agility AI Pvt. Ltd. ·{" "}
+              <Link href="/privacy" className="hover:text-white">
+                Privacy Policy
+              </Link>{" "}
+              ·{" "}
+              <Link href="/terms" className="hover:text-white">
+                Terms of Use
+              </Link>
             </p>
           </div>
           <div className="flex items-center gap-2">
