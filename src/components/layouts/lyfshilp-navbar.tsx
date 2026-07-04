@@ -17,7 +17,7 @@ const programGroups = [
       },
       {
         label: "AI Scholar Program",
-        href: "/summer-programme",
+        href: "/for-schools",
         description: "Focused project sprints with practical outcomes",
         accent: "bg-[#10b981]",
       },
