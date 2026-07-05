@@ -47,11 +47,9 @@ export default function CorporateAIPage() {
                 </div>
 
                 <h1 className="mt-8 text-[48px] font-black leading-[1.08] tracking-tight text-white sm:text-[68px] lg:text-[84px] xl:text-[96px]">
-                  AI Training <br />
-                  That Shows Up <br />
+                  AI adoption, Enablement And <br />
                   <span className="text-[#CFFD53] block mt-4 sm:mt-6">
-                    Where Work <br />
-                    Happens.
+                     integration 
                   </span>
                 </h1>
               </div>

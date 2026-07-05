@@ -21,20 +21,20 @@ type Program = {
 
 const programs: Program[] = [
   {
-    badge: "Scale & Impact",
-    title: "Government Bodies",
-    audience: "Public education systems",
-    duration: "State-wide implementations",
-    highlightText: "Public Sector",
-    durationLabel: "Scale-optimized AI & startup programs",
+    badge: "Scale & Enterprise",
+    title: "Government & Corporates",
+    audience: "Public education systems & modern teams",
+    duration: "State-wide scale & corporate sprints",
+    highlightText: "Institutional",
+    durationLabel: "Scale-optimized AI enablement & workflow audits",
     benefits: [
       "Turnkey curricula for state-wide systems",
       "Scale-ready teacher training models",
-      "Vocational & AI literacy alignments",
-      "State student showcases and hackathons",
+      "Role-specific AI adoption & workflow audits",
+      "Hands-on workspace transformation sprints",
     ],
     cta: "Explore More",
-    href: "/govt-bodies",
+    href: "/corporate-ai",
     accent: "#a3e635",
     softAccent: "rgba(163, 230, 53, 0.1)",
     iconShape: "diamond",
@@ -77,25 +77,6 @@ const programs: Program[] = [
     softAccent: "rgba(255, 255, 255, 0.1)",
     iconShape: "pinwheel",
     isHighlighted: true,
-  },
-  {
-    badge: "Enterprise AI",
-    title: "Corporates",
-    audience: "Modern teams & organizations",
-    duration: "Custom corporate sprints",
-    highlightText: "Teams",
-    durationLabel: "AI enablement & workflow adoption",
-    benefits: [
-      "Role-specific AI adoption audits",
-      "Hands-on workflow transformation",
-      "Custom internal builder sprints",
-      "Continuous team mentor support",
-    ],
-    cta: "Explore More",
-    href: "/corporate-ai",
-    accent: "#CFFD53",
-    softAccent: "rgba(207, 253, 83, 0.1)",
-    iconShape: "diamond",
   },
 ];
 
@@ -204,19 +185,13 @@ export function ProgramsSection() {
           </p>
         </div>
 
-        {/* 4-Column Plan Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border border-white/10 rounded-[32px] overflow-hidden bg-black/20 backdrop-blur-md shadow-2xl">
+        {/* 3-Column Plan Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10 rounded-[32px] overflow-hidden bg-black/20 backdrop-blur-md shadow-2xl">
           {programs.map((program, index) => (
             <div
               key={program.title}
               className={`flex flex-col justify-between p-8 sm:p-10 transition-all duration-500 border-white/10 ${
-                index > 0 ? "border-t" : ""
-              } ${
-                index === 1 ? "md:border-t-0 md:border-l" : ""
-              } ${
-                index === 2 ? "md:border-l-0 xl:border-t-0 xl:border-l" : ""
-              } ${
-                index === 3 ? "md:border-l xl:border-t-0" : ""
+                index > 0 ? "border-t md:border-t-0 md:border-l" : ""
               } ${
                 program.isHighlighted
                   ? "bg-[#062c1f]/45 relative z-10 shadow-[inset_0_0_40px_rgba(16,185,129,0.06)]"

@@ -79,18 +79,6 @@ const routeContent: Record<string, RouteContent> = {
     ],
     accent: "bg-[#a3e635]",
   },
-  educators: {
-    title: "Empowering educators to lead the AI shift.",
-    eyebrow: "Educators",
-    description:
-      "Get access to classroom-ready AI pedagogy, prompt libraries, project frameworks, and join a global community of future-ready mentors.",
-    points: [
-      "AI classroom pedagogy and prompt libraries",
-      "Hands-on project-led instruction guides",
-      "Mentorship networks and continuous coaching",
-    ],
-    accent: "bg-[#67e8f9]",
-  },
   "for-colleges": {
     title: "Launching soon.",
     eyebrow: "For Colleges",
