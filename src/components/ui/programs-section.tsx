@@ -21,65 +21,62 @@ type Program = {
 
 const programs: Program[] = [
   {
-    badge: "In-school · All grades",
-    title: "AI Scholar Track",
-    audience: "Schools and their students (in-school delivery)",
-    duration: "7 sessions + 1 Demo Day (in-school delivery)",
-    highlightText: "7 Sessions",
-    durationLabel: "+1 Demo Day · In-School Delivery",
+    badge: "Scale & Enterprise",
+    title: "Government & Corporates",
+    audience: "Public education systems & modern teams",
+    duration: "State-wide scale & corporate sprints",
+    highlightText: "Institutional",
+    durationLabel: "Scale-optimized AI enablement & workflow audits",
     benefits: [
-      "Build practical AI literacy during school hours",
-      "Learn prompt engineering through projects",
-      "Understand AI ethics and responsible use",
-      "Create a first working AI tool",
-      "Present finished work in a student showcase",
+      "Turnkey curricula for state-wide systems",
+      "Scale-ready teacher training models",
+      "Role-specific AI adoption & workflow audits",
+      "Hands-on workspace transformation sprints",
     ],
-    cta: "Explore the AI Scholar Track",
-    href: "/for-schools",
-    accent: "#ffffff",
-    softAccent: "rgba(255, 255, 255, 0.1)",
+    cta: "Explore More",
+    href: "/corporate-ai",
+    accent: "#a3e635",
+    softAccent: "rgba(163, 230, 53, 0.1)",
     iconShape: "diamond",
   },
   {
-    badge: "Flagship · Grades 6–12",
-    title: "International FutureX Fellowship",
-    audience: "School & college students, Grades 6–12",
-    duration: "36 sessions over 9 months (Online)",
-    highlightText: "36 Sessions",
-    durationLabel: "9 Months / Flagship cohort online",
+    badge: "Teach & Inspire",
+    title: "Educators",
+    audience: "Teachers & school leaders",
+    duration: "Professional development",
+    highlightText: "Pedagogy First",
+    durationLabel: "Modern pedagogy, toolkits & mentorship",
     benefits: [
-      "Build and validate a real startup",
-      "Pitch to investors at Demo Day",
-      "Earn an international certification",
-      "Learn through the Harvard Case Method",
-      "Grow with an XP-based progress system",
+      "AI classroom prompt libraries",
+      "Practical project-based frameworks",
+      "Global community of future-ready mentors",
+      "Classroom-ready teaching guides",
     ],
-    cta: "Explore the Fellowship",
-    href: "/futurex-fellowship",
+    cta: "Explore More",
+    href: "/educators",
     accent: "#67e8f9",
     softAccent: "rgba(103, 232, 249, 0.1)",
     iconShape: "star",
-    isHighlighted: true,
   },
   {
-    badge: "Cohort · Age 14+",
-    title: "Build With AI",
-    audience: "Older students, undergrads, working professionals",
-    duration: "8 weekends (16 sessions, online)",
-    highlightText: "16 Sessions",
-    durationLabel: "8 Weekends / Cohort online",
+    badge: "Flagship In-School",
+    title: "Schools",
+    audience: "Grades 6–12 & all grades",
+    duration: "Academic year delivery",
+    highlightText: "Incubation",
+    durationLabel: "Turnkey programs for academic calendars",
     benefits: [
-      "Build 3 useful AI-powered tools",
-      "Work with free, no-code platforms",
-      "Follow a guided 8-weekend build plan",
-      "Improve through mentor and peer feedback",
-      "Present finished tools at Demo Day",
+      "In-school workshops for all grades",
+      "Demo Days with industry judges",
+      "Internationally recognized fellowships",
+      "Zero extra cost for students",
     ],
-    cta: "Join the Next Cohort",
-    href: "/build-with-ai",
-    accent: "#ffd166",
-    softAccent: "rgba(253, 224, 71, 0.1)",
+    cta: "Explore More",
+    href: "/for-schools",
+    accent: "#ffffff",
+    softAccent: "rgba(255, 255, 255, 0.1)",
     iconShape: "pinwheel",
+    isHighlighted: true,
   },
 ];
 
@@ -175,26 +172,27 @@ export function ProgramsSection() {
         {/* Header Block */}
         <div className="mx-auto max-w-4xl text-center mb-20">
           <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#a3e635]">
-            Our Programs
+            Our Solutions
           </p>
           <h2 className="mt-5 text-[38px] font-black leading-[1.04] tracking-[-0.04em] text-white sm:text-[54px] lg:text-[68px]">
-            Three paths. One mission:{" "}
+            Tailored pathways. One mission:{" "}
             <span className="text-[#a3e635] block sm:inline">
-              build, don&apos;t just learn.
+              build for the future.
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-[17px] leading-7 text-white/60 sm:text-[19px]">
-            Every program is project-led. No passive lectures — your child ships
-            something real.
+            Whether you are a government body, educator, school, or corporate organization, Lyfshilp provides project-led AI and building solutions.
           </p>
         </div>
 
         {/* 3-Column Plan Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 border border-white/10 rounded-[32px] overflow-hidden bg-black/20 backdrop-blur-md shadow-2xl divide-y lg:divide-y-0 lg:divide-x divide-white/10">
-          {programs.map((program) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10 rounded-[32px] overflow-hidden bg-black/20 backdrop-blur-md shadow-2xl">
+          {programs.map((program, index) => (
             <div
               key={program.title}
-              className={`flex flex-col justify-between p-8 sm:p-10 transition-all duration-500 ${
+              className={`flex flex-col justify-between p-8 sm:p-10 transition-all duration-500 border-white/10 ${
+                index > 0 ? "border-t md:border-t-0 md:border-l" : ""
+              } ${
                 program.isHighlighted
                   ? "bg-[#062c1f]/45 relative z-10 shadow-[inset_0_0_40px_rgba(16,185,129,0.06)]"
                   : "bg-transparent"

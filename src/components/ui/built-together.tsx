@@ -47,10 +47,10 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: "WA_4:38:01",
-    src: "/images/built-together/wa_4_38_01.png",
-    alt: "Career fair booth",
-    label: "Career fair booth",
-    description: "Lyfshilp team at fair, team hoodie visible, students engaging.",
+    src: "/images/hero/6.JPG",
+    alt: "Hands-on student session",
+    label: "Student session",
+    description: "Students collaborating and working through hands-on AI projects during school.",
     gridClass: "col-span-1",
   },
   {
@@ -113,12 +113,8 @@ export function BuiltTogether() {
 
               {/* Card Content */}
               <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 md:p-8">
-                {/* Top: Badge / Photo ID */}
-                <div className="flex justify-between items-start">
-                  <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-white backdrop-blur-md border border-white/10">
-                    {item.id}
-                  </span>
-                  {/* Subtle hover arrow indicator */}
+                {/* Top: Hover arrow indicator */}
+                <div className="flex justify-end items-start">
                   <span className="opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -481,17 +481,17 @@ export default function FutureXFellowshipPage() {
                 Cohort 4.0 Applications Open
               </div>
 
-              <h1 className="mt-3 text-[28px] font-black leading-[1.08] tracking-tight sm:text-[38px] lg:text-[44px]">
-                Your Child Doesn't Just Learn AI.{" "}
+              <h1 className="mt-6 text-[36px] sm:text-[48px] md:text-[64px] lg:text-[76px] xl:text-[84px] font-black leading-[1.05] tracking-tight">
+                Your Child Doesn&apos;t Just Learn AI.{" "}
                 <span className="text-[#CFFD53]">
                   <br />
                   They Build With It. Lead With It.
                 </span>
               </h1>
-              <p className="mt-2 text-[12px] font-bold tracking-wide uppercase text-white/50 sm:text-[13px]">
+              <p className="mt-4 text-[12px] font-bold tracking-wide uppercase text-white/40 sm:text-[13px]">
                 FutureX Fellowship
               </p>
-              <p className="mt-2 max-w-2xl text-[14px] font-medium leading-relaxed text-white/80 sm:text-[15px] mx-auto">
+              <p className="mt-6 max-w-3xl text-[16px] sm:text-[18px] leading-relaxed text-white/85 mx-auto font-medium">
                 A mentored sprint-driven pathway for ambitious learners. Move
                 from raw ideas to fully deployed, user-tested AI products in 6
                 weeks with direct guidance from active founders.

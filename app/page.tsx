@@ -55,39 +55,6 @@ const programmes = [
 ];
 
 
-const stats = [
-  {
-    digits: "5,000",
-    suffix: "+",
-    label: "Student Trained",
-    description: "Empowering young minds across high schools and colleges with hands-on startup and tech curricula."
-  },
-  {
-    digits: "40",
-    suffix: "+",
-    label: "Partner schools",
-    description: "Collaborating with elite institutions to drive active tech and AI training directly."
-  },
-  {
-    digits: "14",
-    suffix: "",
-    label: "Cities across India",
-    description: "Forging a nationwide builder community of ambitious learners, co-founders, and mentors."
-  },
-  {
-    digits: "100% Free Tools",
-    suffix: "",
-    label: "Zero extra cost beyond program fee",
-    description: "Ensuring no barriers to entry with completely free, no-code, and open-source ecosystems."
-  },
-  {
-    digits: "Intl. Certified",
-    suffix: "",
-    label: "International FutureX Fellowship seal",
-    description: "Validating student outcomes with international seals and credentials recognized worldwide."
-  },
-];
-
 function PixelMark({ accent }: { accent: string }) {
   const pixels = [1, 2, 4, 7, 8, 10, 13, 14];
 
@@ -139,55 +106,90 @@ export default function Home() {
         />
 
         {/* Stats band */}
-        <section className="bg-[#0d0d0d] px-4 pb-24 pt-24 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[1440px] mb-24">
-            
-            {/* White card container */}
-            <div className="bg-white rounded-[32px] md:rounded-[40px] px-8 py-16 md:px-12 md:py-20 shadow-2xl border border-[#efe7da]/30 text-[#272835]">
+        <section className="bg-black px-6 py-24 sm:px-12 lg:px-20 text-white relative overflow-hidden">
+          {/* Subtle decorative glow to enhance premium look */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+            <div className="absolute -right-40 -top-40 size-[600px] rounded-full bg-white/[0.03] blur-[100px]" />
+            <div className="absolute -bottom-40 -left-40 size-[500px] rounded-full bg-white/[0.02] blur-[80px]" />
+          </div>
+
+          <div className="relative mx-auto max-w-7xl z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
-              {/* Header with headings */}
-              <div className="mb-16">
-                <h2 className="text-[32px] sm:text-[42px] font-black text-[#272835] tracking-tight leading-none">
-                  We only deliver results.
+              {/* Left Column: Text & CTA */}
+              <div className="lg:col-span-5 flex flex-col items-start text-left space-y-6">
+                <h2 className="text-[36px] sm:text-[48px] font-bold text-white tracking-tight leading-none">
+                  Our Impact
                 </h2>
-                <p className="mt-4 text-[16px] sm:text-[18px] text-[#747b8f] font-medium leading-relaxed max-w-2xl">
-                  We don&apos;t use excuses or something. Okay maybe sometimes.
+                <p className="text-[15px] sm:text-[17px] leading-relaxed text-white/80 font-medium">
+                  Empowering young minds across high schools and colleges with hands-on startup and tech curricula, forging a nationwide builder community of ambitious learners.
                 </p>
+                <div>
+                  <Link
+                    href="/about-us"
+                    className="inline-flex h-12 items-center justify-center rounded-lg border border-white/20 bg-white/10 px-8 text-[13px] font-extrabold uppercase tracking-widest text-white backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/30"
+                  >
+                    READ OUR CASES
+                  </Link>
+                </div>
               </div>
 
-              {/* Stats Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-8 xl:gap-x-12 gap-y-12 border-t border-[#272835]/10 pt-16">
-                {stats.map((stat) => {
-                  const isLong = stat.digits.length > 8;
-                  return (
-                    <div key={stat.label} className="flex flex-col text-left">
-                      <div className="flex items-baseline">
-                        <StaggeredCountdown
-                          value={stat.digits}
-                          suffix={stat.suffix}
-                          color="#272835"
-                          duration={2}
-                          className={`font-black leading-none tracking-tight text-[#272835] ${
-                            isLong
-                              ? "text-[20px] sm:text-[24px] lg:text-[28px]"
-                              : "text-[32px] sm:text-[36px] lg:text-[40px]"
-                          }`}
-                        />
-                      </div>
-                      <p className="mt-4 text-[15px] font-extrabold tracking-tight text-[#272835] leading-snug">
-                        {stat.label}
-                      </p>
-                      <p className="mt-3 text-[14px] leading-relaxed text-[#747b8f]">
-                        {stat.description}
-                      </p>
+              {/* Right Column: 2x2 Stats Grid with Divider lines */}
+              <div className="lg:col-span-7 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2">
+                  
+                  {/* Cell 1: Top-Left */}
+                  <div className="border-b border-white/10 pb-8 sm:border-r sm:pr-8 sm:pb-8">
+                    <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
+                      <StaggeredCountdown value="5,000" suffix="+" color="#ffffff" duration={2} />
                     </div>
-                  );
-                })}
-              </div>
-            </div>
+                    <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
+                      STUDENTS TRAINED
+                    </p>
+                  </div>
 
+                  {/* Cell 2: Top-Right */}
+                  <div className="border-b border-white/10 py-8 sm:border-b sm:pl-8 sm:pt-0 sm:pb-8">
+                    <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
+                      <StaggeredCountdown value="40" suffix="+" color="#ffffff" duration={2} />
+                    </div>
+                    <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
+                      PARTNER SCHOOLS
+                    </p>
+                  </div>
+
+                  {/* Cell 3: Bottom-Left */}
+                  <div className="border-b border-white/10 py-8 sm:border-b-0 sm:border-r sm:pr-8 sm:pt-8 sm:pb-0">
+                    <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
+                      <StaggeredCountdown value="14" suffix="" color="#ffffff" duration={2} />
+                    </div>
+                    <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
+                      CITIES NATIONWIDE
+                    </p>
+                  </div>
+
+                  {/* Cell 4: Bottom-Right */}
+                  <div className="pt-8 sm:pl-8">
+                    <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
+                      <StaggeredCountdown value="100" suffix="%" color="#ffffff" duration={2} />
+                    </div>
+                    <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
+                      FREE TOOL ACCESS
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Customer Stories */}
+        <section className="bg-[#0d0d0d] px-4 pb-24 pt-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1440px] mb-12">
             {/* Customer Stories Header */}
-            <div className="mt-24 text-center">
+            <div className="text-center">
               <p className="text-[13px] font-black uppercase tracking-[0.2em] text-[#9bd340]">
                 Customer stories
               </p>
