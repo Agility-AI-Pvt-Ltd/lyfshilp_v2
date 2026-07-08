@@ -67,18 +67,6 @@ const routeContent: Record<string, RouteContent> = {
     ],
     accent: "bg-[#ff492c]",
   },
-  "govt-bodies": {
-    title: "Enabling public education at scale.",
-    eyebrow: "Government Bodies",
-    description:
-      "Partner with Lyfshilp to bring state-wide AI literacy, digital skill alignment, and startup incubation to public school and college ecosystems.",
-    points: [
-      "State-wide student hackathons and showcases",
-      "Vocational & AI literacy curriculum alignment",
-      "Turnkey scale-optimized teacher training models",
-    ],
-    accent: "bg-[#a3e635]",
-  },
   "for-colleges": {
     title: "Launching soon.",
     eyebrow: "For Colleges",
