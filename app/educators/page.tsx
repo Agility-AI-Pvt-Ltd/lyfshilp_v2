@@ -17,10 +17,16 @@ export default function EducatorsPage() {
           style={{ backgroundImage: "url('/images/educators/hero.JPG')" }}
         >
           {/* Dark Overlay Layer for Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#030508]/85 via-[#030508]/65 to-[#030508]/90 z-0" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-[#030508]/85 via-[#030508]/65 to-[#030508]/90 z-0"
+            aria-hidden="true"
+          />
 
           {/* Radial ambient glows */}
-          <div className="pointer-events-none absolute inset-0 overflow-hidden z-0" aria-hidden="true">
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden z-0"
+            aria-hidden="true"
+          >
             <div className="absolute -right-40 -top-40 size-[600px] rounded-full bg-[#67e8f9]/[0.08] blur-[120px]" />
             <div className="absolute -bottom-40 -left-40 size-[500px] rounded-full bg-emerald-500/[0.06] blur-[100px]" />
             <div
@@ -35,7 +41,6 @@ export default function EducatorsPage() {
 
           <div className="relative mx-auto max-w-7xl z-10 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-              
               {/* Left Column: Headings & Subtitle */}
               <div className="lg:col-span-7">
                 {/* Eyebrow */}
@@ -51,9 +56,12 @@ export default function EducatorsPage() {
                     Actually Teach.
                   </span>
                 </h1>
-                
+
                 <p className="mt-8 text-[16px] sm:text-[18px] leading-relaxed text-white/70 font-medium max-w-xl">
-                  Hands-on AI sessions run directly in schools — teaching educators to use AI tools for lesson planning, grading, and everyday admin, so more of their energy goes back to the classroom.
+                  Hands-on AI sessions run directly in schools — teaching
+                  educators to use AI tools for lesson planning, grading, and
+                  everyday admin, so more of their energy goes back to the
+                  classroom.
                 </p>
               </div>
 
@@ -65,11 +73,12 @@ export default function EducatorsPage() {
                     “
                   </div>
                   <p className="text-[16px] italic leading-relaxed text-white/80 font-medium relative z-10 pl-6">
-                    Not another webinar. We show up, sit with teachers, and work through the tools together.
+                    Not another webinar. We show up, sit with teachers, and work
+                    through the tools together.
                   </p>
                   <div className="mt-6 border-t border-white/10 pt-4 pl-6">
                     <p className="text-[13px] font-bold text-white/60">
-                      — Sir
+                      — Sharad Raj Utsav
                     </p>
                   </div>
                 </div>
@@ -83,7 +92,6 @@ export default function EducatorsPage() {
                   </Link>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -92,7 +100,6 @@ export default function EducatorsPage() {
         <section className="relative px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
           <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              
               {/* Left Column: Heading */}
               <div className="lg:col-span-5">
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#67e8f9]/70">
@@ -102,13 +109,16 @@ export default function EducatorsPage() {
                   Why now.
                 </h2>
                 <p className="mt-6 text-[16px] sm:text-[18px] leading-relaxed text-white/65">
-                  This isn&apos;t a &quot;someday&quot; skill. The gap between teachers who use AI well and teachers who don&apos;t is widening fast — and it&apos;s widening this year.
+                  This isn&apos;t a &quot;someday&quot; skill. The gap between
+                  teachers who use AI well and teachers who don&apos;t is
+                  widening fast — and it&apos;s widening this year.
                 </p>
 
                 {/* Inline Quote Callout */}
                 <div className="mt-10 border-l-2 border-[#67e8f9] pl-6 py-2">
                   <p className="text-[17px] italic font-semibold text-white/90">
-                    &quot;The teachers who learn this in 2026 will set the curve for the next decade.&quot;
+                    &quot;The teachers who learn this in 2026 will set the curve
+                    for the next decade.&quot;
                   </p>
                 </div>
               </div>
@@ -141,16 +151,15 @@ export default function EducatorsPage() {
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 aspect-[16/9] w-full max-h-80 bg-white/5 group">
                   <img
                     src="/images/educators/whynow.JPG"
-                    alt="Trainer presenting AI for Educators session stats"
+                    alt="Professionals presenting AI for Educators session stats"
                     className="h-full w-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500"
                     style={{ objectPosition: "center 30%" }}
                   />
                   <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-[11px] font-mono tracking-widest text-[#67e8f9] px-3 py-1.5 rounded border border-white/10">
-                    Trainer presenting AI for Educators session stats
+                    Professionals presenting AI for Educators session stats
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -158,7 +167,6 @@ export default function EducatorsPage() {
         {/* ── SESSIONS IN THE FIELD SECTION ──────────────────────────────── */}
         <section className="relative px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]/40">
           <div className="mx-auto max-w-7xl">
-            
             {/* Section Header */}
             <div className="mb-16 max-w-3xl">
               <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#67e8f9]">
@@ -168,13 +176,14 @@ export default function EducatorsPage() {
                 A running log of schools we&apos;ve visited.
               </h2>
               <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-                Each session is different — some are whole-staff trainings, others are small subject-department sit-downs. Add entries here as sessions happen.
+                Each session is different — some are whole-staff trainings,
+                others are small subject-department sit-downs. Add entries here
+                as sessions happen.
               </p>
             </div>
 
             {/* Grid of Entries */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Entry 1 */}
               <div className="flex flex-col justify-between border border-white/10 bg-[#080b11] rounded-2xl overflow-hidden group hover:border-[#67e8f9]/50 transition-all duration-300">
                 <div className="relative h-48 w-full overflow-hidden bg-white/5">
@@ -190,16 +199,18 @@ export default function EducatorsPage() {
                 <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="text-[11px] font-bold text-white/40 uppercase tracking-widest">
-                      Full staff cohort · Collaboration with EduManiax
+                      Full Staff Cohort
                     </span>
                     <h3 className="mt-2 text-[20px] font-bold text-white leading-tight">
-                      Staffroom of the Future
+                      SRS International School
                     </h3>
                     <p className="mt-1 text-[13px] font-semibold text-[#67e8f9]/80 uppercase tracking-wider">
-                      Workshop for Bloom&apos;s Taxonomy & CBE
+                      Staffroom of the Future
                     </p>
                     <p className="mt-4 text-[14px] leading-relaxed text-white/60">
-                      The teaching staff after a full-day workshop connecting Bloom&apos;s Taxonomy and competency-based education with practical AI tools.
+                      The teaching staff after a full-day Staffroom of the
+                      Future session — reimagining how educators plan,
+                      collaborate, and work with practical AI tools together.
                     </p>
                   </div>
                 </div>
@@ -210,7 +221,7 @@ export default function EducatorsPage() {
                 <div className="relative h-48 w-full overflow-hidden bg-white/5">
                   <img
                     src="/images/educators/springdales.jpg"
-                    alt="Spring Dales School"
+                    alt="Springdales School, Pusa Road"
                     className="h-full w-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500"
                   />
                   <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] font-mono tracking-widest text-[#67e8f9] px-2.5 py-1 rounded border border-white/10">
@@ -220,49 +231,87 @@ export default function EducatorsPage() {
                 <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="text-[11px] font-bold text-white/40 uppercase tracking-widest">
+                      Full Staff Cohort
+                    </span>
+                    <h3 className="mt-2 text-[20px] font-bold text-white leading-tight">
+                      Springdales School, Pusa Road
+                    </h3>
+                    <p className="mt-1 text-[13px] font-semibold text-[#67e8f9]/80 uppercase tracking-wider">
+                      Staffroom of the Future
+                    </p>
+                    <p className="mt-4 text-[14px] leading-relaxed text-white/60">
+                      The Springdales, Pusa Road faculty after a Staffroom of
+                      the Future session — working through practical AI tools
+                      for planning, collaboration, and everyday teaching
+                      workflows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Entry 3 */}
+              <div className="flex flex-col justify-between border border-white/10 bg-[#080b11] rounded-2xl overflow-hidden group hover:border-[#67e8f9]/50 transition-all duration-300">
+                <div className="relative h-48 w-full overflow-hidden bg-white/5">
+                  <img
+                    src="/images/educators/indraprasth_school.JPG"
+                    alt="Indraprastha School"
+                    className="h-full w-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500"
+                  />
+                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] font-mono tracking-widest text-[#67e8f9] px-2.5 py-1 rounded border border-white/10">
+                    ENTRY 03
+                  </div>
+                </div>
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[11px] font-bold text-white/40 uppercase tracking-widest">
                       Full staff cohort
                     </span>
                     <h3 className="mt-2 text-[20px] font-bold text-white leading-tight">
-                      Spring Dales School
+                      Indraprastha School
                     </h3>
                     <p className="mt-1 text-[13px] font-semibold text-[#67e8f9]/80 uppercase tracking-wider">
-                      Hands-on build of a working student app
+                      AI tools for lesson planning & classroom workflows
                     </p>
                     <p className="mt-4 text-[14px] leading-relaxed text-white/60">
-                      The Spring Dales team after building &quot;Spring Dales Competitions&quot; — a real student-facing app — live, during the session.
+                      Educators at Indraprastha School after a hands-on session
+                      — working through real lesson plans, admin tasks, and
+                      everyday AI workflows together in the staffroom.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Entry 3 - Styled Placeholder */}
-              <div className="flex flex-col justify-between border border-dashed border-white/15 bg-white/[0.01] rounded-2xl overflow-hidden min-h-80 p-6 sm:p-8 relative">
-                <div className="absolute top-6 left-6 bg-white/5 text-[10px] font-mono tracking-widest text-white/30 px-2.5 py-1 rounded border border-dashed border-white/10">
-                  ENTRY 03 (PENDING)
-                </div>
-                
-                <div className="flex-1 flex flex-col justify-center items-center text-center py-8">
-                  <div className="size-12 rounded-full border border-dashed border-white/20 bg-white/[0.02] flex items-center justify-center text-white/40 mb-4">
-                    📷
+              {/* Entry 4 */}
+              <div className="flex flex-col justify-between border border-white/10 bg-[#080b11] rounded-2xl overflow-hidden group hover:border-[#67e8f9]/50 transition-all duration-300">
+                <div className="relative h-48 w-full overflow-hidden bg-white/5">
+                  <img
+                    src="/images/educators/mount_carmel_school.jpeg"
+                    alt="Mt. Carmel School"
+                    className="h-full w-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500"
+                  />
+                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] font-mono tracking-widest text-[#67e8f9] px-2.5 py-1 rounded border border-white/10">
+                    ENTRY 04
                   </div>
-                  <h4 className="text-[15px] font-bold text-white/40 uppercase tracking-widest">
-                    [ School Name ]
-                  </h4>
-                  <p className="text-[12px] text-white/30 font-semibold tracking-wider mt-1">
-                    [ Date ] · [ City ] · [ No. of educators / department ]
-                  </p>
-                  <p className="mt-4 text-[13px] italic leading-relaxed text-white/30 max-w-xs">
-                    [ One line on what was covered in this session ]
-                  </p>
                 </div>
-
-                <div className="border-t border-dashed border-white/10 pt-4 text-center">
-                  <span className="text-[11px] font-bold text-white/20 uppercase tracking-[0.15em]">
-                    Session Photo intake pending
-                  </span>
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[11px] font-bold text-white/40 uppercase tracking-widest">
+                      Full staff cohort
+                    </span>
+                    <h3 className="mt-2 text-[20px] font-bold text-white leading-tight">
+                      Mt. Carmel School
+                    </h3>
+                    <p className="mt-1 text-[13px] font-semibold text-[#67e8f9]/80 uppercase tracking-wider">
+                      Practical AI literacy for everyday teaching
+                    </p>
+                    <p className="mt-4 text-[14px] leading-relaxed text-white/60">
+                      The Mt. Carmel faculty after an in-school AI enablement
+                      session — building confidence with tools they can use the
+                      very next day in class.
+                    </p>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -270,7 +319,6 @@ export default function EducatorsPage() {
         {/* ── WHAT WE COVER SECTION ──────────────────────────────────────── */}
         <section className="relative px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
           <div className="mx-auto max-w-7xl">
-            
             {/* Section Header */}
             <div className="mb-16 max-w-3xl">
               <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#67e8f9]">
@@ -280,13 +328,14 @@ export default function EducatorsPage() {
                 Practical AI, for the work teachers actually do.
               </h2>
               <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-                Every session mixes all three — because in practice, teachers don&apos;t separate &quot;planning&quot; from &quot;grading&quot; from &quot;just trying to keep up.&quot;
+                Every session mixes all three — because in practice, teachers
+                don&apos;t separate &quot;planning&quot; from
+                &quot;grading&quot; from &quot;just trying to keep up.&quot;
               </p>
             </div>
 
             {/* Grid of 3 Pillars */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
               {/* Card 1 */}
               <div className="p-8 rounded-2xl border border-white/10 bg-white/[0.01] hover:bg-white/[0.02] transition-colors">
                 <div className="size-12 rounded-lg bg-[#67e8f9]/10 text-[#67e8f9] flex items-center justify-center font-bold text-[18px] mb-6">
@@ -296,7 +345,9 @@ export default function EducatorsPage() {
                   Lesson Planning & Content Creation
                 </h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-                  Using AI to draft lesson plans, worksheets, and classroom materials faster — without losing the teacher&apos;s own voice in them.
+                  Using AI to draft lesson plans, worksheets, and classroom
+                  materials faster — without losing the teacher&apos;s own voice
+                  in them.
                 </p>
               </div>
 
@@ -309,7 +360,8 @@ export default function EducatorsPage() {
                   Grading & Admin Work
                 </h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-                  Hands-on practice with tools that cut down time spent on grading, reports, and routine paperwork.
+                  Hands-on practice with tools that cut down time spent on
+                  grading, reports, and routine paperwork.
                 </p>
               </div>
 
@@ -322,10 +374,11 @@ export default function EducatorsPage() {
                   Everyday AI Literacy
                 </h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-                  Building confidence and comfort with AI tools in general — so teachers aren&apos;t just following steps, but know how to explore on their own.
+                  Building confidence and comfort with AI tools in general — so
+                  teachers aren&apos;t just following steps, but know how to
+                  explore on their own.
                 </p>
               </div>
-
             </div>
           </div>
         </section>
@@ -333,7 +386,6 @@ export default function EducatorsPage() {
         {/* ── INSIDE A SESSION SECTION ───────────────────────────────────── */}
         <section className="relative px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]/30">
           <div className="mx-auto max-w-7xl">
-            
             {/* Section Header */}
             <div className="mb-16 max-w-3xl">
               <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#67e8f9]">
@@ -343,19 +395,38 @@ export default function EducatorsPage() {
                 What the room looks like.
               </h2>
               <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-                Laptops open, tools live on screen, teachers working through their own real lesson plans and reports — not a demo on a slide.
+                Laptops open, tools live on screen, teachers working through
+                their own real lesson plans and reports — not a demo on a slide.
               </p>
             </div>
 
             {/* Grid of Room details and Photos */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { img: "/images/educators/1.JPG", text: "Full staffroom session, working through the material together" },
-                { img: "/images/educators/2.JPG", text: "Activity: using an AI music tool to write a lesson-ready song on water conservation" },
-                { img: "/images/educators/3.JPG", text: "Walking through an AI-powered budgeting activity teachers can bring straight into class" },
-                { img: "/images/educators/4.JPG", text: "\"Three tools, used confidently\" — the promise we open every session with" },
-                { img: "/images/educators/5.JPG", text: "Prompts that actually get used on a Monday morning" },
-                { img: "/images/educators/6.JPG", text: "A full computer lab, everyone working the tools themselves" }
+                {
+                  img: "/images/educators/1.JPG",
+                  text: "Full staffroom session, working through the material together",
+                },
+                {
+                  img: "/images/educators/2.JPG",
+                  text: "Activity: using an AI music tool to write a lesson-ready song on water conservation",
+                },
+                {
+                  img: "/images/educators/mount_carmel_school.JPEG",
+                  text: "Walking through an AI-powered budgeting activity teachers can bring straight into class",
+                },
+                {
+                  img: "/images/educators/4.JPG",
+                  text: '"Three tools, used confidently" — the promise we open every session with',
+                },
+                {
+                  img: "/images/educators/indraprasth_school.JPG",
+                  text: "Prompts that actually get used on a Monday morning",
+                },
+                {
+                  img: "/images/educators/6.JPG",
+                  text: "A full computer lab, everyone working the tools themselves",
+                },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -388,9 +459,8 @@ export default function EducatorsPage() {
         {/* ── VOICES FROM THE CLASSROOM SECTION ──────────────────────────── */}
         <section className="relative px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
           <div className="mx-auto max-w-7xl">
-            
             {/* Section Header */}
-            <div className="mb-16 max-w-3xl">
+            {/* <div className="mb-16 max-w-3xl">
               <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#67e8f9]">
                 — Voices from the Classroom
               </p>
@@ -398,16 +468,26 @@ export default function EducatorsPage() {
                 Testimonials — intake in progress.
               </h2>
               <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-                Space reserved for feedback from educators. Add quotes with name, subject, and school to complete this section.
+                Space reserved for feedback from educators. Add quotes with
+                name, subject, and school to complete this section.
               </p>
-            </div>
+            </div> */}
 
             {/* Testimonials Quote Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { quote: "Quote to be added", author: "— Name, Subject, School" },
-                { quote: "Quote to be added", author: "— Name, Subject, School" },
-                { quote: "Quote to be added", author: "— Name, Subject, School" }
+                {
+                  quote: "Quote to be added",
+                  author: "— Name, Subject, School",
+                },
+                {
+                  quote: "Quote to be added",
+                  author: "— Name, Subject, School",
+                },
+                {
+                  quote: "Quote to be added",
+                  author: "— Name, Subject, School",
+                },
               ].map((item, idx) => (
                 <div
                   key={idx}
@@ -426,14 +506,16 @@ export default function EducatorsPage() {
                   </div>
                 </div>
               ))}
-            </div>
-
+            </div> */}
           </div>
         </section>
 
         {/* ── FINAL CTA SECTION ─────────────────────────────────────────── */}
         <section className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-gradient-to-b from-[#030508] to-[#090d16] overflow-hidden text-center">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden"
+            aria-hidden="true"
+          >
             <div className="absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#67e8f9]/[0.03] blur-[120px]" />
           </div>
 
@@ -443,7 +525,8 @@ export default function EducatorsPage() {
               <span className="text-[#67e8f9]">your school.</span>
             </h2>
             <p className="max-w-2xl text-[18px] sm:text-[22px] leading-relaxed text-white/70 font-medium mx-auto mb-12">
-              A single staff-wide session, an ongoing partnership, or something in between — built around how your teachers already work.
+              A single staff-wide session, an ongoing partnership, or something
+              in between — built around how your teachers already work.
             </p>
 
             <Link

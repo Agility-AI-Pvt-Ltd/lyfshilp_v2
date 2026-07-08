@@ -20,7 +20,10 @@ function ArrowGlyph() {
 
 function SchoolHeroBackground() {
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden z-0" aria-hidden="true">
+    <div
+      className="pointer-events-none absolute inset-0 overflow-hidden z-0"
+      aria-hidden="true"
+    >
       {/* Deep dark base */}
       <div className="absolute inset-0 bg-[#030508]" />
 
@@ -69,7 +72,6 @@ export default function ForSchoolsPage() {
 
           <div className="relative z-10 mx-auto w-full max-w-7xl flex flex-col gap-10">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-              
               {/* Eyebrow badge */}
               <div className="inline-flex items-center gap-2 rounded-full border border-[#10b981]/40 bg-[#10b981]/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#10b981]">
                 <span className="size-1.5 animate-ping rounded-full bg-[#10b981]" />
@@ -84,7 +86,11 @@ export default function ForSchoolsPage() {
               </h1>
 
               <p className="mt-8 max-w-3xl text-[16px] sm:text-[18px] leading-relaxed text-white/70 font-medium">
-                The world your students will graduate into looks nothing like the one their textbooks were written for. Degrees alone are no longer enough. FutureX gives every student — from a single in-school workshop to a flagship global fellowship — the edge to think independently, build with AI, and lead.
+                The world your students will graduate into looks nothing like
+                the one their textbooks were written for. Degrees alone are no
+                longer enough. FutureX gives every student — from a single
+                in-school workshop to a flagship global fellowship — the edge to
+                think independently, build with AI, and lead.
               </p>
 
               {/* Partners / Curricula Highlights */}
@@ -93,7 +99,7 @@ export default function ForSchoolsPage() {
                   "Integrates MIT Sloan curriculum",
                   "Stanford SEED",
                   "Harvard Case Method",
-                  "Grades 6–12"
+                  "Grades 6–12",
                 ].map((item) => (
                   <div
                     key={item}
@@ -113,14 +119,19 @@ export default function ForSchoolsPage() {
                   <ArrowGlyph />
                 </Link>
               </div>
-
             </div>
           </div>
         </section>
 
         {/* ── 2. CHOOSE YOUR PATH SECTION ─────────────────────────────────── */}
-        <section id="paths" className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]/50">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden z-0" aria-hidden="true">
+        <section
+          id="paths"
+          className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]/50"
+        >
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden z-0"
+            aria-hidden="true"
+          >
             <div className="absolute right-1/4 top-1/4 size-[500px] rounded-full bg-[#10b981]/[0.03] blur-[120px]" />
           </div>
 
@@ -135,13 +146,14 @@ export default function ForSchoolsPage() {
                 <span className="text-[#CFFD53]">school wants to start.</span>
               </h2>
               <p className="mt-6 text-[18px] leading-relaxed text-white/60 max-w-3xl font-medium">
-                A focused in-school introduction, or a full flagship fellowship where students build a real venture from scratch — both grounded in the same core belief: AI is a tool to build with, not fear.
+                A focused in-school introduction, or a full flagship fellowship
+                where students build a real venture from scratch — both grounded
+                in the same core belief: AI is a tool to build with, not fear.
               </p>
             </div>
 
             {/* Path Cards Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-              
               {/* Path 1: AI Scholar Track */}
               <div className="flex flex-col justify-between border border-white/10 bg-white/[0.01] hover:bg-white/[0.02] transition-colors rounded-[28px] p-8 sm:p-10">
                 <div>
@@ -153,7 +165,7 @@ export default function ForSchoolsPage() {
                       7 Sessions
                     </span>
                   </div>
-                  
+
                   <h3 className="mt-6 text-[32px] font-black text-white leading-tight">
                     AI Scholar Track
                   </h3>
@@ -167,9 +179,12 @@ export default function ForSchoolsPage() {
                       "Learn prompt engineering through projects",
                       "Understand AI ethics and responsible use",
                       "Create a first working AI tool",
-                      "Present finished work in a student showcase"
+                      "Present finished work in a student showcase",
                     ].map((benefit) => (
-                      <li key={benefit} className="grid grid-cols-[auto_1fr] gap-3.5 text-[15px] leading-relaxed text-white/80">
+                      <li
+                        key={benefit}
+                        className="grid grid-cols-[auto_1fr] gap-3.5 text-[15px] leading-relaxed text-white/80"
+                      >
                         <span className="mt-1 flex size-4 items-center justify-center rounded-full bg-[#10b981]/20 text-[9px] font-black text-[#10b981] shrink-0">
                           ✓
                         </span>
@@ -181,7 +196,7 @@ export default function ForSchoolsPage() {
 
                 <div className="mt-12">
                   <Link
-                    href="#sessions"
+                    href="/ai-scholar-track"
                     className="block w-full py-4 px-6 rounded-full text-center text-[15px] font-bold border border-white/20 text-white hover:bg-white/5 hover:border-white/35 transition-all duration-300 shadow-md"
                   >
                     Explore the AI Scholar Track
@@ -203,12 +218,12 @@ export default function ForSchoolsPage() {
                       36 Sessions
                     </span>
                   </div>
-                  
+
                   <h3 className="mt-6 text-[32px] font-black text-white leading-tight">
                     International FutureX Fellowship
                   </h3>
                   <p className="mt-2 text-[14px] font-bold text-[#CFFD53] uppercase tracking-widest leading-relaxed">
-                    9 Months / Flagship cohort online
+                    6 Months / Flagship cohort online
                   </p>
 
                   <ul className="mt-8 space-y-4 border-t border-white/10 pt-8">
@@ -217,9 +232,12 @@ export default function ForSchoolsPage() {
                       "Pitch to investors at Demo Day",
                       "Earn an international certification",
                       "Learn through the Harvard Case Method",
-                      "Grow with an XP-based progress system"
+                      "Grow with an XP-based progress system",
                     ].map((benefit) => (
-                      <li key={benefit} className="grid grid-cols-[auto_1fr] gap-3.5 text-[15px] leading-relaxed text-white/80">
+                      <li
+                        key={benefit}
+                        className="grid grid-cols-[auto_1fr] gap-3.5 text-[15px] leading-relaxed text-white/80"
+                      >
                         <span className="mt-1 flex size-4 items-center justify-center rounded-full bg-[#CFFD53]/20 text-[9px] font-black text-[#CFFD53] shrink-0">
                           ✓
                         </span>
@@ -238,20 +256,21 @@ export default function ForSchoolsPage() {
                   </Link>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
         {/* ── 3. WHY THIS, WHY NOW SECTION ────────────────────────────────── */}
         <section className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden z-0" aria-hidden="true">
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden z-0"
+            aria-hidden="true"
+          >
             <div className="absolute left-1/4 bottom-1/4 size-[500px] rounded-full bg-[#CFFD53]/[0.02] blur-[120px]" />
           </div>
 
           <div className="relative mx-auto max-w-7xl z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              
               {/* Left Column: Heading & Paragraphs */}
               <div className="lg:col-span-5 flex flex-col justify-start text-left">
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#10b981]">
@@ -262,40 +281,62 @@ export default function ForSchoolsPage() {
                   no longer enough.
                 </h2>
                 <p className="mt-6 text-[16px] sm:text-[18px] leading-relaxed text-white/65">
-                  AI is already replacing entry-level jobs across industries. The students who thrive won&apos;t be the ones who memorised the most — they&apos;ll be the ones who can build, adapt, and lead in a world that changes faster than any syllabus.
+                  AI is already replacing entry-level jobs across industries.
+                  The students who thrive won&apos;t be the ones who memorised
+                  the most — they&apos;ll be the ones who can build, adapt, and
+                  lead in a world that changes faster than any syllabus.
                 </p>
                 <p className="mt-4 text-[15px] leading-relaxed text-white/50">
-                  FutureX isn&apos;t anti-academics — it&apos;s pro-future. We teach students to use AI as a power tool, see robotics as a career path they can enter today, and treat financial independence as a skill that starts young.
+                  FutureX isn&apos;t anti-academics — it&apos;s pro-future. We
+                  teach students to use AI as a power tool, see robotics as a
+                  career path they can enter today, and treat financial
+                  independence as a skill that starts young.
                 </p>
               </div>
 
               {/* Right Column: 2x2 Grid metrics */}
               <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:pt-4">
-                
                 {/* Metric 1 */}
                 <div className="p-8 rounded-[22px] border border-white/5 bg-white/[0.01] flex flex-col justify-between">
                   <div className="text-[52px] sm:text-[64px] font-black text-white leading-none tracking-tight flex items-baseline">
-                    <StaggeredCountdown value="4" suffix="" color="#ffffff" duration={1.5} />
+                    <StaggeredCountdown
+                      value="4"
+                      suffix=""
+                      color="#ffffff"
+                      duration={1.5}
+                    />
                   </div>
                   <p className="mt-4 text-[13px] font-bold text-white/50 uppercase tracking-[0.15em] leading-relaxed">
-                    Core pillars — AI & Robotics, Finance, Marketing, Business Communication
+                    Core pillars — AI & Robotics, Finance, Marketing, Business
+                    Communication
                   </p>
                 </div>
 
                 {/* Metric 2 */}
                 <div className="p-8 rounded-[22px] border border-white/5 bg-white/[0.01] flex flex-col justify-between">
                   <div className="text-[52px] sm:text-[64px] font-black text-[#CFFD53] leading-none tracking-tight flex items-baseline">
-                    <StaggeredCountdown value="1:8" suffix="" color="#CFFD53" duration={1.5} />
+                    <StaggeredCountdown
+                      value="1:8"
+                      suffix=""
+                      color="#CFFD53"
+                      duration={1.5}
+                    />
                   </div>
                   <p className="mt-4 text-[13px] font-bold text-white/50 uppercase tracking-[0.15em] leading-relaxed">
-                    Mentor-to-student ratio, drawn from IIT, IIM, BITS Pilani and MICA alumni
+                    Mentor-to-student ratio, drawn from IIT, IIM, BITS Pilani
+                    and MICA alumni
                   </p>
                 </div>
 
                 {/* Metric 3 */}
                 <div className="p-8 rounded-[22px] border border-white/5 bg-white/[0.01] flex flex-col justify-between">
                   <div className="text-[52px] sm:text-[64px] font-black text-white leading-none tracking-tight flex items-baseline">
-                    <StaggeredCountdown value="6" suffix="" color="#ffffff" duration={1.5} />
+                    <StaggeredCountdown
+                      value="6"
+                      suffix=""
+                      color="#ffffff"
+                      duration={1.5}
+                    />
                   </div>
                   <p className="mt-4 text-[13px] font-bold text-white/50 uppercase tracking-[0.15em] leading-relaxed">
                     Months from first problem statement to a live Demo Day pitch
@@ -305,25 +346,32 @@ export default function ForSchoolsPage() {
                 {/* Metric 4 */}
                 <div className="p-8 rounded-[22px] border border-white/5 bg-white/[0.01] flex flex-col justify-between">
                   <div className="text-[52px] sm:text-[64px] font-black text-[#10b981] leading-none tracking-tight flex items-baseline">
-                    <StaggeredCountdown value="100" suffix="%" color="#10b981" duration={1.5} />
+                    <StaggeredCountdown
+                      value="100"
+                      suffix="%"
+                      color="#10b981"
+                      duration={1.5}
+                    />
                   </div>
                   <p className="mt-4 text-[13px] font-bold text-white/50 uppercase tracking-[0.15em] leading-relaxed">
-                    Free tools throughout — no paid software subscriptions required
+                    Free tools throughout — no paid software subscriptions
+                    required
                   </p>
                 </div>
-
               </div>
-
             </div>
           </div>
         </section>
 
         {/* ── 4. SESSIONS LOG TIMELINE (retained for visual richness) ─────── */}
-        <SchoolsTimelineSection />
+        {/* <SchoolsTimelineSection /> */}
 
         {/* ── 5. FINAL CTA SECTION ────────────────────────────────────────── */}
         <section className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-gradient-to-b from-[#030508] to-[#090d16] overflow-hidden text-center">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden"
+            aria-hidden="true"
+          >
             <div className="absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#10b981]/[0.03] blur-[120px]" />
           </div>
 
@@ -333,7 +381,10 @@ export default function ForSchoolsPage() {
               <span className="text-[#CFFD53]">your school.</span>
             </h2>
             <p className="max-w-2xl text-[18px] sm:text-[22px] leading-relaxed text-white/70 font-medium mx-auto mb-12">
-              Start with a workshop. Grow into a fellowship. Whether your school is exploring AI literacy for the first time or ready for a flagship global program, there&apos;s a FutureX path built for where you are.
+              Start with a workshop. Grow into a fellowship. Whether your school
+              is exploring AI literacy for the first time or ready for a
+              flagship global program, there&apos;s a FutureX path built for
+              where you are.
             </p>
 
             <Link

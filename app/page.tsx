@@ -54,7 +54,6 @@ const programmes = [
   },
 ];
 
-
 function PixelMark({ accent }: { accent: string }) {
   const pixels = [1, 2, 4, 7, 8, 10, 13, 14];
 
@@ -97,7 +96,7 @@ export default function Home() {
           columnOneImages={heroCol1}
           columnTwoImages={heroCol2}
           title={
-            "'Your Child Doesn't Just Learn AI. \nThey Build With It. Lead With It.'"
+            "From Classrooms to Boardrooms. From Policy to Practice.\nWe Make AI Hands-On for Everyone."
           }
           subtitle="The FutureX Fellowship is a 36-session, project-led program where students in Grades 6-12 build real AI tools, pitch real business ideas, and earn internationally recognised certification — all using free tools."
           rating="4.9 rating"
@@ -108,21 +107,25 @@ export default function Home() {
         {/* Stats band */}
         <section className="bg-black px-6 py-24 sm:px-12 lg:px-20 text-white relative overflow-hidden">
           {/* Subtle decorative glow to enhance premium look */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <div
+            className="absolute inset-0 pointer-events-none overflow-hidden"
+            aria-hidden="true"
+          >
             <div className="absolute -right-40 -top-40 size-[600px] rounded-full bg-white/[0.03] blur-[100px]" />
             <div className="absolute -bottom-40 -left-40 size-[500px] rounded-full bg-white/[0.02] blur-[80px]" />
           </div>
 
           <div className="relative mx-auto max-w-7xl z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-              
               {/* Left Column: Text & CTA */}
               <div className="lg:col-span-5 flex flex-col items-start text-left space-y-6">
                 <h2 className="text-[36px] sm:text-[48px] font-bold text-white tracking-tight leading-none">
                   Our Impact
                 </h2>
                 <p className="text-[15px] sm:text-[17px] leading-relaxed text-white/80 font-medium">
-                  Empowering young minds across high schools and colleges with hands-on startup and tech curricula, forging a nationwide builder community of ambitious learners.
+                  Empowering young minds across high schools and colleges with
+                  hands-on startup and tech curricula, forging a nationwide
+                  builder community of ambitious learners.
                 </p>
                 <div>
                   <Link
@@ -137,11 +140,15 @@ export default function Home() {
               {/* Right Column: 2x2 Stats Grid with Divider lines */}
               <div className="lg:col-span-7 w-full">
                 <div className="grid grid-cols-1 sm:grid-cols-2">
-                  
                   {/* Cell 1: Top-Left */}
                   <div className="border-b border-white/10 pb-8 sm:border-r sm:pr-8 sm:pb-8">
                     <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
-                      <StaggeredCountdown value="5,000" suffix="+" color="#ffffff" duration={2} />
+                      <StaggeredCountdown
+                        value="5,000"
+                        suffix="+"
+                        color="#ffffff"
+                        duration={2}
+                      />
                     </div>
                     <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
                       STUDENTS TRAINED
@@ -151,7 +158,12 @@ export default function Home() {
                   {/* Cell 2: Top-Right */}
                   <div className="border-b border-white/10 py-8 sm:border-b sm:pl-8 sm:pt-0 sm:pb-8">
                     <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
-                      <StaggeredCountdown value="40" suffix="+" color="#ffffff" duration={2} />
+                      <StaggeredCountdown
+                        value="40"
+                        suffix="+"
+                        color="#ffffff"
+                        duration={2}
+                      />
                     </div>
                     <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
                       PARTNER SCHOOLS
@@ -161,7 +173,12 @@ export default function Home() {
                   {/* Cell 3: Bottom-Left */}
                   <div className="border-b border-white/10 py-8 sm:border-b-0 sm:border-r sm:pr-8 sm:pt-8 sm:pb-0">
                     <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
-                      <StaggeredCountdown value="14" suffix="" color="#ffffff" duration={2} />
+                      <StaggeredCountdown
+                        value="14"
+                        suffix=""
+                        color="#ffffff"
+                        duration={2}
+                      />
                     </div>
                     <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
                       CITIES NATIONWIDE
@@ -171,16 +188,19 @@ export default function Home() {
                   {/* Cell 4: Bottom-Right */}
                   <div className="pt-8 sm:pl-8">
                     <div className="text-[52px] sm:text-[64px] font-bold leading-none tracking-tight text-white flex items-baseline">
-                      <StaggeredCountdown value="100" suffix="%" color="#ffffff" duration={2} />
+                      <StaggeredCountdown
+                        value="100"
+                        suffix="%"
+                        color="#ffffff"
+                        duration={2}
+                      />
                     </div>
                     <p className="mt-3 text-[11px] font-black uppercase tracking-[0.2em] text-white/50">
                       FREE TOOL ACCESS
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -278,7 +298,6 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-
       </main>
 
       <JoinCommunity />

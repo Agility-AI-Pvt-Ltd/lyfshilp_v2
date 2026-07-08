@@ -11,19 +11,22 @@ interface Testimonial {
 
 const teacherTestimonials: Testimonial[] = [
   {
-    quote: "The workshop on AI and Bloom's Taxonomy was eye-opening for our faculty. We left with practical tools we could use in class the next day — not just theory.",
+    quote:
+      "The workshop on AI and Bloom's Taxonomy was eye-opening for our faculty. We left with practical tools we could use in class the next day — not just theory.",
     author: "Ms. Kavita Joshi",
     subtitle: "Head of Academics · The Shri Ram School, Delhi",
     imgSrc: "/images/testimonials/educator_professional.png",
   },
   {
-    quote: "Our students were disengaged in regular classes but lit up during FutureX sessions. The XP system and community posts made learning feel like a game they wanted to win.",
+    quote:
+      "Our students were disengaged in regular classes but lit up during FutureX sessions. The XP system and community posts made learning feel like a game they wanted to win.",
     author: "Mr. Sandeep Kaur",
     subtitle: "Computer Science Teacher · Delhi Public School, Chandigarh",
     imgSrc: "/images/testimonials/male_teacher_relaxed.png",
   },
   {
-    quote: "As a principal, I care about outcomes. FutureX delivered: 100% of enrolled students completed the program, and 3 presented at a district-level startup competition.",
+    quote:
+      "As a principal, I care about outcomes. FutureX delivered: 100% of enrolled students completed the program, and 3 presented at a district-level startup competition.",
     author: "Dr. Meena Kapoor",
     subtitle: "Principal · Army Public School, Pune",
     imgSrc: "/images/testimonials/principal_smiling.png",
@@ -102,19 +105,19 @@ export function RealVoices() {
       `}</style>
 
       {/* Testimonials Block */}
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-14 lg:py-28">
-        {/* Title */}
-        <div className="mb-16">
+      {/* <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-14 lg:py-28"> */}
+      {/* Title */}
+      {/* <div className="mb-16">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-[#8a90a3]">
             Testimonials
           </p>
           <h2 className="text-[40px] font-black leading-tight tracking-tight text-[#272835] sm:text-[52px]">
             Real voices. Real change.
           </h2>
-        </div>
+        </div> */}
 
-        {/* Teachers Section */}
-        <div>
+      {/* Teachers Section */}
+      {/* <div>
           <h3 className="mb-8 text-[20px] font-black uppercase tracking-wider text-[#272835]/70 border-l-4 border-[#5e22ff] pl-4">
             Teachers and school heads say
           </h3>
@@ -124,7 +127,7 @@ export function RealVoices() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* School Partners Logos Strip */}
       <div className="bg-[#f5f5f7]/60 border-t border-[#e6e8ef] py-6 overflow-hidden">
@@ -132,16 +135,19 @@ export function RealVoices() {
           <p className="text-[11px] font-bold text-center uppercase tracking-widest text-[#8a90a3] mb-6">
             Trusted by schools across India
           </p>
-          
+
           <div className="w-full overflow-hidden relative select-none">
             {/* Fade overlays for marquee ends */}
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#f5f5f7] to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#f5f5f7] to-transparent z-10 pointer-events-none" />
-            
+
             <div className="logo-marquee-track">
               {/* First Pass */}
               {schools.map((school, idx) => (
-                <div key={`logo-1-${idx}`} className="flex items-center gap-2.5 mx-12">
+                <div
+                  key={`logo-1-${idx}`}
+                  className="flex items-center gap-2.5 mx-12"
+                >
                   <svg
                     className="size-5 text-[#8a90a3] opacity-50"
                     viewBox="0 0 24 24"
@@ -163,7 +169,10 @@ export function RealVoices() {
               ))}
               {/* Second Pass */}
               {schools.map((school, idx) => (
-                <div key={`logo-2-${idx}`} className="flex items-center gap-2.5 mx-12">
+                <div
+                  key={`logo-2-${idx}`}
+                  className="flex items-center gap-2.5 mx-12"
+                >
                   <svg
                     className="size-5 text-[#8a90a3] opacity-50"
                     viewBox="0 0 24 24"

@@ -15,29 +15,49 @@ type Program = {
   href: string;
   accent: string;
   softAccent: string;
-  iconShape: "diamond" | "star" | "pinwheel";
+  iconShape: "diamond" | "star" | "pinwheel" | "building";
   isHighlighted?: boolean;
 };
 
 const programs: Program[] = [
   {
-    badge: "Scale & Enterprise",
-    title: "Government & Corporates",
-    audience: "Public education systems & modern teams",
-    duration: "State-wide scale & corporate sprints",
-    highlightText: "Institutional",
-    durationLabel: "Scale-optimized AI enablement & workflow audits",
+    badge: "Public Sector",
+    title: "Government Bodies",
+    audience: "Public institutions & government departments",
+    duration: "Governance at scale",
+    highlightText: "Governance",
+    durationLabel:
+      "Empowering public institutions with practical AI capabilities for smarter governance.",
     benefits: [
-      "Turnkey curricula for state-wide systems",
-      "Scale-ready teacher training models",
-      "Role-specific AI adoption & workflow audits",
-      "Hands-on workspace transformation sprints",
+      "AI readiness assessment & adoption roadmap",
+      "Hands-on AI training for officers and departments",
+      "Workflow automation & AI integration support",
+      "Responsible AI implementation for public services",
     ],
     cta: "Explore More",
-    href: "/corporate-ai",
+    href: "/govt-bodies",
     accent: "#a3e635",
     softAccent: "rgba(163, 230, 53, 0.1)",
     iconShape: "diamond",
+  },
+  {
+    badge: "Scale & Enterprise",
+    title: "Corporates",
+    audience: "Enterprise teams & leadership",
+    duration: "Workplace transformation",
+    highlightText: "AI-Ready",
+    durationLabel:
+      "Building AI-ready through hands-on training and workplace transformation.",
+    benefits: [
+      "AI tool mastery for employees and leadership",
+      "Workflow optimization with practical AI solutions",
+      "Increased productivity through real-world AI applications",
+    ],
+    cta: "Explore More",
+    href: "/corporate-ai",
+    accent: "#CFFD53",
+    softAccent: "rgba(207, 253, 83, 0.1)",
+    iconShape: "building",
   },
   {
     badge: "Teach & Inspire",
@@ -134,19 +154,42 @@ function ShapeIcon({ shape }: { shape: Program["iconShape"] }) {
     );
   }
 
-  return (
-    <svg
-      className="size-16 text-[#ffd166]"
-      viewBox="0 0 100 100"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path d="M50,50 C50,30 65,15 75,25 C85,35 70,50 50,50 Z" />
-      <path d="M50,50 C70,50 85,65 75,75 C65,85 50,70 50,50 Z" />
-      <path d="M50,50 C50,70 35,85 25,75 C15,65 30,50 50,50 Z" />
-      <path d="M50,50 C30,50 15,35 25,25 C35,15 50,30 50,50 Z" />
-    </svg>
-  );
+  if (shape === "building") {
+    return (
+      <svg
+        className="size-16 text-[#CFFD53]"
+        viewBox="0 0 100 100"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <rect x="22" y="30" width="56" height="58" rx="4" />
+        <rect x="32" y="42" width="12" height="12" rx="1" fill="#041d14" />
+        <rect x="56" y="42" width="12" height="12" rx="1" fill="#041d14" />
+        <rect x="32" y="62" width="12" height="12" rx="1" fill="#041d14" />
+        <rect x="56" y="62" width="12" height="12" rx="1" fill="#041d14" />
+        <rect x="44" y="72" width="12" height="16" rx="1" fill="#041d14" />
+        <polygon points="50,12 78,30 22,30" />
+      </svg>
+    );
+  }
+
+  if (shape === "pinwheel") {
+    return (
+      <svg
+        className="size-16 text-[#ffd166]"
+        viewBox="0 0 100 100"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M50,50 C50,30 65,15 75,25 C85,35 70,50 50,50 Z" />
+        <path d="M50,50 C70,50 85,65 75,75 C65,85 50,70 50,50 Z" />
+        <path d="M50,50 C50,70 35,85 25,75 C15,65 30,50 50,50 Z" />
+        <path d="M50,50 C30,50 15,35 25,25 C35,15 50,30 50,50 Z" />
+      </svg>
+    );
+  }
+
+  return null;
 }
 
 export function ProgramsSection() {
@@ -185,14 +228,16 @@ export function ProgramsSection() {
           </p>
         </div>
 
-        {/* 3-Column Plan Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10 rounded-[32px] overflow-hidden bg-black/20 backdrop-blur-md shadow-2xl">
+        {/* 4-Column Plan Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-white/10 rounded-[32px] overflow-hidden bg-black/20 backdrop-blur-md shadow-2xl">
           {programs.map((program, index) => (
             <div
               key={program.title}
               className={`flex flex-col justify-between p-8 sm:p-10 transition-all duration-500 border-white/10 ${
-                index > 0 ? "border-t md:border-t-0 md:border-l" : ""
-              } ${
+                index > 0 ? "border-t" : ""
+              } ${index % 2 === 1 ? "md:border-l" : ""} ${
+                index >= 2 ? "md:border-t" : index > 0 ? "md:border-t-0" : ""
+              } ${index > 0 ? "lg:border-t-0 lg:border-l" : ""} ${
                 program.isHighlighted
                   ? "bg-[#062c1f]/45 relative z-10 shadow-[inset_0_0_40px_rgba(16,185,129,0.06)]"
                   : "bg-transparent"

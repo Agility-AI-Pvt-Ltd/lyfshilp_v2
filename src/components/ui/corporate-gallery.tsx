@@ -13,7 +13,7 @@ interface GalleryItem {
 const sessionPhotos: GalleryItem[] = [
   {
     src: "/images/corporate/ses1.jpg",
-    alt: "Trainer presenting to NDDB cohort",
+    alt: "Professionals presenting to NDDB cohort",
     caption: "Live walkthrough of AI tools for daily reporting",
     tag: "NDDB",
   },
@@ -25,38 +25,38 @@ const sessionPhotos: GalleryItem[] = [
   },
   {
     src: "/images/corporate/ses3.JPG",
-    alt: "Trainer presenting recorded testimonial",
+    alt: "Professionals presenting recorded testimonial",
     caption: "Reviewing a recorded practitioner testimonial",
     tag: "NDDB",
   },
   {
     src: "/images/corporate/ses4.JPG",
-    alt: "Trainer presenting to seated cohort",
+    alt: "Professionals presenting to seated cohort",
     caption: "Guided discussion on AI adoption in the field",
-    tag: "NDDB",
+    tag: "ANAND",
   },
   {
     src: "/images/corporate/ses5.JPG",
-    alt: "Trainer walking cohort through account setup",
+    alt: "Professionals walking cohort through account setup",
     caption: "Step-by-step account setup, done live",
-    tag: "NDDB",
+    tag: "ANAND",
   },
   {
     src: "/images/corporate/ses6.JPG",
-    alt: "Trainer addressing a curved conference room",
+    alt: "Professionals addressing a curved conference room",
     caption: "Closing session, open floor for questions",
-    tag: "NDDB",
+    tag: "ANAND",
   },
 ];
 
 const humanPhotos = [
   {
     src: "/images/corporate/pep1.JPG",
-    caption: "Trainer with cohort, candid group photo",
+    caption: "Professionals with cohort, candid group photo",
   },
   {
     src: "/images/corporate/pep2.JPG",
-    caption: "Trainer with second cohort, candid group photo",
+    caption: "Professionals with second cohort, candid group photo",
   },
 ];
 
@@ -74,7 +74,8 @@ export function CorporateGallery() {
               What the room actually looks like.
             </h2>
             <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-              Practical, screen-facing, hands-on — every attendee works through the tools live, not just watches a demo.
+              Practical, screen-facing, hands-on — every attendee works through
+              the tools live, not just watches a demo.
             </p>
           </div>
 
@@ -124,7 +125,9 @@ export function CorporateGallery() {
               Training that people remember, not just attend.
             </h2>
             <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-              Beyond the slides and the sign-in sheets, what stays with a cohort is whether the session felt worth their time. These are the moments after the formal photo — when the room actually relaxes.
+              Beyond the slides and the sign-in sheets, what stays with a cohort
+              is whether the session felt worth their time. These are the
+              moments after the formal photo — when the room actually relaxes.
             </p>
           </div>
 

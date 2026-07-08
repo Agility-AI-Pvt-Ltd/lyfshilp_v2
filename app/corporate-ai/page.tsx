@@ -2,15 +2,79 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import { LyfshilpNavbar } from "@/src/components/layouts/lyfshilp-navbar";
 import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { CorporateRegister } from "@/src/components/ui/corporate-register";
 import { CorporateFormats } from "@/src/components/ui/corporate-formats";
 import { CorporateGallery } from "@/src/components/ui/corporate-gallery";
 
+const heroLineVariants = {
+  hidden: { opacity: 0, y: 48, filter: "blur(10px)" },
+  visible: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      delay,
+      duration: 0.85,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  }),
+};
+
 export default function CorporateAIPage() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <div className="bg-[#030508] text-white font-sans antialiased overflow-x-hidden min-h-screen">
+      <style>{`
+        @keyframes corporate-shimmer {
+          0% { background-position: 200% center; }
+          100% { background-position: -200% center; }
+        }
+        @keyframes corporate-glow-pulse {
+          0%, 100% { opacity: 0.45; transform: scale(1); }
+          50% { opacity: 0.85; transform: scale(1.04); }
+        }
+        @keyframes corporate-underline-grow {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+        .corporate-hero-shimmer {
+          background: linear-gradient(
+            105deg,
+            #CFFD53 0%,
+            #CFFD53 35%,
+            #ffffff 50%,
+            #CFFD53 65%,
+            #CFFD53 100%
+          );
+          background-size: 220% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: corporate-shimmer 5s linear infinite;
+        }
+        .corporate-hero-glow {
+          animation: corporate-glow-pulse 3.5s ease-in-out infinite;
+        }
+        .corporate-hero-underline {
+          transform-origin: left center;
+          animation: corporate-underline-grow 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+          transform: scaleX(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .corporate-hero-shimmer,
+          .corporate-hero-glow,
+          .corporate-hero-underline {
+            animation: none;
+          }
+          .corporate-hero-underline {
+            transform: scaleX(1);
+          }
+        }
+      `}</style>
       <LyfshilpNavbar />
 
       <main>
@@ -37,26 +101,80 @@ export default function CorporateAIPage() {
           </div>
 
           <div className="relative mx-auto max-w-7xl z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               {/* Left Column: Headings */}
               <div className="lg:col-span-7">
                 {/* Eyebrow */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#CFFD53]/35 bg-[#CFFD53]/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#CFFD53]">
+                <motion.div
+                  initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="inline-flex items-center gap-2 rounded-full border border-[#CFFD53]/35 bg-[#CFFD53]/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#CFFD53]"
+                >
                   <span className="size-1.5 rounded-full bg-[#CFFD53] animate-pulse" />
                   Enterprise & Institutional AI Training
-                </div>
+                </motion.div>
 
-                <h1 className="mt-8 text-[48px] font-black leading-[1.08] tracking-tight text-white sm:text-[68px] lg:text-[84px] xl:text-[96px]">
-                  AI adoption, Enablement And <br />
-                  <span className="text-[#CFFD53] block mt-4 sm:mt-6">
-                     integration 
-                  </span>
+                <h1 className="mt-8 max-w-4xl">
+                  <motion.span
+                    custom={reduceMotion ? 0 : 0.1}
+                    initial={reduceMotion ? false : "hidden"}
+                    animate="visible"
+                    variants={heroLineVariants}
+                    className="block text-[clamp(2.75rem,7vw,5.5rem)] font-black leading-[0.98] tracking-[-0.04em] text-white"
+                  >
+                    AI Adoption.
+                  </motion.span>
+                  <motion.span
+                    custom={reduceMotion ? 0 : 0.28}
+                    initial={reduceMotion ? false : "hidden"}
+                    animate="visible"
+                    variants={heroLineVariants}
+                    className="mt-1 block text-[clamp(2.75rem,7vw,5.5rem)] font-black leading-[0.98] tracking-[-0.04em] text-white sm:mt-2"
+                  >
+                    Enablement{" "}
+                    <motion.span
+                      initial={reduceMotion ? false : { opacity: 0, scale: 0.6 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: reduceMotion ? 0 : 0.55, duration: 0.5 }}
+                      className="inline-block font-bold text-white/25"
+                    >
+                      &
+                    </motion.span>
+                  </motion.span>
+                  <motion.span
+                    custom={reduceMotion ? 0 : 0.46}
+                    initial={reduceMotion ? false : "hidden"}
+                    animate="visible"
+                    variants={heroLineVariants}
+                    className="relative mt-1 inline-block sm:mt-2"
+                  >
+                    <span
+                      className="corporate-hero-glow pointer-events-none absolute -inset-x-6 -inset-y-3 -z-10 rounded-2xl bg-[#CFFD53]/20 blur-2xl"
+                      aria-hidden="true"
+                    />
+                    <span
+                      className="pointer-events-none absolute -inset-x-4 -inset-y-2 -z-10 rounded-xl bg-[#CFFD53]/10 blur-lg"
+                      aria-hidden="true"
+                    />
+                    <span className="corporate-hero-shimmer text-[clamp(3rem,8vw,6.75rem)] font-black leading-[0.95] tracking-[-0.05em]">
+                      Integration.
+                    </span>
+                    <span
+                      className="corporate-hero-underline pointer-events-none absolute -bottom-2 left-0 h-1 w-full rounded-full bg-gradient-to-r from-[#CFFD53] via-white/60 to-transparent"
+                      aria-hidden="true"
+                    />
+                  </motion.span>
                 </h1>
+
+                <p className="mt-6 max-w-xl text-[15px] font-medium leading-relaxed text-white/55 sm:mt-8 sm:text-[16px] lg:hidden">
+                  From national dairy cooperatives to enterprise teams, we deliver hands-on AI training in the rooms where decisions actually get made — not in a generic webinar.
+                </p>
               </div>
 
               {/* Right Column: Description, Callout & Buttons */}
-              <div className="flex flex-col lg:col-span-5 lg:pt-20">
-                <p className="text-[15px] sm:text-[16px] leading-relaxed text-white/60 font-medium">
+              <div className="flex flex-col lg:col-span-5 lg:pt-4">
+                <p className="hidden text-[15px] font-medium leading-relaxed text-white/60 sm:text-[16px] lg:block">
                   From national dairy cooperatives to enterprise teams, we deliver hands-on AI training in the rooms where decisions actually get made — not in a generic webinar.
                 </p>
 
