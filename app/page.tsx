@@ -97,12 +97,10 @@ export default function Home() {
           columnOneImages={heroCol1}
           columnTwoImages={heroCol2}
           title={
-            "'Your Child Doesn't Just Learn AI. \nThey Build With It. Lead With It.'"
+            "From Classrooms to Boardrooms. From Policy to Practice.\nWe Make AI Hands-On for Everyone."
           }
-          subtitle="The FutureX Fellowship is a 36-session, project-led program where students in Grades 6-12 build real AI tools, pitch real business ideas, and earn internationally recognised certification — all using free tools."
-          rating="4.9 rating"
-          students="500+ student founders"
-          programGuideHref="https://drive.google.com/file/d/1mu6FYFgg4kz--Cdt7mW_ObvS8V_HPh3t/view?usp=sharing"
+          trustedText="Hands-On AI for Schools, Government & Corporates"
+          subtitle="Lyfshilp partners with schools, government bodies, and corporates to deliver practical, project-led AI training — turning policy into practice and learning into real-world impact."
         />
 
         {/* Stats band */}

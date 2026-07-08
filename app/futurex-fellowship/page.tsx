@@ -492,9 +492,9 @@ export default function FutureXFellowshipPage() {
                 FutureX Fellowship
               </p>
               <p className="mt-6 max-w-3xl text-[16px] sm:text-[18px] leading-relaxed text-white/85 mx-auto font-medium">
-                A mentored sprint-driven pathway for ambitious learners. Move
-                from raw ideas to fully deployed, user-tested AI products in 6
-                weeks with direct guidance from active founders.
+                A 6-month, 36-session online incubator for Grades 6–12. Move
+                from raw ideas to a real startup — validated, built, and pitched
+                at Demo Day — with direct guidance from active founders.
               </p>
 
               <div className="mt-4 flex flex-wrap justify-center gap-3">
@@ -538,16 +538,18 @@ export default function FutureXFellowshipPage() {
               </div>
               <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
                 <div className="text-[28px] font-black leading-none text-white sm:text-[32px]">
-                  <StaggeredCountdown value="" suffix="Demo Day" />
+                  <StaggeredCountdown value="6" suffix={`${" "}Months`} />
                 </div>
-                <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]"></p>
+                <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
+                  Program duration
+                </p>
               </div>
               <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
-                <p className="text-[28px] font-black leading-none text-white sm:text-[32px]">
-                  XP system
-                </p>
+                <div className="text-[28px] font-black leading-none text-white sm:text-[32px]">
+                  <StaggeredCountdown value="" suffix="Demo Day" />
+                </div>
                 <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
-                  Founder Review Cycles
+                  Live investor pitch
                 </p>
               </div>
             </div>
@@ -568,7 +570,7 @@ export default function FutureXFellowshipPage() {
               </h2>
               <p className="mt-6 text-[18px] sm:text-[20px] leading-relaxed text-white/70 max-w-3xl font-medium">
                 Fellows don&apos;t just learn entrepreneurship — they live it.
-                Every concept is applied to a venture you build across 9 months.
+                Every concept is applied to a venture you build across 6 months.
               </p>
             </div>
 
@@ -616,7 +618,7 @@ export default function FutureXFellowshipPage() {
               Ready to build your first startup?
             </h2>
             <p className="max-w-2xl text-[18px] sm:text-[22px] leading-relaxed text-[#747b8f] font-medium mb-12">
-              The next cohort is forming now. Grades 6–12, fully online, 9
+              The next cohort is forming now. Grades 6–12, fully online, 6
               months to Demo Day.
             </p>
             <button

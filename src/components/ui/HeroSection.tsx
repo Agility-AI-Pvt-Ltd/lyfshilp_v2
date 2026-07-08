@@ -7,10 +7,7 @@ interface HeroSectionProps {
   columnTwoImages: string[];
   title?: string;
   subtitle?: string;
-  rating?: string;
-  students?: string;
   trustedText?: string;
-  programGuideHref?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -19,8 +16,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title = "Master Pro\n3D Design",
   subtitle =
     "GET READY TO TRULY ROCK YOUR 3D DESIGN SKILLS WITH FUN PROJECTS, REAL-LIFE WORKFLOWS, AND TRAINING FROM THE PROS. LEARN BY DOING WITH HANDS-ON PROJECTS THAT MIRROR REAL INDUSTRY WORKFLOWS.",
-  trustedText = "India's Most Serious AI Program for School Students.",
-  programGuideHref,
+  trustedText = "Hands-On AI for Schools, Government & Corporates",
 }) => {
   // Duplicate images for seamless infinite loop
   const col1 = [...columnOneImages, ...columnOneImages, ...columnOneImages];
@@ -92,19 +88,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           transform: translateY(-1px);
         }
 
-        .btn-secondary {
-          background: transparent;
-          border: 1.5px solid rgba(39, 40, 53, 0.4);
-          color: #272835;
-          font-weight: 700;
-          letter-spacing: 0.04em;
-          transition: border-color 0.2s, transform 0.15s;
-        }
-        .btn-secondary:hover {
-          border-color: #272835;
-          transform: translateY(-1px);
-        }
-
         @media (prefers-reduced-motion: reduce) {
           .row-scroll-left,
           .row-scroll-right {
@@ -170,10 +153,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </h1>
 
             {/* Subtitle */}
-            <p
-              className="text-[#747b8f] text-[10px] md:text-xs font-semibold tracking-widest mb-10 max-w-3xl leading-relaxed"
-              style={{ fontSize: "clamp(0.65rem, 1.5vw, 0.75rem)" }}
-            >
+            <p className="mb-10 max-w-3xl text-[15px] font-medium leading-relaxed text-[#747b8f] sm:text-[17px]">
               {subtitle}
             </p>
 
@@ -221,29 +201,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     </svg>
                   </span>
                 </span>
-              </a>
-              <a
-                href={programGuideHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary w-full sm:w-auto h-11 px-7 rounded-full text-sm uppercase flex items-center justify-center gap-2.5 !bg-white !border-0 focus:outline-none"
-              >
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0"
-                >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                <span>Download Program Guide</span>
               </a>
             </div>
           </div>

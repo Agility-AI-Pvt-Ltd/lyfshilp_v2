@@ -20,26 +20,9 @@ const entries: LogEntry[] = [
     location: "National Dairy Development Board, Bengaluru",
     title: "AI-Powered Productivity for Dairy Sector Professionals",
     cohort: "NDDB training cohort, 11 May 2026",
-    details: "Officials from milk unions of Bengaluru, Mandya, Vijaypura & Bagalkot (Karnataka), Puducherry, and Mulkanoor Women's Cooperative Dairy (Telangana), together with NDDB.",
+    details:
+      "Officials from milk unions of Bengaluru, Mandya, Vijaypura & Bagalkot (Karnataka), Puducherry, and Mulkanoor Women's Cooperative Dairy (Telangana), together with NDDB.",
     image: "/images/corporate/entry1.jpeg",
-  },
-  {
-    id: "002",
-    date: "12.05.2026",
-    location: "National Dairy Development Board, Bengaluru",
-    title: "AI-Powered Productivity for Dairy Sector Professionals",
-    cohort: "NDDB training cohort, 12 May 2026",
-    details: "Officials from milk unions of Bengaluru, Mandya, Hassan, Kolar, and Chikkaballapura (Karnataka), together with NDDB.",
-    image: "/images/corporate/entry2.jpeg",
-  },
-  {
-    id: "003",
-    date: "13.05.2026",
-    location: "National Dairy Development Board, Bengaluru",
-    title: "AI-Powered Productivity for Dairy Sector Professionals",
-    cohort: "NDDB training cohort, 13 May 2026",
-    details: "Officials from milk unions of Bengaluru, Kolar, and Mandya (Karnataka), together with NDDB.",
-    image: "/images/corporate/entry3.jpeg",
   },
 ];
 
@@ -56,7 +39,9 @@ export function CorporateRegister() {
             A running log, not a portfolio.
           </h2>
           <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-            Every session we run is logged like a field record — who attended, where, and when. Three entries from a recent multi-day deployment with NDDB follow.
+            Every session we run is logged like a field record — who attended,
+            where, and when. Three entries from a recent multi-day deployment
+            with NDDB follow.
           </p>
         </div>
 
@@ -69,9 +54,11 @@ export function CorporateRegister() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 {/* Session Photo */}
-                <div className={`relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 shrink-0 lg:col-span-6 ${
-                  i % 2 === 1 ? "lg:order-2" : "lg:order-1"
-                }`}>
+                <div
+                  className={`relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 shrink-0 lg:col-span-6 ${
+                    i % 2 === 1 ? "lg:order-2" : "lg:order-1"
+                  }`}
+                >
                   {/* Floating Neon Entry Indicator Overlay */}
                   <div className="absolute top-4 left-4 z-10">
                     <span className="font-mono text-[11px] font-black tracking-widest text-[#030508] bg-[#CFFD53] px-3.5 py-1.5 rounded-md uppercase shadow-md shadow-[#CFFD53]/10">
@@ -89,9 +76,11 @@ export function CorporateRegister() {
                 </div>
 
                 {/* Content block */}
-                <div className={`flex flex-col lg:col-span-6 ${
-                  i % 2 === 1 ? "lg:order-1" : "lg:order-2"
-                }`}>
+                <div
+                  className={`flex flex-col lg:col-span-6 ${
+                    i % 2 === 1 ? "lg:order-1" : "lg:order-2"
+                  }`}
+                >
                   {/* Meta details */}
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] font-mono font-bold text-white/40 uppercase">
                     <span>{entry.date}</span>

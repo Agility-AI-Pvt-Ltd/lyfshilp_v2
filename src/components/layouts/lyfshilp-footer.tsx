@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import Link from "next/link";
 
 type FooterLink = {
@@ -13,7 +14,7 @@ const footerLinks: { title: string; links: FooterLink[] }[] = [
     title: "Programs",
     links: [
       { label: "FutureX Fellowship", href: "/futurex-fellowship" },
-      { label: "AI Scholar Track", href: "/summer-programme" },
+      { label: "AI Scholar Track", href: "/ai-scholar-track" },
       { label: "Build With AI", href: "/build-with-ai" },
     ],
   },
@@ -66,15 +67,20 @@ export function LyfshilpFooter() {
           <div>
             <Link
               href="/"
-              className="inline-flex items-center gap-3 text-[32px] font-black tracking-normal text-white"
+              className="inline-flex items-center gap-2.5"
+              aria-label="Lyfshilp home"
             >
-              <span className="relative grid size-9 place-items-center">
-                <span className="absolute size-7 rotate-45 rounded-[4px] bg-[#5e4cff]" />
-                <span className="absolute left-0 top-1 size-3 rounded-[2px] bg-[#ff492c]" />
-                <span className="absolute bottom-0 right-0 size-3 rounded-[2px] bg-[#10b981]" />
-                <span className="absolute right-0 top-0 size-2.5 rounded-full bg-[#ffd166]" />
+              <NextImage
+                src="/images/logo.png"
+                alt="Lyfshilp Academy Logo"
+                width={42}
+                height={42}
+                className="h-[42px] w-[42px] object-contain"
+                unoptimized
+              />
+              <span className="text-[22px] font-semibold leading-none tracking-normal text-white">
+                Lyfshilp
               </span>
-              lyfshilp
             </Link>
             <p className="mt-6 text-[13px] font-black uppercase tracking-[0.15em] text-white">
               Lyfshilp Academy
