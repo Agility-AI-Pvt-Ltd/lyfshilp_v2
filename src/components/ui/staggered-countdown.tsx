@@ -37,6 +37,8 @@ export function StaggeredCountdown({
   const [animatedDigits, setAnimatedDigits] = useState<number[]>(
     Array(digitCount).fill(0)
   );
+  const suffixNeedsGap = Boolean(value && /^\s/.test(suffix));
+  const displaySuffix = suffixNeedsGap ? suffix.trimStart() : suffix;
 
   useEffect(() => {
     if (!isInView || hasAnimated.current) return;
@@ -150,8 +152,16 @@ export function StaggeredCountdown({
           );
         })}
       </div>
-      {suffix && (
-        <span style={{ color, lineHeight: 1 }}>{suffix}</span>
+      {displaySuffix && (
+        <span
+          style={{
+            color,
+            lineHeight: 1,
+            marginLeft: suffixNeedsGap ? "0.16em" : undefined,
+          }}
+        >
+          {displaySuffix}
+        </span>
       )}
     </div>
   );

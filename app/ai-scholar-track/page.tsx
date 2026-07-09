@@ -79,30 +79,30 @@ const communitySpaces = [
 const sessionHighlights = [
   {
     tag: "Orientation",
-    icon: "🎓",
     title: "The Game Has Changed",
     subtitle: "Orientation Webinar",
     description:
       "Students discover why AI changes everything — with real data on teen entrepreneurs worldwide and young Indian founders already building.",
-    meta: "👥 50+ participants",
+    meta: "",
+    videoSrc: "/videos/ai-scholar-track/session-energy.mp4",
   },
   {
     tag: "Live Session",
-    icon: "💡",
     title: "Hands-On Building",
     subtitle: "Weekly Sessions",
     description:
       "Live chat buzzing, students sharing their AI experiments in real-time, mentors guiding and encouraging — every session is a workshop, not a lecture.",
-    meta: "👥 29–51 participants per session",
+    meta: "",
+    videoSrc: "/videos/ai-scholar-track/student-showcase.mp4",
   },
   {
     tag: "Demo Day",
-    icon: "🏆",
     title: "Student Showcase",
     subtitle: "Cohort 1 · Demo Day",
     description:
       "Students present their AI tools to judges. A separate, dedicated day where every builder gets their moment on stage.",
-    meta: "👥 29 participants · 8+ judges & mentors",
+    meta: "",
+    videoSrc: "/videos/ai-scholar-track/demo-day.mp4",
   },
 ];
 
@@ -420,26 +420,37 @@ export default function AIScholarTrackPage() {
               {sessionHighlights.map((item) => (
                 <div
                   key={item.title}
-                  className="flex flex-col rounded-[24px] border border-white/10 bg-white/2 p-8"
+                  className="flex flex-col overflow-hidden rounded-[24px] border border-white/10 bg-white/2 transition-colors hover:border-[#10b981]/30"
                 >
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#10b981]">
-                    {item.tag}
-                  </span>
-                  <span className="mt-4 text-[36px]" aria-hidden="true">
-                    {item.icon}
-                  </span>
-                  <h3 className="mt-4 text-[22px] font-black text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-[13px] font-bold uppercase tracking-wider text-white/45">
-                    {item.subtitle}
-                  </p>
-                  <p className="mt-4 flex-1 text-[15px] leading-relaxed text-white/65">
-                    {item.description}
-                  </p>
-                  <p className="mt-6 border-t border-white/10 pt-4 text-[13px] font-semibold text-white/50">
-                    {item.meta}
-                  </p>
+                  <div className="relative aspect-[9/16] w-full overflow-hidden bg-black">
+                    <video
+                      src={item.videoSrc}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-6">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#10b981]">
+                      {item.tag}
+                    </span>
+                    <h3 className="mt-4 text-[22px] font-black text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-[13px] font-bold uppercase tracking-wider text-white/45">
+                      {item.subtitle}
+                    </p>
+                    <p className="mt-4 flex-1 text-[15px] leading-relaxed text-white/65">
+                      {item.description}
+                    </p>
+                    {item.meta && (
+                      <p className="mt-6 border-t border-white/10 pt-4 text-[13px] font-semibold text-white/50">
+                        {item.meta}
+                      </p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

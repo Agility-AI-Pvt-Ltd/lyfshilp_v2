@@ -1,4 +1,4 @@
-"use client";
+👥 50+ participants"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";

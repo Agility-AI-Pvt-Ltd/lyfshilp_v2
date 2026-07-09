@@ -530,7 +530,7 @@ export default function FutureXFellowshipPage() {
               </div>
               <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
                 <div className="text-[28px] font-black leading-none text-white sm:text-[32px]">
-                  <StaggeredCountdown value="36" suffix={`${" "}Sessions`} />
+                  <StaggeredCountdown value="36" suffix=" Sessions" />
                 </div>
                 <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
                   Harvard Case Method
@@ -538,7 +538,7 @@ export default function FutureXFellowshipPage() {
               </div>
               <div className="min-h-16 border-l border-[#10b981]/40 pl-4">
                 <div className="text-[28px] font-black leading-none text-white sm:text-[32px]">
-                  <StaggeredCountdown value="6" suffix={`${" "}Months`} />
+                  <StaggeredCountdown value="6" suffix=" Months" />
                 </div>
                 <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50 sm:text-[12px]">
                   Program duration

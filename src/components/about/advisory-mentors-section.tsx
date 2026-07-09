@@ -1,9 +1,13 @@
+import NextImage from "next/image";
+
 type Profile = {
   name: string;
   initials: string;
   role: string;
   credentials?: string;
   bio: string;
+  image?: string;
+  imageClassName?: string;
 };
 
 const advisoryBoard: Profile[] = [
@@ -57,24 +61,32 @@ const programmeMentors: Profile[] = [
     initials: "PC",
     role: "Head of Operations & Marketing, Lyfshilp Academy",
     bio: "Builds the systems that connect schools, students, and parents while sustaining learner engagement throughout the fellowship.",
+    image: "/images/about-team/pooja-choudhary.png",
+    imageClassName: "object-cover object-[50%_28%]",
   },
   {
     name: "Bhawna Khorwal",
     initials: "BK",
     role: "Head of Academic Counsellors, Lyfshilp Academy",
     bio: "Combines an engineering background with psychometric assessment and data-informed career counselling.",
+    image: "/images/about-team/bhawna-khorwal.png",
+    imageClassName: "object-cover object-[50%_24%]",
   },
   {
     name: "Kusum Dhasmana",
     initials: "KD",
     role: "Senior Counsellor, Lyfshilp Academy",
     bio: "Brings deep subject mastery and structured clarity to students balancing school, fellowship sessions, and venture work.",
+    image: "/images/about-team/kusum-dhasmana.png",
+    imageClassName: "object-cover object-[50%_24%]",
   },
   {
     name: "Chhavi Choudhary",
     initials: "CC",
     role: "Senior Counsellor, FutureX Fellowship",
     bio: "Uses her legal and education background to offer precise, thoughtful one-to-one mentorship that moves students from confusion to clarity.",
+    image: "/images/about-team/chhavi-choudhary.png",
+    imageClassName: "object-cover object-[50%_20%]",
   },
   {
     name: "Dayanidh Tripathi",
@@ -102,16 +114,28 @@ function ProfileCard({
       }`}
     >
       <div className="flex items-start justify-between gap-4">
-        <span
-          className={`grid size-12 shrink-0 place-items-center rounded-full text-[13px] font-black tracking-[0.08em] ${
-            isAdvisory
-              ? "bg-[#CFFD53] text-[#10231a]"
-              : "bg-[#10231a] text-white"
-          }`}
-          aria-hidden="true"
-        >
-          {profile.initials}
-        </span>
+        {profile.image ? (
+          <span className="relative size-16 shrink-0 overflow-hidden rounded-full border border-[#dfe5dc] bg-[#f4f7f1] shadow-sm">
+            <NextImage
+              src={profile.image}
+              alt={profile.name}
+              fill
+              sizes="64px"
+              className={profile.imageClassName ?? "object-cover object-top"}
+            />
+          </span>
+        ) : (
+          <span
+            className={`grid size-12 shrink-0 place-items-center rounded-full text-[13px] font-black tracking-[0.08em] ${
+              isAdvisory
+                ? "bg-[#CFFD53] text-[#10231a]"
+                : "bg-[#10231a] text-white"
+            }`}
+            aria-hidden="true"
+          >
+            {profile.initials}
+          </span>
+        )}
         <span
           className={`text-[11px] font-black uppercase tracking-[0.16em] ${
             isAdvisory ? "text-[#CFFD53]/70" : "text-[#1e6344]/65"
