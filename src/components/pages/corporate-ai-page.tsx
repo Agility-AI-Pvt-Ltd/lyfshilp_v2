@@ -81,9 +81,15 @@ export function CorporateAIPageContent() {
           className="relative overflow-hidden px-6 pt-32 pb-24 sm:px-8 lg:px-14 bg-cover bg-center min-h-screen flex flex-col justify-center"
           style={{ backgroundImage: "url('/images/corporate/hero1.jpg')" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0b0c10]/70 via-[#030508]/60 to-[#030508]/90 z-0" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-[#0b0c10]/70 via-[#030508]/60 to-[#030508]/90 z-0"
+            aria-hidden="true"
+          />
 
-          <div className="pointer-events-none absolute inset-0 overflow-hidden z-0" aria-hidden="true">
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden z-0"
+            aria-hidden="true"
+          >
             <div className="absolute -right-40 -top-40 size-[600px] rounded-full bg-[#CFFD53]/[0.08] blur-[120px]" />
             <div className="absolute -bottom-40 -left-40 size-[500px] rounded-full bg-emerald-500/[0.06] blur-[100px]" />
             <div
@@ -128,9 +134,14 @@ export function CorporateAIPageContent() {
                   >
                     Enablement{" "}
                     <motion.span
-                      initial={reduceMotion ? false : { opacity: 0, scale: 0.6 }}
+                      initial={
+                        reduceMotion ? false : { opacity: 0, scale: 0.6 }
+                      }
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: reduceMotion ? 0 : 0.55, duration: 0.5 }}
+                      transition={{
+                        delay: reduceMotion ? 0 : 0.55,
+                        duration: 0.5,
+                      }}
                       className="inline-block font-bold text-white/25"
                     >
                       &
@@ -162,13 +173,17 @@ export function CorporateAIPageContent() {
                 </h1>
 
                 <p className="mt-6 max-w-xl text-[15px] font-medium leading-relaxed text-white/55 sm:mt-8 sm:text-[16px] lg:hidden">
-                  From national dairy cooperatives to enterprise teams, we deliver hands-on AI training in the rooms where decisions actually get made — not in a generic webinar.
+                  From national dairy cooperatives to enterprise teams, we
+                  deliver hands-on AI training in the rooms where decisions
+                  actually get made — not in a generic webinar.
                 </p>
               </div>
 
               <div className="flex flex-col lg:col-span-5 lg:pt-4">
                 <p className="hidden text-[15px] font-medium leading-relaxed text-white/60 sm:text-[16px] lg:block">
-                  From national dairy cooperatives to enterprise teams, we deliver hands-on AI training in the rooms where decisions actually get made — not in a generic webinar.
+                  From national dairy cooperatives to enterprise teams, we
+                  deliver hands-on AI training in the rooms where decisions
+                  actually get made — not in a generic webinar.
                 </p>
 
                 <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-md">
@@ -177,7 +192,12 @@ export function CorporateAIPageContent() {
                       Deployment
                     </div>
                     <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-medium">
-                      Delivered on-site for the <strong>National Dairy Development Board (NDDB), Bengaluru</strong> — training officials from milk unions across Karnataka, Puducherry, and Telangana on AI-powered productivity.
+                      Delivered on-site for the{" "}
+                      <strong>
+                        National Dairy Development Board (NDDB), Bengaluru
+                      </strong>{" "}
+                      — training officials from milk unions across Karnataka,
+                      Puducherry, and Telangana on AI-powered productivity.
                     </p>
                   </div>
                 </div>
@@ -209,7 +229,7 @@ export function CorporateAIPageContent() {
 
         <CorporateGallery />
 
-        <section className="px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
+        {/* <section className="px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
           <div className="mx-auto max-w-7xl">
             <div className="mb-16 max-w-3xl">
               <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#CFFD53]">
@@ -247,10 +267,13 @@ export function CorporateAIPageContent() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-gradient-to-b from-[#030508] to-[#0b0c10] overflow-hidden text-center">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden"
+            aria-hidden="true"
+          >
             <div className="absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#CFFD53]/[0.03] blur-[120px]" />
           </div>
 
@@ -260,7 +283,8 @@ export function CorporateAIPageContent() {
               <span className="text-[#CFFD53]">your organization.</span>
             </h2>
             <p className="max-w-2xl text-[18px] sm:text-[22px] leading-relaxed text-white/70 font-medium mx-auto mb-12">
-              Workshops, certification, or ongoing partnership — scoped around your teams and your tools.
+              Workshops, certification, or ongoing partnership — scoped around
+              your teams and your tools.
             </p>
 
             <Link

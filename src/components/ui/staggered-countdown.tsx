@@ -76,7 +76,7 @@ export function StaggeredCountdown({
   }, [isInView]);
 
   return (
-    <div ref={ref} className={`inline-flex items-center ${className}`}>
+    <div ref={ref} className={`inline-flex items-center gap-1.5 whitespace-nowrap sm:gap-2 ${className}`}>
       <div
         style={{ position: "relative", overflow: "hidden", height: "1.2em" }}
         className="inline-flex items-center"
@@ -151,7 +151,12 @@ export function StaggeredCountdown({
         })}
       </div>
       {suffix && (
-        <span style={{ color, lineHeight: 1 }}>{suffix}</span>
+        <span
+          style={{ color, lineHeight: 1, height: "1.2em" }}
+          className="inline-flex items-center"
+        >
+          {suffix}
+        </span>
       )}
     </div>
   );
