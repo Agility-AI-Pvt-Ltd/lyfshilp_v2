@@ -34,15 +34,55 @@ const teacherTestimonials: Testimonial[] = [
 ];
 
 const schools = [
-  "DAV Public School",
-  "Ryan International",
-  "The Shri Ram School",
-  "Army Public School",
-  "Amity International",
-  "GD Goenka",
-  "Tagore Public School",
-  "Delhi Public School",
+  {
+    name: "Springdales School",
+    logo: "/images/school_logos/springdales_school.jpeg",
+  },
+  {
+    name: "Ryan International",
+    logo: "/images/school_logos/ryan_internation_school.jpeg",
+  },
+  {
+    name: "Modern School New Delhi",
+    logo: "/images/school_logos/modern_school.jpeg",
+  },
+  {
+    name: "Army Public School",
+    logo: "/images/school_logos/army_public_school.jpeg",
+  },
+  {
+    name: "Mt. Carmel School",
+    logo: "/images/school_logos/mount_carmel_school.jpeg",
+  },
+  {
+    name: "St. Thomas School",
+    logo: "/images/school_logos/st_thomas.jpeg",
+  },
+  {
+    name: "St. Francis School",
+    logo: "/images/school_logos/st_francis.jpeg",
+  },
+  {
+    name: "Delhi Public School",
+    logo: "/images/school_logos/delhi_public_school.jpeg",
+  },
 ];
+
+function SchoolLogoItem({ school }: { school: (typeof schools)[number] }) {
+  return (
+    <div className="mx-12 flex min-w-[200px] flex-col items-center gap-3 sm:mx-14 sm:min-w-[240px]">
+      <img
+        src={school.logo}
+        alt={`${school.name} logo`}
+        className="h-16 w-auto max-w-[180px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 sm:h-20 sm:max-w-[220px] lg:h-24 lg:max-w-[260px]"
+        loading="lazy"
+      />
+      <span className="text-center text-[12px] font-bold uppercase tracking-wider text-[#555a68]/70 whitespace-nowrap sm:text-[13px]">
+        {school.name}
+      </span>
+    </div>
+  );
+}
 
 function QuoteIcon() {
   return (
@@ -130,70 +170,24 @@ export function RealVoices() {
       </div> */}
 
       {/* School Partners Logos Strip */}
-      <div className="bg-[#f5f5f7]/60 border-t border-[#e6e8ef] py-6 overflow-hidden">
-        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-14">
-          <p className="text-[11px] font-bold text-center uppercase tracking-widest text-[#8a90a3] mb-6">
-            Trusted by schools across India
-          </p>
+      <div className="w-full bg-[#f5f5f7]/60 border-t border-[#e6e8ef] py-12 sm:py-16 lg:py-20 overflow-hidden">
+        <p className="text-[12px] font-bold text-center uppercase tracking-widest text-[#8a90a3] mb-8 sm:mb-10 sm:text-[13px] px-6">
+          Trusted by schools across India
+        </p>
 
-          <div className="w-full overflow-hidden relative select-none">
+        <div className="w-full overflow-hidden relative select-none py-4 sm:py-6">
             {/* Fade overlays for marquee ends */}
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#f5f5f7] to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#f5f5f7] to-transparent z-10 pointer-events-none" />
 
             <div className="logo-marquee-track">
-              {/* First Pass */}
               {schools.map((school, idx) => (
-                <div
-                  key={`logo-1-${idx}`}
-                  className="flex items-center gap-2.5 mx-12"
-                >
-                  <svg
-                    className="size-5 text-[#8a90a3] opacity-50"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 21V9.75M12 9.75a3.375 3.375 0 0 1 3.375-3.375h1.5a1.125 1.125 0 0 1 1.125 1.125v1.5a1.125 1.125 0 0 1-1.125 1.125h-1.5a3.375 3.375 0 0 1-3.375-3.375ZM12 9.75a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 0 6 7.5v1.5A1.125 1.125 0 0 0 7.125 11.25h1.5A3.375 3.375 0 0 0 12 9.75Zm0 11.25a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"
-                    />
-                  </svg>
-                  <span className="text-[13px] font-black uppercase tracking-wider text-[#555a68]/70 whitespace-nowrap">
-                    {school}
-                  </span>
-                </div>
+                <SchoolLogoItem key={`logo-1-${idx}`} school={school} />
               ))}
-              {/* Second Pass */}
               {schools.map((school, idx) => (
-                <div
-                  key={`logo-2-${idx}`}
-                  className="flex items-center gap-2.5 mx-12"
-                >
-                  <svg
-                    className="size-5 text-[#8a90a3] opacity-50"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 21V9.75M12 9.75a3.375 3.375 0 0 1 3.375-3.375h1.5a1.125 1.125 0 0 1 1.125 1.125v1.5a1.125 1.125 0 0 1-1.125 1.125h-1.5a3.375 3.375 0 0 1-3.375-3.375ZM12 9.75a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 0 6 7.5v1.5A1.125 1.125 0 0 0 7.125 11.25h1.5A3.375 3.375 0 0 0 12 9.75Zm0 11.25a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"
-                    />
-                  </svg>
-                  <span className="text-[13px] font-black uppercase tracking-wider text-[#555a68]/70 whitespace-nowrap">
-                    {school}
-                  </span>
-                </div>
+                <SchoolLogoItem key={`logo-2-${idx}`} school={school} />
               ))}
             </div>
-          </div>
         </div>
       </div>
     </section>
