@@ -35,8 +35,10 @@ export function StaggeredCountdown({
   const digitCount = digitCounter;
 
   const [animatedDigits, setAnimatedDigits] = useState<number[]>(
-    Array(digitCount).fill(0)
+    Array(digitCount).fill(0),
   );
+  const suffixNeedsGap = Boolean(value && /^\s/.test(suffix));
+  const displaySuffix = suffixNeedsGap ? suffix.trimStart() : suffix;
 
   useEffect(() => {
     if (!isInView || hasAnimated.current) return;
@@ -76,7 +78,10 @@ export function StaggeredCountdown({
   }, [isInView]);
 
   return (
-    <div ref={ref} className={`inline-flex items-center gap-1.5 whitespace-nowrap sm:gap-2 ${className}`}>
+    <div
+      ref={ref}
+      className={`inline-flex items-center gap-1.5 whitespace-nowrap sm:gap-2 ${className}`}
+    >
       <div
         style={{ position: "relative", overflow: "hidden", height: "1.2em" }}
         className="inline-flex items-center"
