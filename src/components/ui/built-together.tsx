@@ -18,23 +18,26 @@ const galleryItems: GalleryItem[] = [
     src: "/images/built-together/img_2713.png",
     alt: "Large school session",
     label: "Large school session",
-    description: "150+ uniformed students in FutureX session — primary trust photo.",
+    description:
+      "A full-school FutureX kickoff introducing students to AI, building, and entrepreneurship.",
     gridClass: "col-span-1 md:col-span-2 md:row-span-2",
   },
   {
     id: "IMG_2237",
-    src: "/images/built-together/img_2237.png",
+    src: "/images/educators/hero.JPG",
     alt: "Teacher workshop",
     label: "Teacher workshop",
-    description: "35+ educators, Bloom's Taxonomy workshop, Lyfshilp banner visible.",
+    description:
+      "Educator workshop on Bloom's Taxonomy and bringing AI into classroom practice.",
     gridClass: "col-span-1",
   },
   {
     id: "IMG_2618",
-    src: "/images/built-together/img_2618.png",
+    src: "/images/educators/4.JPG",
     alt: "Founder on stage",
     label: "Founder on stage",
-    description: "Female founder speaking, 'Founder' slide on screen behind her.",
+    description:
+      "Founder keynote sharing the FutureX journey and why young builders matter.",
     gridClass: "col-span-1",
   },
   {
@@ -42,7 +45,8 @@ const galleryItems: GalleryItem[] = [
     src: "/images/built-together/wa_4_37.png",
     alt: "Enrollment forms filling",
     label: "Enrollment forms",
-    description: "Students filling FutureX enrollment forms outdoors, genuine moment.",
+    description:
+      "On-campus fellowship enrollment day where students signed up for FutureX.",
     gridClass: "col-span-1",
   },
   {
@@ -50,15 +54,17 @@ const galleryItems: GalleryItem[] = [
     src: "/images/hero/6.JPG",
     alt: "Hands-on student session",
     label: "Student session",
-    description: "Students collaborating and working through hands-on AI projects during school.",
+    description:
+      "Hands-on lab where students built and shipped their first AI projects together.",
     gridClass: "col-span-1",
   },
   {
     id: "IMG_3580",
     src: "/images/built-together/img_3580.png",
-    alt: "AI reshaping slide",
-    label: "AI reshaping slide",
-    description: "'AI is reshaping the world — Are you ready?' slide clearly visible.",
+    alt: "AI readiness talk",
+    label: "AI readiness talk",
+    description:
+      "School assembly on how AI is reshaping careers — and how students can get ready.",
     gridClass: "col-span-1 md:col-span-2 lg:col-span-1",
   },
 ];
@@ -76,7 +82,8 @@ export function BuiltTogether() {
               See What We&apos;ve Built Together
             </h2>
             <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-[#747b8f]">
-              Real students. Real sessions. Real results. Across 40+ schools in 14 Indian cities.
+              Real students. Real sessions. Real results. Across 40+ schools in
+              14 Indian cities.
             </p>
           </div>
           <Link

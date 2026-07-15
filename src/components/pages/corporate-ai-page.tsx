@@ -7,6 +7,7 @@ import { LyfshilpFooter } from "@/src/components/layouts/lyfshilp-footer";
 import { CorporateRegister } from "@/src/components/ui/corporate-register";
 import { CorporateFormats } from "@/src/components/ui/corporate-formats";
 import { CorporateGallery } from "@/src/components/ui/corporate-gallery";
+import { GovtBodiesTestimonials } from "@/src/components/ui/govt-bodies-testimonials";
 
 const heroLineVariants = {
   hidden: { opacity: 0, y: 48, filter: "blur(10px)" },
@@ -229,47 +230,9 @@ export function CorporateAIPageContent() {
 
         <CorporateGallery />
 
-        {/* <section className="px-6 py-24 sm:px-8 lg:px-14 border-t border-white/10 bg-[#030508]">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-16 max-w-3xl">
-              <p className="text-[13px] font-black uppercase tracking-[0.24em] text-[#CFFD53]">
-                In Their Words
-              </p>
-              <h2 className="mt-4 text-[38px] font-black leading-tight tracking-tight text-white sm:text-[48px]">
-                Testimonials — intake in progress.
-              </h2>
-              <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-white/60">
-                Space reserved for direct feedback from session attendees. Drop in quotes with name, title, and organization to complete this section.
-              </p>
-            </div>
+        <GovtBodiesTestimonials />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((num) => (
-                <div
-                  key={num}
-                  className="group relative border border-dashed border-white/15 rounded-2xl bg-white/[0.01] p-8 flex flex-col justify-between min-h-60"
-                >
-                  <div className="text-[44px] text-[#CFFD53]/30 font-serif leading-none select-none">
-                    “
-                  </div>
-                  <p className="text-[16px] italic leading-relaxed text-white/50 font-medium">
-                    Quote to be added
-                  </p>
-                  <div className="mt-8 border-t border-white/10 pt-4">
-                    <p className="text-[14px] font-bold text-white/70">
-                      Name · Title
-                    </p>
-                    <p className="text-[12px] font-bold uppercase tracking-wider text-white/40 mt-1">
-                      Organization
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-        <section className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-gradient-to-b from-[#030508] to-[#0b0c10] overflow-hidden text-center">
+        <section className="relative px-6 py-28 sm:px-8 lg:px-14 border-t border-white/10 bg-gradient-to-b from-[#030508] to-[#0b0c10] overflow-hidden">
           <div
             className="pointer-events-none absolute inset-0 overflow-hidden"
             aria-hidden="true"
@@ -277,24 +240,42 @@ export function CorporateAIPageContent() {
             <div className="absolute left-1/2 top-1/2 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#CFFD53]/[0.03] blur-[120px]" />
           </div>
 
-          <div className="relative mx-auto max-w-4xl">
-            <h2 className="text-[40px] sm:text-[56px] lg:text-[72px] font-black text-white tracking-tight leading-[1.05] mb-6">
-              Bring this training to <br />
-              <span className="text-[#CFFD53]">your organization.</span>
-            </h2>
-            <p className="max-w-2xl text-[18px] sm:text-[22px] leading-relaxed text-white/70 font-medium mx-auto mb-12">
-              Workshops, certification, or ongoing partnership — scoped around
-              your teams and your tools.
-            </p>
+          <div className="relative mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="text-center lg:text-left">
+                <h2 className="text-[clamp(2.75rem,6vw,4.75rem)] font-black text-white tracking-tight leading-[1.05] mb-6 sm:mb-8">
+                  Bring this training to <br />
+                  <span className="text-[#CFFD53]">your organization.</span>
+                </h2>
+                <p className="max-w-xl text-[clamp(1.125rem,2.2vw,1.5rem)] leading-relaxed text-white/70 font-medium mx-auto lg:mx-0 mb-10 sm:mb-12">
+                  Workshops, certification, or ongoing partnership — scoped
+                  around your teams and your tools.
+                </p>
 
-            <Link
-              href="mailto:service.excellence@lyfshilpacademy.com?subject=Enterprise%20and%20Institutional%20AI%20Training"
-              className="inline-flex h-14 items-center justify-center rounded-full bg-[#CFFD53] px-10 text-[16px] font-black text-[#030508] transition-all hover:bg-white hover:-translate-y-0.5 shadow-lg shadow-[#CFFD53]/10"
-            >
-              Get in Touch
-            </Link>
+                <Link
+                  href="mailto:service.excellence@lyfshilpacademy.com?subject=Enterprise%20and%20Institutional%20AI%20Training"
+                  className="inline-flex h-14 sm:h-16 items-center justify-center rounded-full bg-[#CFFD53] px-10 sm:px-12 text-[16px] sm:text-[18px] font-black text-[#030508] transition-all hover:bg-white hover:-translate-y-0.5 shadow-lg shadow-[#CFFD53]/10"
+                >
+                  Get in Touch
+                </Link>
+              </div>
 
-            <div className="mt-20 font-mono text-[11px] font-bold tracking-[0.25em] text-white/30 uppercase">
+              <div className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl shadow-black/40 lg:mx-0 lg:justify-self-end">
+                <video
+                  src="/videos/govt_corp/both.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="aspect-[9/16] h-full w-full object-cover"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <div className="mt-20 font-mono text-[11px] font-bold tracking-[0.25em] text-white/30 uppercase text-center">
               ENTERPRISE & INSTITUTIONAL AI TRAINING — FIELD RECORD ARCHIVE
             </div>
           </div>

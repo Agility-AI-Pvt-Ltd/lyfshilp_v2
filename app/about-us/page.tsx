@@ -21,30 +21,22 @@ const showcaseCollage = [
   {
     src: "/images/about-collage/reroute-demo.png",
     alt: "A learner presenting the ReRoute sustainability project during an online demo",
-    wrapperClassName:
-      "h-[240px] sm:col-span-2 sm:h-[320px] lg:col-span-6 lg:col-start-1 lg:row-start-1 lg:h-[400px]",
     imageClassName: "object-cover",
   },
   {
     src: "/images/about-collage/student-demo-day.png",
     alt: "A student presenting during a Lyfshilp online demo day",
-    wrapperClassName:
-      "h-[180px] lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:h-[170px]",
     imageClassName: "object-cover",
   },
   {
     src: "/images/about-collage/creativity-compass-demo.png",
     alt: "A student showcasing the Creativity Compass project to mentors",
-    wrapperClassName:
-      "h-[180px] lg:col-span-2 lg:col-start-3 lg:row-start-2 lg:h-[170px]",
     imageClassName: "object-cover",
   },
   {
     src: "/images/about-collage/near-me-demo.jpg",
     alt: "A student demonstrating the NearMe location discovery project",
-    wrapperClassName:
-      "h-[200px] sm:col-span-2 lg:col-span-4 lg:col-start-1 lg:row-start-3 lg:h-[220px]",
-    imageClassName: "object-contain",
+    imageClassName: "object-cover object-center",
   },
 ];
 
@@ -52,7 +44,10 @@ const proofPoints = [
   { value: "6,000+", label: "students introduced to AI and product thinking" },
   { value: "38", label: "institutions engaged through programmes and labs" },
   { value: "500+", label: "student founders and builders in the community" },
-  { value: "NEP", label: "aligned learning that blends skills and application" },
+  {
+    value: "NEP",
+    label: "aligned learning that blends skills and application",
+  },
 ];
 
 const droppingAudiences = ["Students", "Schools", "Colleges", "EVERYONE!"];
@@ -141,15 +136,6 @@ const mentorProfiles = [
     detail:
       "Owns the full technology stack across AI systems, agentic architectures, retrieval-augmented knowledge systems, and automation pipelines. Previously a Machine Learning Engineer at Samsung Research Institute, Delhi, with an Expert rating on Codeforces.",
     focus: "AI systems, platform architecture, and technical mentorship.",
-  },
-  {
-    name: "C.A. Saurabh Jain",
-    role: "Co-Founder - Lyfshilp Academy & Agility AI",
-    credentials:
-      "CA (ICAI) , CS-II , MBA (ICAI) , IMSIP (ICAI)",
-    detail:
-      "A finance, compliance, and strategic operations leader with more than a decade of experience bringing financial rigour and governance depth to the FutureX fellowship team.",
-    focus: "Financial strategy, regulatory compliance, and operational efficiency.",
   },
 ];
 
@@ -253,7 +239,10 @@ function DroppingAudienceText() {
           }
         }
       `}</style>
-      <span className="about-dropping-texts" aria-label={droppingAudiences.join(", ")}>
+      <span
+        className="about-dropping-texts"
+        aria-label={droppingAudiences.join(", ")}
+      >
         {droppingAudiences.map((audience) => (
           <span key={audience}>{audience}</span>
         ))}
@@ -276,7 +265,10 @@ export default function AboutUsPage() {
             sizes="100vw"
             className="object-cover opacity-58"
           />
-          <div className="absolute inset-0 bg-[#101116]/62" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-[#101116]/62"
+            aria-hidden="true"
+          />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_24%,rgba(207,253,83,0.26),transparent_28%),radial-gradient(circle_at_20%_76%,rgba(94,34,255,0.28),transparent_30%)]" />
           <CircuitField />
 
@@ -308,7 +300,10 @@ export default function AboutUsPage() {
 
             <div className="grid gap-4 border-t border-white/18 pt-6 sm:grid-cols-2 lg:pb-4">
               {proofPoints.map((point) => (
-                <div key={point.value} className="min-h-32 border-l border-white/18 pl-5">
+                <div
+                  key={point.value}
+                  className="min-h-32 border-l border-white/18 pl-5"
+                >
                   <p className="text-[42px] font-black leading-none text-white">
                     {point.value}
                   </p>
@@ -372,48 +367,74 @@ export default function AboutUsPage() {
           className="overflow-hidden bg-[#fffaf4] px-6 py-16 sm:px-8 lg:px-14 lg:py-20"
           aria-label="Lyfshilp learner project showcase"
         >
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
-            {showcaseCollage.map((image) => (
-              <div
-                key={image.src}
-                className={`group relative overflow-hidden rounded-2xl bg-[#101116] shadow-[0_16px_40px_rgba(0,0,0,0.22)] ring-1 ring-black/10 ${image.wrapperClassName}`}
-              >
-                <NextImage
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 1280px, (min-width: 640px) 50vw, 100vw"
-                  className={`${image.imageClassName} transition-transform duration-500 group-hover:scale-[1.015]`}
-                />
-              </div>
-            ))}
+          <div className="mx-auto flex max-w-5xl flex-col gap-3">
+            <div className="group relative h-[240px] overflow-hidden rounded-2xl bg-[#101116] shadow-[0_16px_40px_rgba(0,0,0,0.22)] ring-1 ring-black/10 sm:h-[320px] lg:h-[400px]">
+              <NextImage
+                src={showcaseCollage[0].src}
+                alt={showcaseCollage[0].alt}
+                fill
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                className={`${showcaseCollage[0].imageClassName} transition-transform duration-500 group-hover:scale-[1.015]`}
+              />
+            </div>
 
-            <div className="flex min-h-[360px] flex-col rounded-2xl bg-[#101116] p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.26)] sm:col-span-2 sm:p-7 lg:col-span-2 lg:col-start-5 lg:row-start-2 lg:row-span-2">
-              <p className="text-[12px] font-black uppercase tracking-[0.18em] text-[#CFFD53]">
-                Who We Serve
-              </p>
-              <h2 className="mt-3 text-[28px] font-black leading-tight tracking-normal sm:text-[32px]">
-                AI pathways for schools, colleges, and teams.
-              </h2>
-              <div className="mt-auto grid gap-3 pt-6">
-                {audiences.map((audience, index) => (
-                  <div
-                    key={audience.title}
-                    className="grid grid-cols-[30px_1fr] gap-2 border-t border-white/14 pt-3"
-                  >
-                    <span className="pt-0.5 text-[11px] font-black tracking-[0.16em] text-white/30">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <h3 className="text-[16px] font-black tracking-normal">
-                        {audience.title}
-                      </h3>
-                      <p className="mt-1 text-[12px] leading-5 text-white/58">
-                        {audience.description}
-                      </p>
+            <div className="grid gap-3 lg:grid-cols-[2fr_1fr] lg:items-stretch">
+              <div className="grid min-h-0 gap-3 lg:grid-rows-[minmax(170px,1fr)_minmax(220px,1.3fr)]">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {[showcaseCollage[1], showcaseCollage[2]].map((image) => (
+                    <div
+                      key={image.src}
+                      className="group relative h-[180px] overflow-hidden rounded-2xl bg-[#101116] shadow-[0_16px_40px_rgba(0,0,0,0.22)] ring-1 ring-black/10 lg:h-full lg:min-h-[170px]"
+                    >
+                      <NextImage
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 340px, 50vw"
+                        className={`${image.imageClassName} transition-transform duration-500 group-hover:scale-[1.015]`}
+                      />
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+
+                <div className="group relative h-[200px] overflow-hidden rounded-2xl bg-[#101116] shadow-[0_16px_40px_rgba(0,0,0,0.22)] ring-1 ring-black/10 lg:h-full lg:min-h-[220px]">
+                  <NextImage
+                    src={showcaseCollage[3].src}
+                    alt={showcaseCollage[3].alt}
+                    fill
+                    sizes="(min-width: 1024px) 680px, 100vw"
+                    className={`${showcaseCollage[3].imageClassName} transition-transform duration-500 group-hover:scale-[1.015]`}
+                  />
+                </div>
+              </div>
+
+              <div className="flex min-h-[360px] flex-col rounded-2xl bg-[#101116] p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.26)] sm:p-7 lg:min-h-0 lg:h-full">
+                <p className="text-[12px] font-black uppercase tracking-[0.18em] text-[#CFFD53]">
+                  Who We Serve
+                </p>
+                <h2 className="mt-3 text-[28px] font-black leading-tight tracking-normal sm:text-[32px]">
+                  AI pathways for schools, colleges, and teams.
+                </h2>
+                <div className="mt-auto grid gap-3 pt-6">
+                  {audiences.map((audience, index) => (
+                    <div
+                      key={audience.title}
+                      className="grid grid-cols-[30px_1fr] gap-2 border-t border-white/14 pt-3"
+                    >
+                      <span className="pt-0.5 text-[11px] font-black tracking-[0.16em] text-white/30">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="text-[16px] font-black tracking-normal">
+                          {audience.title}
+                        </h3>
+                        <p className="mt-1 text-[12px] leading-5 text-white/58">
+                          {audience.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
