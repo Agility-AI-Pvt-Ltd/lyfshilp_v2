@@ -115,30 +115,51 @@ export function CorporateProgramPageContent() {
           </div>
 
           <div className="relative z-10 mx-auto max-w-7xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#CFFD53]/35 bg-[#CFFD53]/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#CFFD53]">
-              <span className="size-1.5 rounded-full bg-[#CFFD53] animate-pulse" />
-              Corporate AI Training
-            </div>
-            <h1 className="mt-8 max-w-4xl text-[40px] font-black leading-[1.06] tracking-tight sm:text-[56px] lg:text-[68px]">
-              Building AI-ready teams through{" "}
-              <span className="text-[#CFFD53]">hands-on training.</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-[16px] font-medium leading-relaxed text-white/65 sm:text-[18px]">
-              A 10-hour, 4-session programme for corporates — automate repetitive
-              work, build real AI tools, and grow workplace productivity with no
-              coding required.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {["4 Live Sessions", "10 Total Hours", "No Coding Needed", "Certificate + Badge"].map(
-                (pill) => (
-                  <span
-                    key={pill}
-                    className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-white/70"
-                  >
-                    {pill}
-                  </span>
-                ),
-              )}
+            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#CFFD53]/35 bg-[#CFFD53]/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#CFFD53]">
+                  <span className="size-1.5 rounded-full bg-[#CFFD53] animate-pulse" />
+                  Corporate AI Training
+                </div>
+                <h1 className="mt-8 text-[clamp(2.5rem,5.5vw,4.25rem)] font-black leading-[1.06] tracking-tight">
+                  Building AI-ready teams through{" "}
+                  <span className="text-[#CFFD53]">hands-on training.</span>
+                </h1>
+                <p className="mt-6 mx-auto max-w-2xl text-[16px] font-medium leading-relaxed text-white/65 sm:text-[18px] lg:mx-0">
+                  A 10-hour, 4-session programme for corporates — automate
+                  repetitive work, build real AI tools, and grow workplace
+                  productivity with no coding required.
+                </p>
+                <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+                  {[
+                    "4 Live Sessions",
+                    "10 Total Hours",
+                    "No Coding Needed",
+                    "Certificate + Badge",
+                  ].map((pill) => (
+                    <span
+                      key={pill}
+                      className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-white/70"
+                    >
+                      {pill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl shadow-black/40 lg:mx-0 lg:justify-self-end">
+                <video
+                  src="/videos/govt_corp/both.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="aspect-[9/16] h-full w-full object-cover"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </section>
